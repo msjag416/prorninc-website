@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProRN Inc. | Strategic Healthcare Workforce Solutions</title>
+    <meta name="description" content="Operationalizing Ontario’s Nursing Retention Strategy. Specialized in Inpatient Virtual Nursing Pilots, Centralized Float Pools, and Clinical Workflow Design.">
+    <meta name="keywords" content="Virtual Nursing Ontario, Nursing Float Pool, Healthcare Consultant, Nursing Retention Strategy, Andrea Gomez RN">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Subtle animation for the hero image */
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="text-slate-800 bg-white antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo / Home Link -->
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center group">
+                        <span class="text-2xl font-extrabold text-slate-900 tracking-tight group-hover:text-blue-700 transition-colors">ProRN Inc.</span>
+                        <span class="ml-3 hidden lg:block px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-700 border border-blue-100">
+                            Strategic Workforce Solutions
+                        </span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Nav Links -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#expertise" class="text-sm font-medium text-slate-600 hover:text-blue-700 transition-colors">Expertise</a>
+                    <a href="#services" class="text-sm font-medium text-slate-600 hover:text-blue-700 transition-colors">Services</a>
+                    <a href="#about" class="text-sm font-medium text-slate-600 hover:text-blue-700 transition-colors">About</a>
+                </div>
+
+                <!-- CTA Button (Protected) -->
+                <div>
+                    <a href="#" onclick="contactFirm(event)" class="inline-flex items-center px-6 py-2.5 border border-transparent text-sm font-semibold rounded-lg text-white bg-blue-900 hover:bg-blue-800 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-900 transition-all duration-200">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dynamic Hero Section -->
+    <header class="relative pt-32 pb-16 lg:pt-40 lg:pb-24 overflow-hidden bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Text Content -->
+                <div class="fade-in-up">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-[1.1] mb-6 tracking-tight">
+                        The Bedside Has Changed. <br>
+                        <span class="text-blue-700 bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-blue-500">Your Strategy Needs to Catch Up.</span>
+                    </h1>
+                    <p class="text-lg text-slate-600 mb-8 max-w-lg leading-relaxed">
+                        We bridge the gap between Ministry policy and clinical reality. Specializing in the operational design of <strong>Inpatient Virtual Nursing Pilots</strong> and <strong>Centralized Provincial Float Pools</strong>.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <!-- Protected Email Link with Subject Line -->
+                        <a href="#" onclick="contactFirm(event, 'Phase 1 Feasibility Inquiry')" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-semibold rounded-lg text-white bg-blue-700 hover:bg-blue-600 md:text-lg shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200">
+                            Book Phase 1 Feasibility Consult
+                        </a>
+                        <a href="#services" class="inline-flex items-center justify-center px-8 py-4 border border-slate-300 text-base font-semibold rounded-lg text-slate-700 bg-white hover:bg-slate-50 md:text-lg shadow-sm hover:shadow transition-all duration-200">
+                            View Services
+                        </a>
+                    </div>
+                    <p class="mt-6 text-sm text-slate-500 flex items-center">
+                        <i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i>
+                        Booking Q1 2026 Consultations
+                    </p>
+                </div>
+
+                <!-- Hero Image (UPDATED to local file) -->
+                <div class="relative lg:h-auto fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="absolute -inset-4 bg-blue-200 rounded-2xl blur-2xl opacity-30"></div>
+                    <img 
+                        src="hero.jpg" 
+                        alt="Virtual nurse monitoring patient data on dual screens while conducting a video assessment, representing the ProRN Inc. Dyad Model" 
+                        class="relative rounded-2xl shadow-2xl border border-slate-200 w-full object-cover h-[400px] lg:h-[500px]"
+                        loading="eager"
+                        onerror="this.style.display='none'; document.getElementById('image-error').style.display='flex';"
+                    >
+                    <!-- Fallback if image missing -->
+                    <div id="image-error" class="hidden absolute inset-0 bg-slate-100 rounded-2xl border border-slate-200 items-center justify-center text-center p-6">
+                        <div>
+                            <i data-lucide="image-off" class="w-12 h-12 text-slate-400 mx-auto mb-2"></i>
+                            <p class="text-slate-500 font-medium">Image not found.</p>
+                            <p class="text-slate-400 text-sm mt-1">Please ensure 'hero.jpg' is in the same folder as this file.</p>
+                        </div>
+                    </div>
+
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl border border-slate-100 hidden md:flex items-center gap-4">
+                        <div class="bg-blue-100 p-3 rounded-lg text-blue-700">
+                            <i data-lucide="activity" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-500 font-semibold uppercase">Reduction in Agency Spend</p>
+                            <p class="text-xl font-bold text-slate-900">Projected 40%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Expertise Section (ID added for link functionality) -->
+    <section id="expertise" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-6">The "Paper Roadmap" is Insufficient Without Clinical Oversight.</h2>
+                    <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                        Administrative strategy cannot see the "invisible workload" crushing Ontario's nurses. When generalist consultants implement workforce pilots, they often fail due to role confusion, union grievances, and cognitive fatigue.
+                    </p>
+                    <div class="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-lg">
+                        <p class="text-lg text-slate-800 italic font-medium">
+                            "If you hand this to an IT vendor, the nurses will reject it as surveillance. If you hand it to a generalist, the union will grieve it. You need a translator who speaks 'bedside'."
+                        </p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 gap-6">
+                    <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 p-3 bg-red-100 rounded-lg">
+                                <i data-lucide="alert-triangle" class="w-6 h-6 text-red-600"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-bold text-slate-900">The Implementation Risk</h3>
+                                <p class="mt-2 text-slate-600">Without clinical calibration, pilots fail due to "Big Brother" syndrome and ONA non-compliance.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-slate-900 rounded-xl shadow-lg transform lg:scale-105 transition-transform">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 p-3 bg-blue-600 rounded-lg">
+                                <i data-lucide="shield-check" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-bold text-white">The ProRN Inc. Solution</h3>
+                                <p class="mt-2 text-slate-300">Clinical workflow design that respects cognitive load limits and protects the collective agreement.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-slate-900 text-white relative overflow-hidden">
+        <!-- Background decorative blob -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-blue-400 font-bold tracking-wider uppercase text-sm">Scope of Work</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">Specialized Implementation Phases</h2>
+                <p class="text-slate-400 mt-4 max-w-2xl mx-auto text-lg">
+                    We do not replace your internal teams. We lead the high-risk phases requiring clinical and regulatory precision.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="group bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 hover:bg-slate-800/80 transition-all duration-300">
+                    <div class="w-14 h-14 bg-blue-900/50 rounded-xl flex items-center justify-center mb-6 text-blue-400 group-hover:text-blue-300 group-hover:scale-110 transition-all">
+                        <i data-lucide="layout-dashboard" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Virtual Nursing Pilot Lead</h3>
+                    <p class="text-slate-400 mb-6 text-xs font-bold uppercase tracking-wide bg-slate-900 inline-block px-2 py-1 rounded">Phase 1 & 2 Strategy</p>
+                    <p class="text-slate-300 leading-relaxed">
+                        Design of the "Dyad Model" workflow. We define the specific Scope of Virtual Practice for admission/discharge to ensure the Virtual Nurse offloads 40% of administrative tasks without compromising safety.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="group bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 hover:bg-slate-800/80 transition-all duration-300">
+                    <div class="w-14 h-14 bg-blue-900/50 rounded-xl flex items-center justify-center mb-6 text-blue-400 group-hover:text-blue-300 group-hover:scale-110 transition-all">
+                        <i data-lucide="users" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Float Pool Architect</h3>
+                    <p class="text-slate-400 mb-6 text-xs font-bold uppercase tracking-wide bg-slate-900 inline-block px-2 py-1 rounded">Governance & Feasibility</p>
+                    <p class="text-slate-300 leading-relaxed">
+                        Facilitation of the Ministry advisory table to define the "Provincial Float Nurse" classification. We handle the feasibility analysis to project costs vs. current private agency expenditures.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="group bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 hover:bg-slate-800/80 transition-all duration-300">
+                    <div class="w-14 h-14 bg-blue-900/50 rounded-xl flex items-center justify-center mb-6 text-blue-400 group-hover:text-blue-300 group-hover:scale-110 transition-all">
+                        <i data-lucide="handshake" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Stakeholder Liaison</h3>
+                    <p class="text-slate-400 mb-6 text-xs font-bold uppercase tracking-wide bg-slate-900 inline-block px-2 py-1 rounded">Union & Clinical Alignment</p>
+                    <p class="text-slate-300 leading-relaxed">
+                        Bridging the gap between Ministry policy and ONA requirements. We mitigate "contracting out" risks by ensuring all pilot structures align with collective agreements from Day 1.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100">
+                <div class="grid grid-cols-1 md:grid-cols-12">
+                    <div class="md:col-span-8 p-10 md:p-14">
+                        <div class="flex items-center gap-4 mb-6">
+                            <h2 class="text-2xl font-bold text-slate-900">About the Lead Strategist</h2>
+                            <span class="h-px bg-slate-200 flex-grow"></span>
+                        </div>
+                        
+                        <h3 class="text-2xl text-blue-700 font-bold mb-6">Andrea Gomez, RN</h3>
+                        <p class="text-slate-600 mb-6 leading-relaxed text-lg">
+                            With over 20 years of high-acuity experience in ICU and Recovery, Andrea Gomez specializes in <strong>Clinical Translation</strong>—turning high-level healthcare policy into workable bedside reality. 
+                        </p>
+                        <p class="text-slate-600 mb-8 leading-relaxed text-lg">
+                            As the author of <em>Burnout to Balance</em> and the architect behind the <em>Ontario Retention Strategy</em> roadmap, she helps organizations stop hemorrhaging talent by redesigning the work itself, not just the payroll. Her expertise lies in identifying the "friction points" in clinical workflows that cause pilots to fail.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <span class="inline-flex items-center px-4 py-2 rounded-full bg-slate-100 text-slate-700 font-medium text-sm">
+                                <i data-lucide="map-pin" class="w-4 h-4 mr-2 text-blue-600"></i> Toronto, Ontario
+                            </span>
+                            <span class="inline-flex items-center px-4 py-2 rounded-full bg-slate-100 text-slate-700 font-medium text-sm">
+                                <i data-lucide="check-circle" class="w-4 h-4 mr-2 text-blue-600"></i> CNO Registered
+                            </span>
+                        </div>
+                    </div>
+                    <div class="md:col-span-4 bg-slate-100 border-l border-slate-200 p-10 flex flex-col justify-center relative">
+                        <!-- Decorative Quote Icon -->
+                        <div class="absolute top-8 left-8 text-slate-200">
+                            <i data-lucide="quote" class="w-12 h-12 transform -scale-x-100"></i>
+                        </div>
+                        <blockquote class="text-xl font-medium text-slate-800 italic mb-8 relative z-10">
+                            "You don't need just a plan; you need a translator who speaks 'bedside'."
+                        </blockquote>
+                        <!-- Protected Contact Button -->
+                        <a href="#" onclick="contactFirm(event)" class="group inline-flex items-center justify-center w-full px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-700 hover:bg-blue-800 transition-all">
+                            Contact Andrea 
+                            <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <span class="text-xl font-extrabold text-slate-900">ProRN Inc.</span>
+                <p class="text-sm text-slate-500 mt-1">Clinical Workforce Implementation</p>
+            </div>
+            <div class="flex space-x-6">
+                <!-- LinkedIn Active Link -->
+                <a href="https://www.linkedin.com/in/jag416" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-blue-700 transition-colors">
+                    <span class="sr-only">LinkedIn</span>
+                    <i data-lucide="linkedin" class="w-6 h-6"></i>
+                </a>
+                <!-- Protected Email Icon -->
+                <a href="#" onclick="contactFirm(event)" class="text-slate-400 hover:text-blue-700 transition-colors">
+                    <span class="sr-only">Email</span>
+                    <i data-lucide="mail" class="w-6 h-6"></i>
+                </a>
+            </div>
+            <div class="text-slate-500 text-sm">
+                &copy; 2026 ProRN Inc. Toronto, Ontario. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Email Protection Script
+        // This hides your email from bots by constructing it only on click
+        function contactFirm(e, subject) {
+            e.preventDefault();
+            // Breakdown of email parts
+            const user = 'andrea';
+            const domain = 'prorninc.com';
+            const address = user + '@' + domain;
+            
+            let mailtoLink = 'mailto:' + address;
+            
+            // Add subject line if provided (e.g., from Hero button)
+            if (subject) {
+                mailtoLink += '?subject=' + encodeURIComponent(subject);
+            }
+            
+            // Trigger the email client
+            window.location.href = mailtoLink;
+        }
+    </script>
+</body>
+</html>
