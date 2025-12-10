@@ -246,7 +246,7 @@
                         
                         <h3 class="text-2xl text-blue-700 font-bold mb-6">Andrea Gomez, RN</h3>
                         <p class="text-slate-600 mb-6 leading-relaxed text-lg">
-                            With over 25 years of high-acuity experience in ICU and Recovery, Andrea Gomez specializes in <strong>Clinical Translation</strong>—turning high-level healthcare policy into workable bedside reality. 
+                            With over 20 years of high-acuity experience in ICU and Recovery, Andrea Gomez specializes in <strong>Clinical Translation</strong>—turning high-level healthcare policy into workable bedside reality. 
                         </p>
                         <p class="text-slate-600 mb-8 leading-relaxed text-lg">
                             As the author of <em>Burnout to Balance</em> and the architect behind the <em>Ontario Retention Strategy</em> roadmap, she helps organizations stop hemorrhaging talent by redesigning the work itself, not just the payroll. Her expertise lies in identifying the "friction points" in clinical workflows that cause pilots to fail.
@@ -318,16 +318,25 @@
             const address = user + '@' + domain;
             
             let mailtoLink = 'mailto:' + address;
-            
-            // Add subject line if provided (e.g., from Hero button)
             if (subject) {
                 mailtoLink += '?subject=' + encodeURIComponent(subject);
             }
             
-            // Trigger the email client
-            window.location.href = mailtoLink;
+            // UX Improvement: Fail-Safe for Desktop
+            // 1. Copy email to clipboard so they have it if the app doesn't open.
+            // 2. Alert them so they know what happened.
+            // 3. Try to open the app.
+            
+            navigator.clipboard.writeText(address).then(() => {
+                alert("We have copied the email to your clipboard (" + address + ") and are opening your mail client.");
+                window.location.href = mailtoLink;
+            }).catch(err => {
+                // Fallback if clipboard fails (e.g. non-secure context)
+                // Using prompt allows user to manually copy
+                prompt("Here is our email address (Ctrl+C to copy):", address);
+                window.location.href = mailtoLink;
+            });
         }
     </script>
 </body>
 </html>
-
