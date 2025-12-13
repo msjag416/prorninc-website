@@ -126,11 +126,7 @@
                 </div>
 
                 <!-- Hero Image -->
-                <img id="heroImg" src="hero.jpg" alt="Virtual nursing consult" onerror="document.getElementById('heroFallback').style.display='block'; this.style.display='none';">
-<p id="heroFallback" style="display:none;">
-  Image not found. Please ensure 'hero.jpg' is in the same folder as this file.
-</p>
-
+            
                 <div class="relative lg:h-auto fade-in-up" style="animation-delay: 0.2s;">
                     <div class="absolute -inset-4 bg-blue-200 rounded-2xl blur-2xl opacity-30"></div>
                     <img 
@@ -141,13 +137,7 @@
                         onerror="this.style.display='none'; document.getElementById('image-error').style.display='flex';"
                     >
                     <!-- Fallback if image missing -->
-                    <div id="image-error" class="hidden absolute inset-0 bg-slate-100 rounded-2xl border border-slate-200 items-center justify-center text-center p-6">
-                        <div>
-                            <i data-lucide="image-off" class="w-12 h-12 text-slate-400 mx-auto mb-2"></i>
-                            <p class="text-slate-500 font-medium">Image not found.</p>
-                            <p class="text-slate-400 text-sm mt-1">Please ensure 'hero.jpg' is in the same folder as this file.</p>
-                        </div>
-                    </div>
+                   
 
                     <!-- Floating Badge -->
                     <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl border border-slate-100 hidden md:flex items-center gap-4">
@@ -892,4 +882,5 @@
     </script>
 </body>
 </html>
+
 
