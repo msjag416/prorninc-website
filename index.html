@@ -126,6 +126,11 @@
                 </div>
 
                 <!-- Hero Image -->
+                <img id="heroImg" src="hero.jpg" alt="Virtual nursing consult" onerror="document.getElementById('heroFallback').style.display='block'; this.style.display='none';">
+<p id="heroFallback" style="display:none;">
+  Image not found. Please ensure 'hero.jpg' is in the same folder as this file.
+</p>
+
                 <div class="relative lg:h-auto fade-in-up" style="animation-delay: 0.2s;">
                     <div class="absolute -inset-4 bg-blue-200 rounded-2xl blur-2xl opacity-30"></div>
                     <img 
@@ -887,3 +892,4 @@
     </script>
 </body>
 </html>
+
