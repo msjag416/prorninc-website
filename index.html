@@ -12,6 +12,7 @@
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     
     <!-- Google Fonts: Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -38,6 +39,9 @@
                 transform: translateY(0);
             }
         }
+        .section-anchor {
+            scroll-margin-top: 100px;
+        }
     </style>
 </head>
 <body class="text-slate-800 bg-white antialiased">
@@ -61,6 +65,7 @@
                     <a href="#expertise" class="text-sm font-medium text-slate-600 hover:text-blue-700 transition-colors">Expertise</a>
                     <a href="#services" class="text-sm font-medium text-slate-600 hover:text-blue-700 transition-colors">Services</a>
                     <a href="#about" class="text-sm font-medium text-slate-600 hover:text-blue-700 transition-colors">About</a>
+                    <a href="#proposal-start" class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full hover:bg-blue-100 transition-colors">View VN Proposal</a>
                 </div>
 
                 <!-- CTA Button (Protected) -->
@@ -102,7 +107,7 @@
                     </p>
                 </div>
 
-                <!-- Hero Image (UPDATED to local file) -->
+                <!-- Hero Image (Ensure your file is named hero.jpg) -->
                 <div class="relative lg:h-auto fade-in-up" style="animation-delay: 0.2s;">
                     <div class="absolute -inset-4 bg-blue-200 rounded-2xl blur-2xl opacity-30"></div>
                     <img 
@@ -136,8 +141,8 @@
         </div>
     </header>
 
-    <!-- Expertise Section (ID added for link functionality) -->
-    <section id="expertise" class="py-24 bg-white">
+    <!-- Expertise Section -->
+    <section id="expertise" class="py-24 bg-white section-anchor">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>
@@ -180,7 +185,7 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-24 bg-slate-900 text-white relative overflow-hidden">
+    <section id="services" class="py-24 bg-slate-900 text-white relative overflow-hidden section-anchor">
         <!-- Background decorative blob -->
         <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
 
@@ -194,8 +199,8 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="group bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 hover:bg-slate-800/80 transition-all duration-300">
+                <!-- Service 1: LINKED TO PROPOSAL SECTION -->
+                <a href="#proposal-start" class="block group bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 hover:bg-slate-800/80 transition-all duration-300">
                     <div class="w-14 h-14 bg-blue-900/50 rounded-xl flex items-center justify-center mb-6 text-blue-400 group-hover:text-blue-300 group-hover:scale-110 transition-all">
                         <i data-lucide="layout-dashboard" class="w-7 h-7"></i>
                     </div>
@@ -204,7 +209,10 @@
                     <p class="text-slate-300 leading-relaxed">
                         Design of the "Dyad Model" workflow. We define the specific Scope of Virtual Practice for admission/discharge to ensure the Virtual Nurse offloads 40% of administrative tasks without compromising safety.
                     </p>
-                </div>
+                    <div class="mt-4 text-blue-400 text-sm font-semibold flex items-center">
+                        Read Proposal <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                    </div>
+                </a>
 
                 <!-- Service 2 -->
                 <div class="group bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 hover:bg-slate-800/80 transition-all duration-300">
@@ -234,7 +242,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-24 bg-slate-50">
+    <section id="about" class="py-24 bg-slate-50 section-anchor">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100">
                 <div class="grid grid-cols-1 md:grid-cols-12">
@@ -251,6 +259,7 @@
                         <p class="text-slate-600 mb-8 leading-relaxed text-lg">
                             As the author of <em>Burnout to Balance</em> and the architect behind the <em>Ontario Retention Strategy</em> roadmap, she helps organizations stop hemorrhaging talent by redesigning the work itself, not just the payroll. Her expertise lies in identifying the "friction points" in clinical workflows that cause pilots to fail.
                         </p>
+
                         <div class="flex flex-wrap gap-4">
                             <span class="inline-flex items-center px-4 py-2 rounded-full bg-slate-100 text-slate-700 font-medium text-sm">
                                 <i data-lucide="map-pin" class="w-4 h-4 mr-2 text-blue-600"></i> Toronto, Ontario
@@ -279,27 +288,290 @@
         </div>
     </section>
 
+    <!-- PROPOSAL CONTENT STARTS HERE -->
+    
+    <!-- Proposal Header -->
+    <header id="proposal-start" class="relative bg-white pt-32 pb-20 border-t border-slate-200 section-anchor">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <span class="inline-block py-1 px-3 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold tracking-wide uppercase mb-4">
+                    Official Documentation
+                </span>
+                <h1 class="text-4xl tracking-tight font-extrabold text-slate-900 sm:text-5xl md:text-6xl mb-6">
+                    <span class="block">Proposal for a Provincial</span>
+                    <span class="block text-blue-700">Virtual Nursing Program in Ontario</span>
+                </h1>
+                <p class="mt-3 max-w-md mx-auto text-base text-slate-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+                    A formal, research-backed blueprint for enhancing patient care and nursing workforce sustainability through a government-funded virtual nursing model.
+                </p>
+                <div class="mt-10 flex justify-center gap-4">
+                    <a href="#rationale" class="flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-700 hover:bg-blue-800 md:py-4 md:text-lg transition shadow-md">
+                        Start Reading
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Proposal Content Grid -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+
+        <!-- Introduction -->
+        <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-8 section-anchor">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 border-b border-blue-100 pb-2">Introduction and Background</h2>
+            <p class="text-slate-600 leading-relaxed mb-4">
+                Ontario faces a severe nursing workforce challenge, with a projected shortfall of 33,000 nurses by 2028. This shortage demands innovative models of care delivery to maximize the reach and impact of our experienced Registered Nurses (RNs). One such innovation is virtual nursing; this leverages technology to allow RNs to provide patient care remotely. Virtual nursing gained traction during the pandemic and is now being systematically scaled by many health systems as a strategy to support bedside teams and retain veteran nurses.
+            </p>
+            <p class="text-slate-600 leading-relaxed">
+                This report proposes a provincial, government-funded virtual nursing program in Ontario that enables experienced RNs to work from home as “virtual nurses.” Unlike ad-hoc hospital or agency-run initiatives, a centrally administered program would ensure equitable access to virtual nursing services across the province. It would standardize quality and integrate strong guardrails to complement bedside care. The goal is a formal blueprint for the Ontario Ministry of Health’s Nursing and Professional Practice Division to consider.
+            </p>
+        </section>
+
+        <!-- Rationale -->
+        <section id="rationale" class="bg-white rounded-xl shadow-sm border border-slate-200 p-8 section-anchor">
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/3">
+                    <div class="bg-blue-50 p-6 rounded-lg h-full">
+                        <i class="fa-solid fa-scale-balanced text-blue-600 text-3xl mb-4"></i>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Government-Employer Model</h3>
+                        <p class="text-sm text-slate-600">
+                            A centralized approach promotes consistency, prevents competition between hospitals, and leverages economies of scale.
+                        </p>
+                    </div>
+                </div>
+                <div class="md:w-2/3">
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4 border-b border-blue-100 pb-2">Rationale for a Provincial Model</h2>
+                    <p class="text-slate-600 leading-relaxed mb-4">
+                        A provincially funded and managed virtual RN program provides several advantages over individual hospital or private agency approaches. Centralized oversight and funding would promote consistency in standards, training, and technology. This ensures that smaller or rural hospitals can benefit equally from virtual nursing support. Ontario has precedents for successful province-wide telehealth services. For example, the Health811 nurse advice line handles about 70,000 calls/chats per month from across Ontario via a centralized platform.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed">
+                        From a workforce perspective, a government-employer model permits better coordination of virtual RN deployment to areas of greatest need. It prevents a patchwork of differing hospital programs that compete for staff or develop redundant infrastructure. A provincial program can also set uniform employment conditions and collaborate with the Ontario Nurses’ Association (ONA). This ensures these remote roles support frontline staffing rather than undermine it.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Use Cases -->
+        <section id="use-cases" class="section-anchor">
+            <h2 class="text-3xl font-bold text-slate-900 mb-8 text-center">Virtual RN Use Cases and Benefits</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <!-- Card 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                    <div class="flex items-center mb-4">
+                        <div class="p-3 bg-green-100 rounded-full text-green-600 mr-4">
+                            <i class="fa-solid fa-hospital-user"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Discharge Education & Coordination</h3>
+                    </div>
+                    <p class="text-slate-600">
+                        Virtual RNs can take charge of discharge planning and patient teaching. At Baptist Memorial Hospital, virtual nurses conduct discharge education for surgical patients, fill out paperwork, and arrange to print discharge instructions. This process typically takes 15 minutes and ensures patients receive thorough counseling on medications and follow-up care. Dedicated discharge teaching has reduced readmissions in multiple jurisdictions.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                    <div class="flex items-center mb-4">
+                        <div class="p-3 bg-purple-100 rounded-full text-purple-600 mr-4">
+                            <i class="fa-solid fa-file-medical"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Admission Interview & Documentation</h3>
+                    </div>
+                    <p class="text-slate-600">
+                        Admission assessments involve history-taking and documentation rather than hands-on care. Virtual RNs can guide patients through admission questions and enter data directly into the electronic health record (EHR). Henry Ford Health identified admissions as a primary task to shift to virtual care. This accelerates bed flow and maintains documentation accuracy.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                    <div class="flex items-center mb-4">
+                        <div class="p-3 bg-orange-100 rounded-full text-orange-600 mr-4">
+                            <i class="fa-solid fa-chalkboard-user"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Patient Education & Consults</h3>
+                    </div>
+                    <p class="text-slate-600">
+                        Virtual RNs provide ongoing patient education during the hospital stay. They reinforce pre-surgery instructions and answer routine questions. Virtual nurses act as another approachable face of care, which increases patient satisfaction. They can also coordinate consults by arranging virtual family meetings or specialist consultations.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                    <div class="flex items-center mb-4">
+                        <div class="p-3 bg-red-100 rounded-full text-red-600 mr-4">
+                            <i class="fa-solid fa-video"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Safety Monitoring ("Virtual Sitter")</h3>
+                    </div>
+                    <p class="text-slate-600">
+                        Hospitals often require 1:1 patient sitters for those at risk of falls or delirium. Virtual "tele-sitter" technology allows one staff member to remotely monitor multiple patients via cameras. Virtual RNs can oversee camera feeds for acute cases where an RN’s assessment skills might detect subtle signs of distress. This adds a layer of fall prevention without pulling bedside staff away.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategy -->
+        <section class="bg-slate-800 text-white rounded-xl shadow-lg p-8 section-anchor">
+            <h2 class="text-2xl font-bold mb-6 border-b border-slate-600 pb-2">Low-Contention Rollout Strategy with Guardrails</h2>
+            <p class="mb-6 opacity-90">
+                Introducing virtual nursing into Ontario’s healthcare system requires careful planning to gain buy-in from frontline staff and unions. We propose a phased rollout starting with a pilot project under strict guardrails.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-slate-700 p-4 rounded-lg">
+                    <h4 class="font-bold text-blue-300 mb-2">No Reduction in Bedside RN Positions</h4>
+                    <p class="text-sm opacity-80">Participating hospitals must commit that virtual RNs will not result in any reduction of budgeted in-person RN staffing lines. The virtual program augments capacity; it does not replace it.</p>
+                </div>
+                <div class="bg-slate-700 p-4 rounded-lg">
+                    <h4 class="font-bold text-blue-300 mb-2">Clear Delineation of Tasks</h4>
+                    <p class="text-sm opacity-80">The program must establish a defined scope of practice. Virtual RNs may document admission history but will not perform wound care or administer medications.</p>
+                </div>
+                <div class="bg-slate-700 p-4 rounded-lg">
+                    <h4 class="font-bold text-blue-300 mb-2">Mandated Reporting</h4>
+                    <p class="text-sm opacity-80">Hospitals must transparently track virtual RN usage. Data on tasks performed and key outcomes will allow evaluation of the program’s impact.</p>
+                </div>
+                <div class="bg-slate-700 p-4 rounded-lg">
+                    <h4 class="font-bold text-blue-300 mb-2">Capped Pilot Scope</h4>
+                    <p class="text-sm opacity-80">The initial rollout should be limited in size and duration. We recommend a 12-month pilot with roughly 50 RNs across volunteer hospitals.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Examples -->
+        <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-8 section-anchor">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6 border-b border-blue-100 pb-2">Examples in Practice</h2>
+            <div class="space-y-6">
+                <div>
+                    <h3 class="text-lg font-bold text-blue-800">Henry Ford Health (Michigan, USA)</h3>
+                    <p class="text-slate-600 mt-1">
+                        Henry Ford launched a virtual acute care nursing program across its hospital system in 2025. Virtual RNs operate from a 24/7 command center and appear on patients’ in-room smart TVs via secure video. They perform admission interviews, discharge prep, safety rounds, and chart checks. In the first full month, virtual nurses logged 600+ hours on patient calls and completed approximately 24,700 tasks.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-blue-800">Baptist Memorial Health Care (Southern USA)</h3>
+                    <p class="text-slate-600 mt-1">
+                        Baptist began implementing virtual nurses in 2022. They utilize telepresence robots that the remote nurse can drive to patient rooms. Virtual nurses focus on admissions and discharges. By 2024, Baptist Memphis had virtual nurses handle approximately 6,000 hours of admission and discharge assessments in a year.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-blue-800">Canadian Telehealth Nursing Services</h3>
+                    <p class="text-slate-600 mt-1">
+                        Ontario’s Health811 nurse hotline and Telehomecare program demonstrate that nurses can successfully deliver remote assessments and health education at scale. Ottawa’s Telehome Monitoring program achieved major improvements in outcomes and cost savings, illustrating the potential impact of remote nursing care.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology -->
+        <section id="tech" class="bg-white rounded-xl shadow-sm border border-slate-200 p-8 section-anchor">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6 border-b border-blue-100 pb-2">Technology Infrastructure and Tools</h2>
+            <ul class="space-y-4 text-slate-600">
+                <li class="flex items-start">
+                    <i class="fa-solid fa-server text-blue-500 mt-1.5 mr-3"></i>
+                    <span><strong>Secure Remote Access to EHRs:</strong> Virtual RNs require secure VPN or cloud-based access to systems like Meditech, Cerner, or Epic to view charts and enter documentation in real time.</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fa-solid fa-video text-blue-500 mt-1.5 mr-3"></i>
+                    <span><strong>Video and Audio Communication:</strong> Implement standardized platforms for two-way video, such as wall-mounted screens or mobile carts. Systems must be HIPAA/PHIPA-compliant.</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fa-solid fa-microchip text-blue-500 mt-1.5 mr-3"></i>
+                    <span><strong>AI-Powered Documentation:</strong> Incorporate ambient clinical intelligence tools like Nuance Dragon Ambient eXperience (DAX) to assist with charting. This allows conversation to be auto-transcribed and summarized.</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fa-solid fa-house-laptop text-blue-500 mt-1.5 mr-3"></i>
+                    <span><strong>Home Office Hardware:</strong> The government should cover costs for high-performance computers, HD webcams, and secure network connectivity for all virtual RNs.</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Operational -->
+        <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-8 section-anchor">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6 border-b border-blue-100 pb-2">Operational Considerations</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="font-bold text-slate-800 mb-2">Scheduling and Shifts</h4>
+                    <p class="text-slate-600 text-sm mb-4">
+                        We recommend starting with 8-hour shifts to maintain focus. Coverage will likely be needed 18–24 hours a day. Hospitals will book virtual RN time slots for predictable tasks and have the ability to call on them for urgent needs.
+                    </p>
+                    <h4 class="font-bold text-slate-800 mb-2">Workflow Integration</h4>
+                    <p class="text-slate-600 text-sm">
+                        Each hospital unit needs protocols for engaging the virtual nurse. A regional hub or software platform will triage requests. Regular virtual huddles between on-duty virtual RNs and site liaisons will ensure smooth operations.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-slate-800 mb-2">HR and Unions</h4>
+                    <p class="text-slate-600 text-sm mb-4">
+                        Virtual RNs could be employed by Ontario Health or seconded from hospitals. Alignment with ONA contracts is necessary to ensure parity in wages and benefits.
+                    </p>
+                    <h4 class="font-bold text-slate-800 mb-2">Quality Assurance</h4>
+                    <p class="text-slate-600 text-sm">
+                        Continuous evaluation is required. Key performance indicators include patient satisfaction, nurse burnout levels, documentation accuracy, and clinical outcomes like readmission rates.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section id="conclusion" class="bg-blue-900 text-white rounded-xl shadow-lg p-8 section-anchor">
+            <h2 class="text-2xl font-bold mb-4">Conclusion and Recommendations</h2>
+            <p class="mb-6 opacity-90 leading-relaxed">
+                Ontario’s Nursing and Professional Practice Division has an opportunity to lead a transformative initiative. This proposal lays out the justification for a government-employer model that enables experienced RNs to provide virtual care. This is additive; it extends the reach of every nurse and relieves burden from on-site staff.
+            </p>
+            <div class="bg-blue-800 rounded-lg p-6 border border-blue-700">
+                <h3 class="font-bold text-lg mb-4 text-blue-200">Key Recommendations</h3>
+                <ol class="list-decimal list-inside space-y-3 opacity-90 text-sm">
+                    <li><span class="font-bold">Launch a Pilot in 2026:</span> Convene a project team early in the year and select 3–5 diverse hospitals.</li>
+                    <li><span class="font-bold">Establish Governance:</span> Create a steering committee and partner with technology providers.</li>
+                    <li><span class="font-bold">Develop Training:</span> Conduct simulations and training for both virtual and unit staff.</li>
+                    <li><span class="font-bold">Monitor Rigorously:</span> Define KPIs and produce a comprehensive evaluation after 12 months.</li>
+                    <li><span class="font-bold">Plan for Scale-Up:</span> Draft an expansion strategy while maintaining core guardrails.</li>
+                </ol>
+            </div>
+            <p class="mt-6 text-sm opacity-80 italic">
+                "It maximizes their impact by removing some physical barriers of location and allowing them to focus on their knowledge and therapeutic communication."
+            </p>
+        </section>
+
+        <!-- Sources -->
+        <section class="bg-slate-100 rounded-xl p-8 border border-slate-200">
+            <h3 class="text-lg font-bold text-slate-800 mb-4">Sources Cited</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-slate-500">
+                <p>Baptist Memorial Health Care – virtual nursing program overview.</p>
+                <p>Henry Ford Health – press release on virtual nursing launch.</p>
+                <p>Becker’s Hospital Review – report on Henry Ford’s pilot results.</p>
+                <p>Online Journal of Issues in Nursing – case study on community hospital programs.</p>
+                <p>Canadian Healthcare Technology – article on Health811 expansion.</p>
+                <p>Critical Care Services Ontario – description of Virtual Critical Care.</p>
+                <p>Ottawa Heart Institute – Telehome Monitoring program results.</p>
+                <p>American Hospital Association – notes on ambient AI documentation.</p>
+                <p>Chief Healthcare Executive – report on Nuance DAX AI tools.</p>
+                <p>Hospital News (Ontario) – nursing shortage projections.</p>
+            </div>
+        </section>
+
+    </div>
+
     <!-- Footer -->
-    <footer class="bg-white border-t border-slate-200 py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+    <footer class="bg-slate-900 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="text-center md:text-left">
-                <span class="text-xl font-extrabold text-slate-900">ProRN Inc.</span>
-                <p class="text-sm text-slate-500 mt-1">Clinical Workforce Implementation</p>
+                <span class="text-xl font-extrabold text-white">ProRN Inc.</span>
+                <p class="text-sm text-slate-400 mt-1">Clinical Workforce Implementation</p>
             </div>
             <div class="flex space-x-6">
                 <!-- LinkedIn Active Link -->
-                <a href="https://www.linkedin.com/in/jag416" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-blue-700 transition-colors">
+                <a href="https://www.linkedin.com/in/jag416" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-blue-500 transition-colors">
                     <span class="sr-only">LinkedIn</span>
                     <i data-lucide="linkedin" class="w-6 h-6"></i>
                 </a>
                 <!-- Protected Email Icon -->
-                <a href="#" onclick="contactFirm(event)" class="text-slate-400 hover:text-blue-700 transition-colors">
+                <a href="#" onclick="contactFirm(event)" class="text-slate-400 hover:text-blue-500 transition-colors">
                     <span class="sr-only">Email</span>
                     <i data-lucide="mail" class="w-6 h-6"></i>
                 </a>
             </div>
             <div class="text-slate-500 text-sm">
-                &copy; 2026 ProRN Inc. Toronto, Ontario. All rights reserved.
+                &copy; 2026 ProRN Inc. Toronto, Ontario All rights reserved.
             </div>
         </div>
     </footer>
@@ -309,10 +581,8 @@
         lucide.createIcons();
 
         // Email Protection Script
-        // This hides your email from bots by constructing it only on click
         function contactFirm(e, subject) {
             e.preventDefault();
-            // Breakdown of email parts
             const user = 'andrea';
             const domain = 'prorninc.com';
             const address = user + '@' + domain;
@@ -322,17 +592,10 @@
                 mailtoLink += '?subject=' + encodeURIComponent(subject);
             }
             
-            // UX Improvement: Fail-Safe for Desktop
-            // 1. Copy email to clipboard so they have it if the app doesn't open.
-            // 2. Alert them so they know what happened.
-            // 3. Try to open the app.
-            
             navigator.clipboard.writeText(address).then(() => {
                 alert("We have copied the email to your clipboard (" + address + ") and are opening your mail client.");
                 window.location.href = mailtoLink;
             }).catch(err => {
-                // Fallback if clipboard fails (e.g. non-secure context)
-                // Using prompt allows user to manually copy
                 prompt("Here is our email address (Ctrl+C to copy):", address);
                 window.location.href = mailtoLink;
             });
