@@ -69,12 +69,29 @@
                     <a href="#pool-implementation" class="text-sm font-medium text-green-700 bg-green-50 px-3 py-1 rounded-full hover:bg-green-100 transition-colors">RN Float Pool</a>
                 </div>
 
-                <!-- CTA Button (Protected) -->
-                <div>
-                    <a href="#" onclick="contactFirm(event)" class="inline-flex items-center px-6 py-2.5 border border-transparent text-sm font-semibold rounded-lg text-white bg-blue-900 hover:bg-blue-800 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-900 transition-all duration-200">
+                <!-- CTA Button and Mobile Menu Toggle -->
+                <div class="flex items-center gap-4">
+                    <!-- CTA Button (Protected) -->
+                    <a href="#" onclick="contactFirm(event)" class="inline-flex items-center px-4 py-2 sm:px-6 sm:py-2.5 border border-transparent text-sm font-semibold rounded-lg text-white bg-blue-900 hover:bg-blue-800 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-900 transition-all duration-200">
                         Contact Us
                     </a>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="md:hidden text-slate-600 hover:text-blue-700 focus:outline-none">
+                        <i data-lucide="menu" class="w-7 h-7"></i>
+                    </button>
                 </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 shadow-xl absolute w-full left-0">
+            <div class="px-4 py-4 space-y-2">
+                <a href="#expertise" class="block px-4 py-3 rounded-lg text-base font-medium text-slate-600 hover:text-blue-700 hover:bg-slate-50 transition-colors">Expertise</a>
+                <a href="#services" class="block px-4 py-3 rounded-lg text-base font-medium text-slate-600 hover:text-blue-700 hover:bg-slate-50 transition-colors">Services</a>
+                <a href="#about" class="block px-4 py-3 rounded-lg text-base font-medium text-slate-600 hover:text-blue-700 hover:bg-slate-50 transition-colors">About</a>
+                <a href="#proposal-start" class="block px-4 py-3 rounded-lg text-base font-medium text-blue-700 bg-blue-50 hover:bg-blue-100 transition-colors">View VN Proposal</a>
+                <a href="#pool-implementation" class="block px-4 py-3 rounded-lg text-base font-medium text-green-700 bg-green-50 hover:bg-green-100 transition-colors">RN Float Pool</a>
             </div>
         </div>
     </nav>
@@ -822,6 +839,12 @@
                 window.location.href = mailtoLink;
             });
         }
+        
+        // Mobile Menu Toggle Script
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
     </script>
 </body>
 </html>
