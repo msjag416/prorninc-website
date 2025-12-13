@@ -129,7 +129,7 @@
                 <div class="relative lg:h-auto fade-in-up" style="animation-delay: 0.2s;">
                     <div class="absolute -inset-4 bg-blue-200 rounded-2xl blur-2xl opacity-30"></div>
                     <img 
-                        src="hero.jpg" 
+                        src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
                         alt="Virtual nurse monitoring patient data on dual screens while conducting a video assessment, representing the ProRN Inc. Dyad Model" 
                         class="relative rounded-2xl shadow-2xl border border-slate-200 w-full object-cover h-[400px] lg:h-[500px]"
                         loading="eager"
@@ -285,6 +285,7 @@
                             <span class="inline-flex items-center px-4 py-2 rounded-full bg-slate-100 text-slate-700 font-medium text-sm">
                                 <i data-lucide="map-pin" class="w-4 h-4 mr-2 text-blue-600"></i> Toronto, Ontario
                             </span>
+                            
                             <span class="inline-flex items-center px-4 py-2 rounded-full bg-slate-100 text-slate-700 font-medium text-sm">
                                 <i data-lucide="check-circle" class="w-4 h-4 mr-2 text-blue-600"></i> CNO Registered
                             </span>
@@ -815,9 +816,32 @@
         </div>
     </footer>
 
+    <!-- Toast Notification (Replaces Alert) -->
+    <div id="toast-notification" class="fixed bottom-4 right-4 z-50 transform transition-all duration-300 translate-y-24 opacity-0">
+        <div class="bg-slate-800 text-white px-6 py-4 rounded-lg shadow-xl flex items-center gap-3 border border-slate-700">
+            <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+            <span id="toast-message" class="font-medium text-sm">Notification</span>
+        </div>
+    </div>
+
     <script>
         // Initialize Icons
         lucide.createIcons();
+
+        // Toast Function
+        function showToast(message) {
+            const container = document.getElementById('toast-notification');
+            const msgSpan = document.getElementById('toast-message');
+            msgSpan.textContent = message;
+            
+            // Show
+            container.classList.remove('translate-y-24', 'opacity-0');
+            
+            // Hide after 3s
+            setTimeout(() => {
+                container.classList.add('translate-y-24', 'opacity-0');
+            }, 3000);
+        }
 
         // Email Protection Script
         function contactFirm(e, subject) {
@@ -832,11 +856,15 @@
             }
             
             navigator.clipboard.writeText(address).then(() => {
-                alert("We have copied the email to your clipboard (" + address + ") and are opening your mail client.");
-                window.location.href = mailtoLink;
+                showToast("Email copied to clipboard. Opening mail client...");
+                setTimeout(() => {
+                    window.location.href = mailtoLink;
+                }, 1000);
             }).catch(err => {
-                prompt("Here is our email address (Ctrl+C to copy):", address);
-                window.location.href = mailtoLink;
+                showToast("Could not copy automatically. Email: " + address);
+                setTimeout(() => {
+                    window.location.href = mailtoLink;
+                }, 2000);
             });
         }
         
