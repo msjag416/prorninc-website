@@ -12,8 +12,10 @@
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome for Inner Proposal Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Font Awesome (Lazy Loaded for Performance) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     
     <!-- Google Fonts: Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -97,7 +99,7 @@
     </nav>
 
     <!-- Dynamic Hero Section -->
-    <header class="relative pt-32 pb-16 lg:pt-40 lg:pb-24 overflow-hidden bg-slate-50">
+    <header class="relative pt-24 pb-12 sm:pt-32 sm:pb-16 lg:pt-40 lg:pb-24 overflow-hidden bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 
@@ -119,25 +121,28 @@
                             View Services
                         </a>
                     </div>
-                    <p class="mt-6 text-sm text-slate-500 flex items-center">
+                    <!-- Increased contrast from slate-500 to slate-600 -->
+                    <p class="mt-6 text-sm text-slate-600 flex items-center">
                         <i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i>
                         Booking Q1 2026 Consultations
                     </p>
                 </div>
 
                 <!-- Hero Image -->
-            
                 <div class="relative lg:h-auto fade-in-up" style="animation-delay: 0.2s;">
                     <div class="absolute -inset-4 bg-blue-200 rounded-2xl blur-2xl opacity-30"></div>
+                    <!-- Updated Hero Image Path -->
                     <img 
-                        src="hero.jpg" 
+                        src="https://raw.githubusercontent.com/msjag416/prorninc-website/main/hero.jpg" 
                         alt="Virtual nurse monitoring patient data on dual screens while conducting a video assessment, representing the ProRN Inc. Dyad Model" 
                         class="relative rounded-2xl shadow-2xl border border-slate-200 w-full object-cover h-[400px] lg:h-[500px]"
                         loading="eager"
                         onerror="this.style.display='none'; document.getElementById('image-error').style.display='flex';"
                     >
                     <!-- Fallback if image missing -->
-                   
+                    <div id="image-error" class="hidden absolute inset-0 bg-slate-200 rounded-2xl items-center justify-center text-slate-500 border border-slate-300">
+                        <span class="flex items-center gap-2"><i data-lucide="image-off"></i> Image unavailable</span>
+                    </div>
 
                     <!-- Floating Badge -->
                     <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl border border-slate-100 hidden md:flex items-center gap-4">
@@ -145,7 +150,8 @@
                             <i data-lucide="activity" class="w-6 h-6"></i>
                         </div>
                         <div>
-                            <p class="text-xs text-slate-500 font-semibold uppercase">Reduction in Agency Spend</p>
+                            <!-- Increased contrast from slate-500 to slate-600 -->
+                            <p class="text-xs text-slate-600 font-semibold uppercase">Reduction in Agency Spend</p>
                             <p class="text-xl font-bold text-slate-900">Projected 40%</p>
                         </div>
                     </div>
@@ -206,7 +212,8 @@
             <div class="text-center mb-16">
                 <span class="text-blue-400 font-bold tracking-wider uppercase text-sm">Scope of Work</span>
                 <h2 class="text-3xl md:text-4xl font-bold mt-2">Specialized Implementation Phases</h2>
-                <p class="text-slate-400 mt-4 max-w-2xl mx-auto text-lg">
+                <!-- Increased contrast from slate-400 to slate-300 for dark mode -->
+                <p class="text-slate-300 mt-4 max-w-2xl mx-auto text-lg">
                     We do not replace your internal teams. We lead the high-risk phases requiring clinical and regulatory precision.
                 </p>
             </div>
@@ -218,7 +225,8 @@
                         <i data-lucide="layout-dashboard" class="w-7 h-7"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Virtual Nursing Pilot Lead</h3>
-                    <p class="text-slate-400 mb-6 text-xs font-bold uppercase tracking-wide bg-slate-900 inline-block px-2 py-1 rounded">Phase 1 & 2 Strategy</p>
+                    <!-- Increased contrast from slate-400 to slate-300 -->
+                    <p class="text-slate-300 mb-6 text-xs font-bold uppercase tracking-wide bg-slate-900 inline-block px-2 py-1 rounded">Phase 1 & 2 Strategy</p>
                     <p class="text-slate-300 leading-relaxed">
                         Design of the "Dyad Model" workflow. We define the specific Scope of Virtual Practice for admission/discharge to ensure the Virtual Nurse offloads 40% of administrative tasks without compromising safety.
                     </p>
@@ -233,7 +241,8 @@
                         <i data-lucide="users" class="w-7 h-7"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Float Pool Architect</h3>
-                    <p class="text-slate-400 mb-6 text-xs font-bold uppercase tracking-wide bg-slate-900 inline-block px-2 py-1 rounded">Governance & Feasibility</p>
+                    <!-- Increased contrast from slate-400 to slate-300 -->
+                    <p class="text-slate-300 mb-6 text-xs font-bold uppercase tracking-wide bg-slate-900 inline-block px-2 py-1 rounded">Governance & Feasibility</p>
                     <p class="text-slate-300 leading-relaxed">
                         Facilitation of the Ministry advisory table to define the "Provincial Float Nurse" classification. We handle the feasibility analysis to project costs vs. current private agency expenditures.
                     </p>
@@ -248,7 +257,8 @@
                         <i data-lucide="handshake" class="w-7 h-7"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Stakeholder Liaison</h3>
-                    <p class="text-slate-400 mb-6 text-xs font-bold uppercase tracking-wide bg-slate-900 inline-block px-2 py-1 rounded">Union & Clinical Alignment</p>
+                    <!-- Increased contrast from slate-400 to slate-300 -->
+                    <p class="text-slate-300 mb-6 text-xs font-bold uppercase tracking-wide bg-slate-900 inline-block px-2 py-1 rounded">Union & Clinical Alignment</p>
                     <p class="text-slate-300 leading-relaxed">
                         Bridging the gap between Ministry policy and ONA requirements. We mitigate "contracting out" risks by ensuring all pilot structures align with collective agreements from Day 1.
                     </p>
@@ -273,7 +283,7 @@
                             With over 25 years of high-acuity experience in ICU and Recovery, Andrea Gomez specializes in <strong>Clinical Translation</strong>—turning high-level healthcare policy into workable bedside reality. 
                         </p>
                         <p class="text-slate-600 mb-8 leading-relaxed text-lg">
-                            As the author of <em>Burnout to Balance</em> and the architect behind the <em>Ontario Retention Strategy</em> roadmap, she helps organizations stop hemorrhaging talent by redesigning the work itself, not just the payroll. Her expertise lies in identifying the "friction points" in clinical workflows that cause pilots to fail.
+                            As the author of <em>Burnout to Balance: Your 8-Step Guide to Thriving in a Messy Workplace</em> and the architect behind the <em>Ontario Retention Strategy</em> roadmap, she helps organizations stop hemorrhaging talent by redesigning the work itself, not just the payroll. Her expertise lies in identifying the "friction points" in clinical workflows that cause pilots to fail.
                         </p>
 
                         <div class="flex flex-wrap gap-4">
@@ -317,7 +327,8 @@
                     <span class="block">Proposal for a Provincial</span>
                     <span class="block text-blue-700">Virtual Nursing Program in Ontario</span>
                 </h1>
-                <p class="mt-3 max-w-md mx-auto text-base text-slate-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+                <!-- Increased contrast from slate-500 to slate-600 -->
+                <p class="mt-3 max-w-md mx-auto text-base text-slate-600 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
                     A formal, research-backed blueprint for enhancing patient care and nursing workforce sustainability through a government-funded virtual nursing model.
                 </p>
             </div>
@@ -544,7 +555,7 @@
 
         <section class="bg-slate-100 rounded-xl p-8 border border-slate-200">
             <h3 class="text-lg font-bold text-slate-800 mb-4">VN Proposal Sources Cited</h3>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-slate-500">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-slate-600">
                 <p>Baptist Memorial Health Care – virtual nursing program overview.</p>
                 <p>Henry Ford Health – press release on virtual nursing launch.</p>
                 <p>Becker’s Hospital Review – report on Henry Ford’s pilot results.</p>
@@ -570,7 +581,8 @@
                 <h1 class="text-4xl tracking-tight font-extrabold text-slate-900 sm:text-5xl md:text-5xl mb-6">
                     Ontario Nursing Pool and Scheduling Implementation
                 </h1>
-                <p class="mt-3 max-w-md mx-auto text-base text-slate-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+                <!-- Increased contrast from slate-500 to slate-600 -->
+                <p class="mt-3 max-w-md mx-auto text-base text-slate-600 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
                     Introduction and Background on addressing staffing shortages through centralized solutions.
                 </p>
             </div>
@@ -598,6 +610,7 @@
                     <div class="bg-blue-50 p-6 rounded-lg h-full">
                         <i class="fa-solid fa-chart-line text-blue-600 text-3xl mb-4"></i>
                         <h3 class="text-xl font-bold text-slate-900 mb-2">Financial Impact</h3>
+                        <!-- Increased contrast from slate-500 to slate-600 -->
                         <p class="text-sm text-slate-600">
                             Agency expenditures have skyrocketed since the COVID-19 pandemic. In 2022–23, total agency staffing costs neared $953 million.
                         </p>
@@ -772,7 +785,7 @@
 
         <section class="bg-slate-100 rounded-xl p-8 border border-slate-200">
             <h3 class="text-lg font-bold text-slate-800 mb-4">Sources Cited</h3>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-slate-500">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-slate-600">
                 <p>Canadian Health Coalition – “The use of agency nursing is exploding” (Aug 2023).</p>
                 <p>Global News / Canadian Press – “Ontario hospitals spent over $9B on agency staff over 10 years” (May 2025).</p>
                 <p>Policy Alternatives (CCPA) – “Hollowed Out: Ontario public hospitals and the rise of private staffing agencies” (Nov 2023).</p>
@@ -791,22 +804,22 @@
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="text-center md:text-left">
                 <span class="text-xl font-extrabold text-white">ProRN Inc.</span>
-                <p class="text-sm text-slate-400 mt-1">Clinical Workforce Implementation</p>
+                <p class="text-sm text-slate-300 mt-1">Clinical Workforce Implementation</p>
             </div>
             <div class="flex space-x-6">
                 <!-- LinkedIn Active Link -->
-                <a href="https://www.linkedin.com/in/jag416" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-blue-500 transition-colors">
+                <a href="https://www.linkedin.com/in/jag416" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-blue-500 transition-colors">
                     <span class="sr-only">LinkedIn</span>
                     <i data-lucide="linkedin" class="w-6 h-6"></i>
                 </a>
                 <!-- Protected Email Icon -->
-                <a href="#" onclick="contactFirm(event)" class="text-slate-400 hover:text-blue-500 transition-colors">
+                <a href="#" onclick="contactFirm(event)" class="text-slate-300 hover:text-blue-500 transition-colors">
                     <span class="sr-only">Email</span>
                     <i data-lucide="mail" class="w-6 h-6"></i>
                 </a>
             </div>
             <div class="text-slate-500 text-sm">
-                &copy; 2026 ProRN Inc. Toronto, Ontario All rights reserved.
+                &copy; <span id="current-year"></span> ProRN Inc. Toronto, Ontario All rights reserved.
             </div>
         </div>
     </footer>
@@ -822,6 +835,9 @@
     <script>
         // Initialize Icons
         lucide.createIcons();
+
+        // Set Current Year Dynamically
+        document.getElementById('current-year').textContent = new Date().getFullYear();
 
         // Toast Function
         function showToast(message) {
@@ -841,9 +857,10 @@
         // Email Protection Script
         function contactFirm(e, subject) {
             e.preventDefault();
-            const user = 'andrea';
-            const domain = 'prorninc.com';
-            const address = user + '@' + domain;
+            
+            // ASCII Character codes for andrea@prorninc.com to bypass static scrapers
+            const _0x1a2b = [97, 110, 100, 114, 101, 97, 64, 112, 114, 111, 114, 110, 105, 110, 99, 46, 99, 111, 109];
+            const address = String.fromCharCode(..._0x1a2b);
             
             let mailtoLink = 'mailto:' + address;
             if (subject) {
@@ -882,5 +899,3 @@
     </script>
 </body>
 </html>
-
-
