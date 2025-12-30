@@ -844,83 +844,236 @@
                 </a>
             </div>
             <div class="text-slate-500 text-sm">
-                &copy; <span id="current-year"></span> ProRN Inc. Toronto, Ontario All rights reserved.
+                &copy; <span id="current-year"></span> ProRN Inc. Toronto, Ontario. All rights reserved.
             </div>
         </div>
     </footer>
 
     <!-- Toast Notification (Replaces Alert) -->
-    <div id="toast-notification" class="fixed bottom-4 right-4 z-50 transform transition-all duration-300 translate-y-24 opacity-0">
+    <div id="toast-notification" class="fixed bottom-4 right-4 z-[10000] transform transition-all duration-300 translate-y-24 opacity-0">
         <div class="bg-slate-800 text-white px-6 py-4 rounded-lg shadow-xl flex items-center gap-3 border border-slate-700">
             <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
             <span id="toast-message" class="font-medium text-sm">Notification</span>
         </div>
     </div>
-
-    <script>
-        // Initialize Icons
-        lucide.createIcons();
-
-        // Set Current Year Dynamically
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-
-        // Toast Function
-        function showToast(message) {
-            const container = document.getElementById('toast-notification');
-            const msgSpan = document.getElementById('toast-message');
-            msgSpan.textContent = message;
-            
-            // Show
-            container.classList.remove('translate-y-24', 'opacity-0');
-            
-            // Hide after 3s
-            setTimeout(() => {
-                container.classList.add('translate-y-24', 'opacity-0');
-            }, 3000);
+    
+    <!-- Voice Assistant Chat Widget with Toggle -->
+<style>
+    #voice-assistant-widget {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 9999;
+        font-family: 'Inter', sans-serif;
+    }
+    
+    #voice-assistant-container {
+        display: none;
+        margin-bottom: 16px;
+        width: 400px;
+    }
+    
+    #voice-assistant-iframe {
+        width: 400px;
+        height: 550px;
+        border: none;
+        border-radius: 0 0 10px 10px;
+        display: block;
+    }
+    
+    /* Mobile Responsive */
+    @media (max-width: 480px) {
+        #voice-assistant-widget {
+            bottom: 0;
+            right: 0;
+            left: 0;
+            padding: 0;
         }
+        
+        #voice-assistant-widget.widget-open {
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+        }
+        
+        #voice-assistant-container {
+            width: 100%;
+            max-width: 100%;
+            margin: auto 0 0 0;
+            max-height: calc(100vh - 20px);
+        }
+        
+        #voice-assistant-iframe {
+            width: 100%;
+            height: calc(100vh - 80px);
+            max-height: 600px;
+        }
+        
+        #voice-assistant-toggle {
+            position: fixed;
+            bottom: 16px;
+            right: 16px;
+        }
+    }
+</style>
 
-        // Email Protection Script
-        function contactFirm(e, subject) {
-            e.preventDefault();
-            
-            // ASCII Character codes for andrea@prorninc.com to bypass static scrapers
-            const _0x1a2b = [97, 110, 100, 114, 101, 97, 64, 112, 114, 111, 114, 110, 105, 110, 99, 46, 99, 111, 109];
-            const address = String.fromCharCode(..._0x1a2b);
-            
-            let mailtoLink = 'mailto:' + address;
-            if (subject) {
-                mailtoLink += '?subject=' + encodeURIComponent(subject);
+<div id="voice-assistant-widget">
+    
+    <!-- Chat Window (Hidden by Default) -->
+    <div id="voice-assistant-container">
+        <div style="background: #1e3a5f; color: white; padding: 12px 16px; border-radius: 10px 10px 0 0; display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-weight: 600; font-size: 14px;">ProRN Assistant</span>
+            <button onclick="toggleVoiceAssistant()" style="background: none; border: none; color: white; cursor: pointer; padding: 4px; display: flex; align-items: center; justify-content: center;" aria-label="Close assistant">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <iframe 
+            id="voice-assistant-iframe"
+            src="about:blank"
+            data-src="https://prorn-inc-ai-voice-assistant-624237507602.us-west1.run.app/"
+            allow="microphone"
+            title="ProRN Voice Assistant"
+        ></iframe>
+    </div>
+    
+    <!-- Toggle Button -->
+    <button id="voice-assistant-toggle" onclick="toggleVoiceAssistant()" aria-label="Open voice assistant" style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%); border: none; cursor: pointer; box-shadow: 0 4px 12px rgba(30, 64, 175, 0.4); display: flex; align-items: center; justify-content: center; transition: transform 0.2s ease, box-shadow 0.2s ease; margin-left: auto;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+            <line x1="12" y1="19" x2="12" y2="23"></line>
+            <line x1="8" y1="23" x2="16" y2="23"></line>
+        </svg>
+    </button>
+</div>
+
+<script>
+    // Initialize Icons
+    lucide.createIcons();
+
+    // Set Current Year Dynamically
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    /* --- Voice Assistant Logic --- */
+    let voiceAssistantOpen = false;
+    let voiceAssistantLoaded = false;
+    
+    function toggleVoiceAssistant() {
+        const widget = document.getElementById('voice-assistant-widget');
+        const container = document.getElementById('voice-assistant-container');
+        const toggle = document.getElementById('voice-assistant-toggle');
+        const iframe = document.getElementById('voice-assistant-iframe');
+        
+        voiceAssistantOpen = !voiceAssistantOpen;
+        
+        if (voiceAssistantOpen) {
+            // Lazy load iframe on first open
+            if (!voiceAssistantLoaded) {
+                iframe.src = iframe.dataset.src;
+                voiceAssistantLoaded = true;
             }
+            container.style.display = 'block';
+            toggle.style.display = 'none';
+            widget.classList.add('widget-open');
             
-            navigator.clipboard.writeText(address).then(() => {
-                showToast("Email copied to clipboard. Opening mail client...");
-                setTimeout(() => {
-                    window.location.href = mailtoLink;
-                }, 1000);
-            }).catch(err => {
-                showToast("Could not copy automatically. Email: " + address);
-                setTimeout(() => {
-                    window.location.href = mailtoLink;
-                }, 2000);
-            });
+            // Prevent body scroll on mobile when widget is open
+            if (window.innerWidth <= 480) {
+                document.body.style.overflow = 'hidden';
+            }
+        } else {
+            container.style.display = 'none';
+            toggle.style.display = 'flex';
+            widget.classList.remove('widget-open');
+            document.body.style.overflow = '';
+        }
+    }
+    
+    // Hover effect for toggle button
+    const toggleBtn = document.getElementById('voice-assistant-toggle');
+    if (toggleBtn) {
+        toggleBtn.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.1)';
+            this.style.boxShadow = '0 6px 16px rgba(30, 64, 175, 0.5)';
+        });
+        toggleBtn.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+            this.style.boxShadow = '0 4px 12px rgba(30, 64, 175, 0.4)';
+        });
+    }
+    
+    // Close on escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && voiceAssistantOpen) {
+            toggleVoiceAssistant();
+        }
+    });
+
+    /* --- Main Site Logic --- */
+
+    // Toast Function
+    function showToast(message) {
+        const container = document.getElementById('toast-notification');
+        const msgSpan = document.getElementById('toast-message');
+        msgSpan.textContent = message;
+        
+        // Show
+        container.classList.remove('translate-y-24', 'opacity-0');
+        
+        // Hide after 3s
+        setTimeout(() => {
+            container.classList.add('translate-y-24', 'opacity-0');
+        }, 3000);
+    }
+
+    // Email Protection Script
+    function contactFirm(e, subject) {
+        e.preventDefault();
+        
+        // ASCII Character codes for andrea@prorninc.com to bypass static scrapers
+        const _0x1a2b = [97, 110, 100, 114, 101, 97, 64, 112, 114, 111, 114, 110, 105, 110, 99, 46, 99, 111, 109];
+        const address = String.fromCharCode(..._0x1a2b);
+        
+        let mailtoLink = 'mailto:' + address;
+        if (subject) {
+            mailtoLink += '?subject=' + encodeURIComponent(subject);
         }
         
-        // Mobile Menu Toggle Script
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileBtn = document.getElementById('mobile-menu-btn');
-        
-        // Toggle menu visibility
+        navigator.clipboard.writeText(address).then(() => {
+            showToast("Email copied to clipboard. Opening mail client...");
+            setTimeout(() => {
+                window.location.href = mailtoLink;
+            }, 1000);
+        }).catch(err => {
+            showToast("Could not copy automatically. Email: " + address);
+            setTimeout(() => {
+                window.location.href = mailtoLink;
+            }, 2000);
+        });
+    }
+    
+    // Mobile Menu Toggle Script
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    
+    // Toggle menu visibility
+    if (mobileBtn) {
         mobileBtn.addEventListener('click', function() {
             mobileMenu.classList.toggle('hidden');
         });
+    }
 
-        // Close menu when a link inside it is clicked
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
+    // Close menu when a link inside it is clicked
+    const mobileLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
         });
-    </script>
+    });
+</script>
 </body>
 </html>
