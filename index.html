@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProRN Inc. | Strategic Healthcare Workforce Solutions</title>
     <meta name="description" content="Operationalizing Provincial Nursing Retention Strategies. Specialized in Inpatient Virtual Nursing Pilots, Centralized Float Pools, and Clinical Workflow Design.">
-    <meta name="keywords" content="Virtual Nursing Canada, Nursing Float Pool, Healthcare Consultant, Nursing Retention Strategy, Andrea Gomez RN, Provincial Healthcare Strategy, ICH GCP Certified, Medical Writer, Healthcare AI">
+    <meta name="keywords" content="Virtual Nursing Canada, Nursing Float Pool, Healthcare Consultant, Nursing Retention Strategy, Andrea Gomez RN, Provincial Healthcare Strategy">
 
+    <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -26,116 +27,294 @@
           "name": "ProRN Inc.",
           "url": "https://prorninc.com/",
           "description": "Healthcare consulting firm specializing in provincial nursing retention strategies, virtual nursing program design, and centralized float pool implementation for Canadian healthcare systems.",
-          "founder": { "@id": "https://prorninc.com/resume#person" },
+          "founder": { "@id": "https://www.andreagomez.com/#person" },
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Toronto",
             "addressRegion": "ON",
             "addressCountry": "CA"
           },
-          "areaServed": { "@type": "Country", "name": "Canada" },
-          "knowsAbout": ["Virtual Nursing Programs","Provincial Float Pools","Nursing Retention Strategy","Healthcare Workforce Planning","Clinical Workflow Design","Union Collective Agreement Compliance","Healthcare Policy Implementation","Nursing Agency Cost Reduction","Good Clinical Practice","Medical Writing","Healthcare AI","HIPAA","PHIPA","GDPR"],
-          "sameAs": ["https://www.linkedin.com/in/jag416/"]
+          "areaServed": {
+            "@type": "Country",
+            "name": "Canada"
+          },
+          "knowsAbout": [
+            "Virtual Nursing Programs",
+            "Provincial Float Pools",
+            "Nursing Retention Strategy",
+            "Healthcare Workforce Planning",
+            "Clinical Workflow Design",
+            "Union Collective Agreement Compliance",
+            "Healthcare Policy Implementation",
+            "Nursing Agency Cost Reduction"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Healthcare Consulting Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Virtual Nursing Pilot Lead",
+                  "description": "Design of the Dyad Model workflow defining the specific Scope of Virtual Practice for admission and discharge to ensure the Virtual Nurse offloads 40% of administrative tasks without compromising safety."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Float Pool Architect",
+                  "description": "Facilitation of the Provincial advisory table to define the Provincial Float Nurse classification with feasibility analysis projecting costs versus current private agency expenditures."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Stakeholder Liaison",
+                  "description": "Bridging the gap between Provincial policy and union requirements, mitigating contracting out risks by ensuring all pilot structures align with collective agreements from Day 1."
+                }
+              }
+            ]
+          },
+          "sameAs": [
+            "https://www.linkedin.com/in/jag416/"
+          ]
         },
         {
           "@type": "Person",
-          "@id": "https://prorninc.com/resume#person",
+          "@id": "https://www.andreagomez.com/#person",
           "name": "Andrea Gomez",
           "jobTitle": "Lead Strategist and Healthcare Consultant",
-          "description": "Registered Nurse with 27+ years of clinical experience including 12+ years in Trauma-Neuro ICU. ICH GCP E6(R3) certified. Trained in HIPAA, PHIPA, and GDPR. Specializes in Clinical Translation, turning high-level healthcare policy into workable bedside reality. Also pursues medical writing, clinical research documentation, and healthcare AI training. Author of Burnout to Balance and architect behind various Provincial Retention Strategy roadmaps.",
-          "url": "https://prorninc.com/resume",
-          "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of Nebraska", "sameAs": "https://www.unl.edu/" },
+          "description": "Registered Nurse with 27+ years of clinical experience including 12+ years in Trauma-Neuro ICU. Specializes in Clinical Translation, turning high-level healthcare policy into workable bedside reality. Author of Burnout to Balance and architect behind various Provincial Retention Strategy roadmaps.",
+          "url": "https://www.andreagomez.com/",
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "University of Nebraska",
+            "sameAs": "https://www.unl.edu/"
+          },
           "hasCredential": [
-            { "@type": "EducationalOccupationalCredential", "credentialCategory": "Professional License", "name": "Registered Nurse (RN)", "recognizedBy": { "@type": "Organization", "name": "College of Nurses of Ontario", "url": "https://www.cno.org/" } },
-            { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "ICH GCP E6(R3) Certification", "recognizedBy": { "@type": "Organization", "name": "TransCelerate BioPharma" } },
-            { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "HIPAA Compliance Training", "recognizedBy": { "@type": "Organization", "name": "HIPAA Training US" } },
-            { "@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "name": "Bachelor of Arts in Psychology", "recognizedBy": { "@type": "CollegeOrUniversity", "name": "University of Nebraska" } },
-            { "@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "name": "Bachelor of Arts in English", "recognizedBy": { "@type": "CollegeOrUniversity", "name": "University of Nebraska" } }
+            {
+              "@type": "EducationalOccupationalCredential",
+              "credentialCategory": "Professional License",
+              "name": "Registered Nurse (RN)",
+              "recognizedBy": {
+                "@type": "Organization",
+                "name": "College of Nurses of Ontario",
+                "url": "https://www.cno.org/"
+              }
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              "credentialCategory": "degree",
+              "name": "Bachelor of Arts in Psychology",
+              "recognizedBy": {
+                "@type": "CollegeOrUniversity",
+                "name": "University of Nebraska"
+              }
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              "credentialCategory": "degree",
+              "name": "Bachelor of Arts in English",
+              "recognizedBy": {
+                "@type": "CollegeOrUniversity",
+                "name": "University of Nebraska"
+              }
+            }
           ],
           "hasOccupation": [
-            { "@type": "Occupation", "name": "Healthcare Consultant", "skills": ["Virtual Nursing Program Design","Provincial Float Pool Implementation","Clinical Workflow Design","Union Collective Agreement Navigation","Healthcare Policy Translation"] },
-            { "@type": "Occupation", "name": "Trauma-Neuro ICU Nurse", "skills": ["Critical Care Nursing","Ventilator Management","Trauma Care","Neurological Assessment"] },
-            { "@type": "Occupation", "name": "Medical Writer", "skills": ["Clinical Trial Documentation","Safety Reporting","Healthcare AI Training","Medical Content Writing"] },
-            { "@type": "Occupation", "name": "Healthcare Author", "skills": ["Workplace Psychology","Healthcare Writing","Nursing Retention Strategies"] }
+            {
+              "@type": "Occupation",
+              "name": "Healthcare Consultant",
+              "skills": ["Virtual Nursing Program Design", "Provincial Float Pool Implementation", "Clinical Workflow Design", "Union Collective Agreement Navigation", "Healthcare Policy Translation"]
+            },
+            {
+              "@type": "Occupation",
+              "name": "Trauma-Neuro ICU Nurse",
+              "skills": ["Critical Care Nursing", "Ventilator Management", "Trauma Care", "Neurological Assessment"]
+            },
+            {
+              "@type": "Occupation",
+              "name": "Healthcare Author",
+              "skills": ["Workplace Psychology", "Healthcare Writing", "Nursing Retention Strategies"]
+            }
           ],
-          "knowsAbout": ["Virtual Nursing","Provincial Float Pools","Nursing Retention","Healthcare Policy","Clinical Workflow Design","ICU Nursing","Critical Care","Union Collective Agreements","Nursing Burnout","Healthcare Workforce Planning","Good Clinical Practice","Medical Writing","Healthcare AI","HIPAA","PHIPA","GDPR"],
-          "sameAs": ["https://medium.com/@msjag416","https://www.instagram.com/msjag_writer/","https://www.linkedin.com/in/jag416/","https://burnouttobalanceguide.com/","https://prorninc.com/resume"]
+          "knowsAbout": [
+            "Virtual Nursing",
+            "Provincial Float Pools",
+            "Nursing Retention",
+            "Healthcare Policy",
+            "Clinical Workflow Design",
+            "ICU Nursing",
+            "Critical Care",
+            "Union Collective Agreements",
+            "Nursing Burnout",
+            "Healthcare Workforce Planning"
+          ],
+          "sameAs": [
+            "https://medium.com/@msjag416",
+            "https://www.instagram.com/msjag_writer/",
+            "https://www.linkedin.com/in/jag416/",
+            "https://burnouttobalanceguide.com/",
+            "https://torontoprorn.com/"
+          ]
         },
         {
           "@type": "Book",
           "name": "Burnout to Balance: Your 8-Step Guide to Thriving in a Messy Workplace",
-          "author": { "@id": "https://prorninc.com/resume#person" },
+          "author": { "@id": "https://www.andreagomez.com/#person" },
           "description": "Eight specific steps that move any employee from desperation to stability in a messy workplace.",
           "url": "https://www.amazon.com/dp/B0F1L3KFLY",
           "inLanguage": "en",
-          "genre": ["Self-Help","Workplace Psychology","Healthcare Leadership"]
+          "genre": ["Self-Help", "Workplace Psychology", "Healthcare Leadership"]
         },
         {
           "@type": "FAQPage",
           "mainEntity": [
-            { "@type": "Question", "name": "What is virtual nursing in healthcare?", "acceptedAnswer": { "@type": "Answer", "text": "Virtual nursing uses technology to allow experienced Registered Nurses to provide patient care remotely. Virtual RNs conduct admission interviews, discharge education, patient teaching, and documentation through secure video connections to patient rooms. This model offloads administrative tasks from bedside nurses, allowing them to focus on hands-on patient care while retaining experienced nurses who might otherwise leave the profession." } },
-            { "@type": "Question", "name": "What is a provincial nursing float pool?", "acceptedAnswer": { "@type": "Answer", "text": "A provincial nursing float pool is a centralized, government-operated staffing resource that deploys Registered Nurses to hospitals and long-term care facilities across the province as needed. Unlike private nursing agencies that charge premium rates, a provincial pool employs nurses directly within the public system with union wages, benefits, and pension. This model reduces reliance on costly agency staffing while providing nurses with flexible work opportunities." } },
-            { "@type": "Question", "name": "How much do hospitals spend on nursing agency staff?", "acceptedAnswer": { "@type": "Answer", "text": "Canadian hospitals have paid billions to private staffing agencies over the past decade. In Ontario alone, agency staffing costs neared 953 million in 2022-23. Agencies typically charge two to three times the normal hourly rate of in-house staff, with some facilities paying 88 to 150 per hour for agency RNs compared to approximately 43 per hour for staff nurses." } },
-            { "@type": "Question", "name": "Why do virtual nursing pilots fail?", "acceptedAnswer": { "@type": "Answer", "text": "Virtual nursing pilots fail when implemented by generalist consultants or IT vendors without clinical oversight. Common failure points include role confusion between virtual and bedside nurses, union grievances over contracting out provisions, nurses rejecting the technology as surveillance, and workflows that ignore cognitive fatigue limits." } },
-            { "@type": "Question", "name": "What services does ProRN Inc. provide?", "acceptedAnswer": { "@type": "Answer", "text": "ProRN Inc. provides strategic healthcare workforce consulting including Virtual Nursing Pilot Lead services designing the Dyad Model workflow, Float Pool Architect services facilitating provincial advisory tables and feasibility analysis, and Stakeholder Liaison services bridging provincial policy and union requirements. ProRN Inc. provides the intellectual property, strategic roadmap, and operational design. Funding and implementation budgets are the responsibility of the Province or Hospital Corporation." } }
+            {
+              "@type": "Question",
+              "name": "What is virtual nursing in healthcare?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Virtual nursing uses technology to allow experienced Registered Nurses to provide patient care remotely. Virtual RNs conduct admission interviews, discharge education, patient teaching, and documentation through secure video connections to patient rooms. This model offloads administrative tasks from bedside nurses, allowing them to focus on hands-on patient care while retaining experienced nurses who might otherwise leave the profession."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is a provincial nursing float pool?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A provincial nursing float pool is a centralized, government-operated staffing resource that deploys Registered Nurses to hospitals and long-term care facilities across the province as needed. Unlike private nursing agencies that charge premium rates, a provincial pool employs nurses directly within the public system with union wages, benefits, and pension. This model reduces reliance on costly agency staffing while providing nurses with flexible work opportunities."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How much do hospitals spend on nursing agency staff?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Canadian hospitals have paid billions to private staffing agencies over the past decade. In Ontario alone, agency staffing costs neared $953 million in 2022-23. Agencies typically charge two to three times the normal hourly rate of in-house staff, with some facilities paying $88 to $150 per hour for agency RNs compared to approximately $43 per hour for staff nurses. Some short-notice premiums have reached $300 per hour."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Why do virtual nursing pilots fail?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Virtual nursing pilots fail when implemented by generalist consultants or IT vendors without clinical oversight. Common failure points include role confusion between virtual and bedside nurses, union grievances over contracting out provisions, nurses rejecting the technology as surveillance, and workflows that ignore cognitive fatigue limits. Successful implementation requires clinical translation expertise that understands both bedside reality and collective agreement requirements."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What services does ProRN Inc. provide?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "ProRN Inc. provides strategic healthcare workforce consulting including Virtual Nursing Pilot Lead services designing the Dyad Model workflow, Float Pool Architect services facilitating provincial advisory tables and feasibility analysis, and Stakeholder Liaison services bridging provincial policy and union requirements. ProRN Inc. provides the intellectual property, strategic roadmap, and operational design. Funding and implementation budgets are the responsibility of the Province or Hospital Corporation."
+              }
+            }
           ]
         }
       ]
     }
     </script>
+    <!-- Custom Favicon: Blue Square with Pulse/Cross -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect x=%220%22 y=%220%22 width=%2264%22 height=%2264%22 rx=%2212%22 fill=%22%231d4ed8%22/><path d=%22M32 12v40M12 32h12l4-8 8 16 4-8h12%22 stroke=%22white%22 stroke-width=%226%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/></svg>">
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome (Async Loading via Preload) -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    
+    <!-- Google Fonts: Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        .fade-in-up { animation: fadeInUp 0.8s ease-out; }
-        @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        .section-anchor { scroll-margin-top: 100px; }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Subtle animation for the hero image */
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .section-anchor {
+            scroll-margin-top: 100px;
+        }
     </style>
 </head>
 <body class="text-slate-800 bg-white antialiased">
 
+    <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
+                <!-- Logo / Home Link -->
                 <div class="flex items-center">
                     <a href="#" class="flex items-center group">
                         <span class="text-2xl font-extrabold text-slate-900 tracking-tight group-hover:text-blue-700 transition-colors">ProRN Inc.</span>
-                        <span class="ml-3 hidden lg:block px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-700 border border-blue-100">Strategic Workforce Solutions</span>
+                        <span class="ml-3 hidden lg:block px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-700 border border-blue-100">
+                            Strategic Workforce Solutions
+                        </span>
                     </a>
                 </div>
+                
+                <!-- Desktop Nav Links -->
                 <div class="hidden md:flex space-x-8">
                     <a href="#expertise" class="text-sm font-medium text-slate-600 hover:text-blue-700 transition-colors">Expertise</a>
                     <a href="#services" class="text-sm font-medium text-slate-600 hover:text-blue-700 transition-colors">Services</a>
                     <a href="#about" class="text-sm font-medium text-slate-600 hover:text-blue-700 transition-colors">About</a>
-                    <a href="/resume" class="text-sm font-medium text-slate-600 hover:text-blue-700 transition-colors">Resume</a>
                     <a href="#proposal-start" class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full hover:bg-blue-100 transition-colors">View VN Proposal</a>
                     <a href="#pool-implementation" class="text-sm font-medium text-green-700 bg-green-50 px-3 py-1 rounded-full hover:bg-green-100 transition-colors">RN Float Pool</a>
                 </div>
+
+                <!-- CTA Button and Mobile Menu Toggle -->
                 <div class="flex items-center gap-4">
-                    <a href="#" onclick="contactFirm(event)" class="inline-flex items-center px-4 py-2 sm:px-6 sm:py-2.5 border border-transparent text-sm font-semibold rounded-lg text-white bg-blue-900 hover:bg-blue-800 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-900 transition-all duration-200">Contact Us</a>
-                    <button id="mobile-menu-btn" class="md:hidden text-slate-600 hover:text-blue-700 focus:outline-none"><i data-lucide="menu" class="w-7 h-7"></i></button>
+                    <!-- CTA Button (Protected) -->
+                    <a href="#" onclick="contactFirm(event)" class="inline-flex items-center px-4 py-2 sm:px-6 sm:py-2.5 border border-transparent text-sm font-semibold rounded-lg text-white bg-blue-900 hover:bg-blue-800 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-900 transition-all duration-200">
+                        Contact Us
+                    </a>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="md:hidden text-slate-600 hover:text-blue-700 focus:outline-none">
+                        <i data-lucide="menu" class="w-7 h-7"></i>
+                    </button>
                 </div>
             </div>
         </div>
+
+        <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 shadow-xl absolute w-full left-0">
             <div class="px-4 py-4 space-y-2">
                 <a href="#expertise" class="block px-4 py-3 rounded-lg text-base font-medium text-slate-600 hover:text-blue-700 hover:bg-slate-50 transition-colors">Expertise</a>
                 <a href="#services" class="block px-4 py-3 rounded-lg text-base font-medium text-slate-600 hover:text-blue-700 hover:bg-slate-50 transition-colors">Services</a>
                 <a href="#about" class="block px-4 py-3 rounded-lg text-base font-medium text-slate-600 hover:text-blue-700 hover:bg-slate-50 transition-colors">About</a>
-                <a href="/resume" class="block px-4 py-3 rounded-lg text-base font-medium text-slate-600 hover:text-blue-700 hover:bg-slate-50 transition-colors">Resume</a>
                 <a href="#proposal-start" class="block px-4 py-3 rounded-lg text-base font-medium text-blue-700 bg-blue-50 hover:bg-blue-100 transition-colors">View VN Proposal</a>
                 <a href="#pool-implementation" class="block px-4 py-3 rounded-lg text-base font-medium text-green-700 bg-green-50 hover:bg-green-100 transition-colors">RN Float Pool</a>
             </div>
         </div>
     </nav>
 
+    <!-- Dynamic Hero Section -->
     <header class="relative pt-24 pb-12 sm:pt-32 sm:pb-16 lg:pt-40 lg:pb-24 overflow-hidden bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Text Content -->
                 <div class="fade-in-up">
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-[1.1] mb-6 tracking-tight">
                         The Bedside Has Changed. <br>
@@ -144,30 +323,65 @@
                     <p class="text-lg text-slate-600 mb-6 max-w-lg leading-relaxed">
                         We bridge the gap between Provincial policy and clinical reality. Specializing in the operational design of <strong>Inpatient Virtual Nursing Pilots</strong> and <strong>Centralized Provincial Float Pools</strong>.
                     </p>
+                    
+                    <!-- NEW DISCLAIMER BOX -->
                     <div class="bg-amber-50 border-l-4 border-amber-500 p-4 mb-8 rounded-r-md">
                         <div class="flex">
-                            <div class="flex-shrink-0"><i data-lucide="info" class="h-5 w-5 text-amber-600"></i></div>
+                            <div class="flex-shrink-0">
+                                <i data-lucide="info" class="h-5 w-5 text-amber-600"></i>
+                            </div>
                             <div class="ml-3">
-                                <p class="text-sm text-amber-800 font-medium">Strategic Advisory Notice</p>
-                                <p class="text-sm text-amber-700 mt-1">These strategic frameworks are designed and ready for provincial adoption. ProRN Inc. provides the intellectual property, roadmap, and operational design. <strong>Funding and implementation decisions rest with the Province or Hospital Corporation.</strong></p>
+                                <p class="text-sm text-amber-800 font-medium">
+                                    Strategic Advisory Notice
+                                </p>
+                                <p class="text-sm text-amber-700 mt-1">
+                                    ProRN Inc. provides the intellectual property, strategic roadmap, and operational design. <strong>Funding and implementation budgets are the sole responsibility of the Province or Hospital Corporation.</strong>
+                                </p>
                             </div>
                         </div>
                     </div>
+
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="#proposal-start" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-semibold rounded-lg text-white bg-blue-700 hover:bg-blue-600 md:text-lg shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200">Explore the Strategic Framework</a>
-                        <a href="#services" class="inline-flex items-center justify-center px-8 py-4 border border-slate-300 text-base font-semibold rounded-lg text-slate-700 bg-white hover:bg-slate-50 md:text-lg shadow-sm hover:shadow transition-all duration-200">View Services</a>
+                        <!-- Protected Email Link with Subject Line -->
+                        <a href="#" onclick="contactFirm(event, 'Phase 1 Feasibility Inquiry')" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-semibold rounded-lg text-white bg-blue-700 hover:bg-blue-600 md:text-lg shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200">
+                            Book Phase 1 Feasibility Consult
+                        </a>
+                        <a href="#services" class="inline-flex items-center justify-center px-8 py-4 border border-slate-300 text-base font-semibold rounded-lg text-slate-700 bg-white hover:bg-slate-50 md:text-lg shadow-sm hover:shadow transition-all duration-200">
+                            View Services
+                        </a>
                     </div>
-                    <p class="mt-6 text-sm text-slate-600 flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i>Strategic frameworks ready for provincial adoption</p>
+                    <!-- Increased contrast from slate-500 to slate-600 -->
+                    <p class="mt-6 text-sm text-slate-600 flex items-center">
+                        <i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i>
+                        Booking Q1 2026 Consultations
+                    </p>
                 </div>
+
+                <!-- Hero Image -->
                 <div class="relative lg:h-auto fade-in-up" style="animation-delay: 0.2s;">
                     <div class="absolute -inset-4 bg-blue-200 rounded-2xl blur-2xl opacity-30"></div>
-                    <img src="https://raw.githubusercontent.com/msjag416/prorninc-website/main/hero.jpg" alt="Virtual nurse monitoring patient data on dual screens while conducting a video assessment, representing the ProRN Inc. Dyad Model" class="relative rounded-2xl shadow-2xl border border-slate-200 w-full object-cover h-[400px] lg:h-[500px]" loading="eager" onerror="this.style.display='none'; document.getElementById('image-error').style.display='flex';">
-                    <div id="image-error" class="hidden absolute inset-0 bg-slate-200 rounded-2xl items-center justify-center text-slate-500 border border-slate-300"><span class="flex items-center gap-2"><i data-lucide="image-off"></i> Image unavailable</span></div>
+                    <!-- Updated Hero Image Path -->
+                    <img 
+                        src="https://raw.githubusercontent.com/msjag416/prorninc-website/main/hero.jpg" 
+                        alt="Virtual nurse monitoring patient data on dual screens while conducting a video assessment, representing the ProRN Inc. Dyad Model" 
+                        class="relative rounded-2xl shadow-2xl border border-slate-200 w-full object-cover h-[400px] lg:h-[500px]"
+                        loading="eager"
+                        onerror="this.style.display='none'; document.getElementById('image-error').style.display='flex';"
+                    >
+                    <!-- Fallback if image missing -->
+                    <div id="image-error" class="hidden absolute inset-0 bg-slate-200 rounded-2xl items-center justify-center text-slate-500 border border-slate-300">
+                        <span class="flex items-center gap-2"><i data-lucide="image-off"></i> Image unavailable</span>
+                    </div>
+
+                    <!-- Floating Badge -->
                     <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl border border-slate-100 hidden md:flex items-center gap-4">
-                        <div class="bg-blue-100 p-3 rounded-lg text-blue-700"><i data-lucide="activity" class="w-6 h-6"></i></div>
+                        <div class="bg-blue-100 p-3 rounded-lg text-blue-700">
+                            <i data-lucide="activity" class="w-6 h-6"></i>
+                        </div>
                         <div>
-                            <p class="text-xs text-slate-600 font-semibold uppercase">Projected Reduction in Agency Spend</p>
-                            <p class="text-xl font-bold text-slate-900">Up to 40%</p>
+                            <!-- Increased contrast from slate-500 to slate-600 -->
+                            <p class="text-xs text-slate-600 font-semibold uppercase">Reduction in Agency Spend</p>
+                            <p class="text-xl font-bold text-slate-900">Projected 40%</p>
                         </div>
                     </div>
                 </div>
@@ -175,32 +389,41 @@
         </div>
     </header>
 
+    <!-- Expertise Section -->
     <section id="expertise" class="py-24 bg-white section-anchor">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>
-                    <h2 class="text-3xl font-bold text-slate-900 mb-6">The &ldquo;Paper Roadmap&rdquo; is Insufficient Without Clinical Oversight.</h2>
-                    <p class="text-lg text-slate-600 mb-6 leading-relaxed">Administrative strategy cannot see the &ldquo;invisible workload&rdquo; crushing nurses across the country. When generalist consultants implement workforce pilots, they fail due to role confusion, union grievances, and cognitive fatigue. These programs don&rsquo;t exist yet in Ontario, but the evidence says they should.</p>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-6">The "Paper Roadmap" is Insufficient Without Clinical Oversight.</h2>
+                    <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                        Administrative strategy cannot see the "invisible workload" crushing nurses across the country. When generalist consultants implement workforce pilots, they often fail due to role confusion, union grievances, and cognitive fatigue.
+                    </p>
                     <div class="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-lg">
-                        <p class="text-lg text-slate-800 italic font-medium">&ldquo;If you hand this to an IT vendor, the nurses will reject it as surveillance. If you hand it to a generalist, the union will grieve it. You need a translator who speaks &lsquo;bedside&rsquo;.&rdquo;</p>
+                        <p class="text-lg text-slate-800 italic font-medium">
+                            "If you hand this to an IT vendor, the nurses will reject it as surveillance. If you hand it to a generalist, the union will grieve it. You need a translator who speaks 'bedside'."
+                        </p>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 gap-6">
                     <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
                         <div class="flex items-start">
-                            <div class="flex-shrink-0 p-3 bg-red-100 rounded-lg"><i data-lucide="alert-triangle" class="w-6 h-6 text-red-600"></i></div>
+                            <div class="flex-shrink-0 p-3 bg-red-100 rounded-lg">
+                                <i data-lucide="alert-triangle" class="w-6 h-6 text-red-600"></i>
+                            </div>
                             <div class="ml-4">
                                 <h3 class="text-lg font-bold text-slate-900">The Implementation Risk</h3>
-                                <p class="mt-2 text-slate-600">Without clinical calibration, pilots fail due to &ldquo;Big Brother&rdquo; syndrome and collective agreement non-compliance. The longer provinces wait, the more they spend on agency premiums.</p>
+                                <p class="mt-2 text-slate-600">Without clinical calibration, pilots fail due to "Big Brother" syndrome and collective agreement non-compliance.</p>
                             </div>
                         </div>
                     </div>
                     <div class="p-6 bg-slate-900 rounded-xl shadow-lg transform lg:scale-105 transition-transform">
                         <div class="flex items-start">
-                            <div class="flex-shrink-0 p-3 bg-blue-600 rounded-lg"><i data-lucide="shield-check" class="w-6 h-6 text-white"></i></div>
+                            <div class="flex-shrink-0 p-3 bg-blue-600 rounded-lg">
+                                <i data-lucide="shield-check" class="w-6 h-6 text-white"></i>
+                            </div>
                             <div class="ml-4">
                                 <h3 class="text-lg font-bold text-white">The ProRN Inc. Solution</h3>
-                                <p class="mt-2 text-slate-300">Clinical workflow design that respects cognitive load limits and protects the collective agreement. Designed, evidence-based, and ready for adoption.</p>
+                                <p class="mt-2 text-slate-300">Clinical workflow design that respects cognitive load limits and protects the collective agreement.</p>
                             </div>
                         </div>
                     </div>
@@ -209,40 +432,74 @@
         </div>
     </section>
 
+    <!-- Services Section -->
     <section id="services" class="py-24 bg-slate-900 text-white relative overflow-hidden section-anchor">
+        <!-- Background decorative blob -->
         <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16">
                 <span class="text-blue-400 font-bold tracking-wider uppercase text-sm">Scope of Work</span>
                 <h2 class="text-3xl md:text-4xl font-bold mt-2">Specialized Implementation Phases</h2>
-                <p class="text-slate-300 mt-4 max-w-2xl mx-auto text-lg">We do not replace your internal teams. We lead the high-risk phases requiring clinical and regulatory precision.</p>
-                <p class="text-amber-400/80 text-sm mt-2 font-medium">(Note: Budgetary allocation for these programs is held by the Province/Hospital.)</p>
+                <!-- Increased contrast from slate-400 to slate-300 for dark mode -->
+                <p class="text-slate-300 mt-4 max-w-2xl mx-auto text-lg">
+                    We do not replace your internal teams. We lead the high-risk phases requiring clinical and regulatory precision.
+                </p>
+                <p class="text-amber-400/80 text-sm mt-2 font-medium">
+                    (Note: Budgetary allocation for these programs is held by the Province/Hospital.)
+                </p>
             </div>
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1: LINKED TO VN PROPOSAL SECTION -->
                 <a href="#proposal-start" class="block group bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 hover:bg-slate-800/80 transition-all duration-300">
-                    <div class="w-14 h-14 bg-blue-900/50 rounded-xl flex items-center justify-center mb-6 text-blue-400 group-hover:text-blue-300 group-hover:scale-110 transition-all"><i data-lucide="layout-dashboard" class="w-7 h-7"></i></div>
+                    <div class="w-14 h-14 bg-blue-900/50 rounded-xl flex items-center justify-center mb-6 text-blue-400 group-hover:text-blue-300 group-hover:scale-110 transition-all">
+                        <i data-lucide="layout-dashboard" class="w-7 h-7"></i>
+                    </div>
                     <h3 class="text-xl font-bold mb-3">Virtual Nursing Pilot Lead</h3>
-                    <p class="text-slate-300 mb-6 text-xs font-bold uppercase tracking-wide bg-slate-900 inline-block px-2 py-1 rounded">Phase 1 &amp; 2 Strategy</p>
-                    <p class="text-slate-300 leading-relaxed">Design of the &ldquo;Dyad Model&rdquo; workflow. We define the specific Scope of Virtual Practice for admission/discharge to ensure the Virtual Nurse offloads 40% of administrative tasks without compromising safety.</p>
-                    <div class="mt-4 text-blue-400 text-sm font-semibold flex items-center">Read Proposal <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i></div>
+                    <!-- Increased contrast from slate-400 to slate-300 -->
+                    <p class="text-slate-300 mb-6 text-xs font-bold uppercase tracking-wide bg-slate-900 inline-block px-2 py-1 rounded">Phase 1 & 2 Strategy</p>
+                    <p class="text-slate-300 leading-relaxed">
+                        Design of the "Dyad Model" workflow. We define the specific Scope of Virtual Practice for admission/discharge to ensure the Virtual Nurse offloads 40% of administrative tasks without compromising safety.
+                    </p>
+                    <div class="mt-4 text-blue-400 text-sm font-semibold flex items-center">
+                        Read Proposal <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                    </div>
                 </a>
+
+                <!-- Service 2: LINKED TO POOL IMPLEMENTATION SECTION -->
                 <a href="#pool-implementation" class="block group bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 hover:bg-slate-800/80 transition-all duration-300">
-                    <div class="w-14 h-14 bg-blue-900/50 rounded-xl flex items-center justify-center mb-6 text-blue-400 group-hover:text-blue-300 group-hover:scale-110 transition-all"><i data-lucide="users" class="w-7 h-7"></i></div>
+                    <div class="w-14 h-14 bg-blue-900/50 rounded-xl flex items-center justify-center mb-6 text-blue-400 group-hover:text-blue-300 group-hover:scale-110 transition-all">
+                        <i data-lucide="users" class="w-7 h-7"></i>
+                    </div>
                     <h3 class="text-xl font-bold mb-3">Float Pool Architect</h3>
-                    <p class="text-slate-300 mb-6 text-xs font-bold uppercase tracking-wide bg-slate-900 inline-block px-2 py-1 rounded">Governance &amp; Feasibility</p>
-                    <p class="text-slate-300 leading-relaxed">Facilitation of the Provincial advisory table to define the &ldquo;Provincial Float Nurse&rdquo; classification. We handle the feasibility analysis to project costs vs. current private agency expenditures.</p>
-                    <div class="mt-4 text-blue-400 text-sm font-semibold flex items-center">Read Proposal <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i></div>
+                    <!-- Increased contrast from slate-400 to slate-300 -->
+                    <p class="text-slate-300 mb-6 text-xs font-bold uppercase tracking-wide bg-slate-900 inline-block px-2 py-1 rounded">Governance & Feasibility</p>
+                    <p class="text-slate-300 leading-relaxed">
+                        Facilitation of the Provincial advisory table to define the "Provincial Float Nurse" classification. We handle the feasibility analysis to project costs vs. current private agency expenditures.
+                    </p>
+                    <div class="mt-4 text-blue-400 text-sm font-semibold flex items-center">
+                        Read Proposal <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                    </div>
                 </a>
+
+                <!-- Service 3 -->
                 <div class="group bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 hover:bg-slate-800/80 transition-all duration-300">
-                    <div class="w-14 h-14 bg-blue-900/50 rounded-xl flex items-center justify-center mb-6 text-blue-400 group-hover:text-blue-300 group-hover:scale-110 transition-all"><i data-lucide="handshake" class="w-7 h-7"></i></div>
+                    <div class="w-14 h-14 bg-blue-900/50 rounded-xl flex items-center justify-center mb-6 text-blue-400 group-hover:text-blue-300 group-hover:scale-110 transition-all">
+                        <i data-lucide="handshake" class="w-7 h-7"></i>
+                    </div>
                     <h3 class="text-xl font-bold mb-3">Stakeholder Liaison</h3>
-                    <p class="text-slate-300 mb-6 text-xs font-bold uppercase tracking-wide bg-slate-900 inline-block px-2 py-1 rounded">Union &amp; Clinical Alignment</p>
-                    <p class="text-slate-300 leading-relaxed">Bridging the gap between Provincial policy and union requirements. We mitigate &ldquo;contracting out&rdquo; risks by ensuring all pilot structures align with collective agreements from Day 1.</p>
+                    <!-- Increased contrast from slate-400 to slate-300 -->
+                    <p class="text-slate-300 mb-6 text-xs font-bold uppercase tracking-wide bg-slate-900 inline-block px-2 py-1 rounded">Union & Clinical Alignment</p>
+                    <p class="text-slate-300 leading-relaxed">
+                        Bridging the gap between Provincial policy and union requirements. We mitigate "contracting out" risks by ensuring all pilot structures align with collective agreements from Day 1.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- About Section -->
     <section id="about" class="py-24 bg-slate-50 section-anchor">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100">
@@ -252,189 +509,397 @@
                             <h2 class="text-2xl font-bold text-slate-900">About the Lead Strategist</h2>
                             <span class="h-px bg-slate-200 flex-grow"></span>
                         </div>
+                        
                         <h3 class="text-2xl text-blue-700 font-bold mb-6">Andrea Gomez, RN</h3>
-                        <p class="text-slate-600 mb-6 leading-relaxed text-lg">With 27+ years of high-acuity experience in ICU and Recovery, Andrea Gomez specializes in <strong>Clinical Translation</strong>&mdash;turning high-level healthcare policy into workable bedside reality.</p>
-                        <p class="text-slate-600 mb-6 leading-relaxed text-lg">As the author of <em>Burnout to Balance: Your 8-Step Guide to Thriving in a Messy Workplace</em> and the architect behind various Provincial Retention Strategy roadmaps, she helps organizations stop hemorrhaging talent by redesigning the work itself, not just the payroll. Her expertise lies in identifying the &ldquo;friction points&rdquo; in clinical workflows that cause pilots to fail.</p>
-                        <p class="text-slate-600 mb-8 leading-relaxed text-lg">ICH GCP E6(R3) certified (TransCelerate recognized) with training in HIPAA, PHIPA, and GDPR data privacy requirements. Andrea also pursues medical writing, clinical research documentation, and healthcare AI training through ProRN Inc.</p>
+                        <p class="text-slate-600 mb-6 leading-relaxed text-lg">
+                            With over 25 years of high-acuity experience in ICU and Recovery, Andrea Gomez specializes in <strong>Clinical Translation</strong>—turning high-level healthcare policy into workable bedside reality. 
+                        </p>
+                        <p class="text-slate-600 mb-8 leading-relaxed text-lg">
+                            As the author of <em>Burnout to Balance: Your 8-Step Guide to Thriving in a Messy Workplace</em> and the architect behind various Provincial Retention Strategy roadmaps, she helps organizations stop hemorrhaging talent by redesigning the work itself, not just the payroll. Her expertise lies in identifying the "friction points" in clinical workflows that cause pilots to fail.
+                        </p>
+
                         <div class="flex flex-wrap gap-4">
-                            <span class="inline-flex items-center px-4 py-2 rounded-full bg-slate-100 text-slate-700 font-medium text-sm"><i data-lucide="map-pin" class="w-4 h-4 mr-2 text-blue-600"></i> Toronto, Ontario (Available Nationally)</span>
-                            <span class="inline-flex items-center px-4 py-2 rounded-full bg-slate-100 text-slate-700 font-medium text-sm"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-blue-600"></i> Registered Nurse</span>
-                            <span class="inline-flex items-center px-4 py-2 rounded-full bg-blue-50 text-blue-700 font-medium text-sm border border-blue-100"><i data-lucide="shield-check" class="w-4 h-4 mr-2"></i> ICH GCP E6(R3) Certified</span>
-                            <span class="inline-flex items-center px-4 py-2 rounded-full bg-blue-50 text-blue-700 font-medium text-sm border border-blue-100"><i data-lucide="lock" class="w-4 h-4 mr-2"></i> HIPAA | PHIPA | GDPR</span>
+                            <span class="inline-flex items-center px-4 py-2 rounded-full bg-slate-100 text-slate-700 font-medium text-sm">
+                                <i data-lucide="map-pin" class="w-4 h-4 mr-2 text-blue-600"></i> Toronto, Ontario (Available Nationally)
+                            </span>
+                            
+                            <span class="inline-flex items-center px-4 py-2 rounded-full bg-slate-100 text-slate-700 font-medium text-sm">
+                                <i data-lucide="check-circle" class="w-4 h-4 mr-2 text-blue-600"></i> Registered Nurse
+                            </span>
                         </div>
                     </div>
                     <div class="md:col-span-4 bg-slate-100 border-l border-slate-200 p-10 flex flex-col justify-center relative">
-                        <div class="absolute top-8 left-8 text-slate-200"><i data-lucide="quote" class="w-12 h-12 transform -scale-x-100"></i></div>
-                        <blockquote class="text-xl font-medium text-slate-800 italic mb-8 relative z-10">&ldquo;You don&rsquo;t need just a plan; you need a translator who speaks &lsquo;bedside&rsquo;.&rdquo;</blockquote>
-                        <a href="#" onclick="contactFirm(event)" class="group inline-flex items-center justify-center w-full px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-700 hover:bg-blue-800 transition-all">Contact Andrea <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i></a>
-                        <a href="/resume" class="group inline-flex items-center justify-center w-full px-6 py-3 border border-slate-300 text-base font-medium rounded-md text-slate-700 bg-white hover:bg-slate-50 transition-all mt-3">View Full Resume <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i></a>
+                        <!-- Decorative Quote Icon -->
+                        <div class="absolute top-8 left-8 text-slate-200">
+                            <i data-lucide="quote" class="w-12 h-12 transform -scale-x-100"></i>
+                        </div>
+                        <blockquote class="text-xl font-medium text-slate-800 italic mb-8 relative z-10">
+                            "You don't need just a plan; you need a translator who speaks 'bedside'."
+                        </blockquote>
+                        <!-- Protected Contact Button -->
+                        <a href="#" onclick="contactFirm(event)" class="group inline-flex items-center justify-center w-full px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-700 hover:bg-blue-800 transition-all">
+                            Contact Andrea 
+                            <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- VN PROPOSAL CONTENT -->
+    
     <section id="proposal-start" class="relative bg-white pt-32 pb-20 border-t border-slate-200 section-anchor">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <span class="inline-block py-1 px-3 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold tracking-wide uppercase mb-4">Conceptual Framework</span>
-                <h2 class="text-4xl tracking-tight font-extrabold text-slate-900 sm:text-5xl md:text-6xl mb-6"><span class="block">Proposal for a Provincial</span><span class="block text-blue-700">Virtual Nursing Program</span></h2>
-                <p class="mt-3 max-w-md mx-auto text-base text-slate-600 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">A research-backed conceptual framework for enhancing patient care and nursing workforce sustainability through a government-funded virtual nursing model. These programs don&rsquo;t exist yet in Ontario, but the evidence says they should.</p>
+                <span class="inline-block py-1 px-3 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold tracking-wide uppercase mb-4">
+                    Official Documentation
+                </span>
+                <h2 class="text-4xl tracking-tight font-extrabold text-slate-900 sm:text-5xl md:text-6xl mb-6">
+                    <span class="block">Proposal for a Provincial</span>
+                    <span class="block text-blue-700">Virtual Nursing Program</span>
+                </h2>
+                <!-- Increased contrast from slate-500 to slate-600 -->
+                <p class="mt-3 max-w-md mx-auto text-base text-slate-600 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+                    A formal, research-backed blueprint for enhancing patient care and nursing workforce sustainability through a government-funded virtual nursing model.
+                </p>
                 <div class="mt-6 inline-block bg-slate-100 border border-slate-200 px-4 py-2 rounded-md">
                     <p class="text-xs text-slate-500 font-semibold uppercase tracking-wider">Note to Stakeholders</p>
-                    <p class="text-sm text-slate-700">ProRN Inc. has designed the program structure and strategic framework. These concepts are ready for adoption when provincial funding becomes available.</p>
+                    <p class="text-sm text-slate-700">ProRN Inc. designs the program structure. Funding is derived from provincial health envelopes.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+        
+        <!-- Introduction -->
         <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-8 section-anchor">
             <h2 class="text-2xl font-bold text-slate-900 mb-4 border-b border-blue-100 pb-2">Introduction and Background</h2>
-            <p class="text-slate-600 leading-relaxed mb-4">Healthcare systems across Canada face a severe nursing workforce challenge, with significant projected shortfalls by 2028. This shortage demands innovative models of care delivery to maximize the reach and impact of our experienced Registered Nurses (RNs). One such innovation is virtual nursing; this leverages technology to allow RNs to provide patient care remotely. Virtual nursing gained traction during the pandemic and is now being systematically scaled by many health systems as a strategy to support bedside teams and retain veteran nurses.</p>
-            <p class="text-slate-600 leading-relaxed">This report proposes a provincial, government-funded virtual nursing program that enables experienced RNs to work from home as &ldquo;virtual nurses.&rdquo; Unlike ad-hoc hospital or agency-run initiatives, a centrally administered program would ensure equitable access to virtual nursing services across the province. It would standardize quality and integrate strong guardrails to complement bedside care. The goal is a formal blueprint for Provincial Ministries of Health and Professional Practice Divisions to consider. The sooner these frameworks are adopted, the less provinces will spend on agency premiums in the interim.</p>
+            <p class="text-slate-600 leading-relaxed mb-4">
+                Healthcare systems across Canada face a severe nursing workforce challenge, with significant projected shortfalls by 2028. This shortage demands innovative models of care delivery to maximize the reach and impact of our experienced Registered Nurses (RNs). One such innovation is virtual nursing; this leverages technology to allow RNs to provide patient care remotely. Virtual nursing gained traction during the pandemic and is now being systematically scaled by many health systems as a strategy to support bedside teams and retain veteran nurses.
+            </p>
+            <p class="text-slate-600 leading-relaxed">
+                This report proposes a provincial, government-funded virtual nursing program that enables experienced RNs to work from home as “virtual nurses.” Unlike ad-hoc hospital or agency-run initiatives, a centrally administered program would ensure equitable access to virtual nursing services across the province. It would standardize quality and integrate strong guardrails to complement bedside care. The goal is a formal blueprint for Provincial Ministries of Health and Professional Practice Divisions to consider.
+            </p>
         </section>
 
+        <!-- Rationale -->
         <section id="rationale" class="bg-white rounded-xl shadow-sm border border-slate-200 p-8 section-anchor">
             <div class="flex flex-col md:flex-row gap-8">
                 <div class="md:w-1/3">
                     <div class="bg-blue-50 p-6 rounded-lg h-full">
                         <i class="fa-solid fa-scale-balanced text-blue-600 text-3xl mb-4"></i>
                         <h3 class="text-xl font-bold text-slate-900 mb-2">Government-Employer Model</h3>
-                        <p class="text-sm text-slate-600">A centralized approach promotes consistency, prevents competition between hospitals, and leverages economies of scale.</p>
+                        <p class="text-sm text-slate-600">
+                            A centralized approach promotes consistency, prevents competition between hospitals, and leverages economies of scale.
+                        </p>
                     </div>
                 </div>
                 <div class="md:w-2/3">
                     <h2 class="text-2xl font-bold text-slate-900 mb-4 border-b border-blue-100 pb-2">Rationale for a Provincial Model</h2>
-                    <p class="text-slate-600 leading-relaxed mb-4">A provincially funded and managed virtual RN program provides several advantages over individual hospital or private agency approaches. Centralized oversight and funding would promote consistency in standards, training, and technology. This ensures that smaller or rural hospitals can benefit equally from virtual nursing support. Various provinces have precedents for successful province-wide telehealth services.</p>
-                    <p class="text-slate-600 leading-relaxed">From a workforce perspective, a government-employer model permits better coordination of virtual RN deployment to areas of greatest need. It prevents a patchwork of differing hospital programs that compete for staff or develop redundant infrastructure. A provincial program can also set uniform employment conditions and collaborate with nursing unions (e.g., ONA, BCNU). This ensures these remote roles support frontline staffing rather than undermine it.</p>
+                    <p class="text-slate-600 leading-relaxed mb-4">
+                        A provincially funded and managed virtual RN program provides several advantages over individual hospital or private agency approaches. Centralized oversight and funding would promote consistency in standards, training, and technology. This ensures that smaller or rural hospitals can benefit equally from virtual nursing support. Various provinces have precedents for successful province-wide telehealth services. 
+                    </p>
+                    <p class="text-slate-600 leading-relaxed">
+                        From a workforce perspective, a government-employer model permits better coordination of virtual RN deployment to areas of greatest need. It prevents a patchwork of differing hospital programs that compete for staff or develop redundant infrastructure. A provincial program can also set uniform employment conditions and collaborate with nursing unions (e.g., ONA, BCNU). This ensures these remote roles support frontline staffing rather than undermine it.
+                    </p>
                 </div>
             </div>
         </section>
 
+        <!-- Use Cases -->
         <section id="use-cases" class="section-anchor">
             <h2 class="text-3xl font-bold text-slate-900 mb-8 text-center">Virtual RN Use Cases and Benefits</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <!-- Card 1 -->
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
-                    <div class="flex items-center mb-4"><div class="p-3 bg-green-100 rounded-full text-green-600 mr-4"><i class="fa-solid fa-hospital-user"></i></div><h3 class="text-xl font-bold text-slate-900">Discharge Education &amp; Coordination</h3></div>
-                    <p class="text-slate-600">Virtual RNs can take charge of discharge planning and patient teaching. At Baptist Memorial Hospital, virtual nurses conduct discharge education for surgical patients, fill out paperwork, and arrange to print discharge instructions. This process typically takes 15 minutes and ensures patients receive thorough counseling on medications and follow-up care. Dedicated discharge teaching has reduced readmissions in multiple jurisdictions.</p>
+                    <div class="flex items-center mb-4">
+                        <div class="p-3 bg-green-100 rounded-full text-green-600 mr-4">
+                            <i class="fa-solid fa-hospital-user"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Discharge Education & Coordination</h3>
+                    </div>
+                    <p class="text-slate-600">
+                        Virtual RNs can take charge of discharge planning and patient teaching. At Baptist Memorial Hospital, virtual nurses conduct discharge education for surgical patients, fill out paperwork, and arrange to print discharge instructions. This process typically takes 15 minutes and ensures patients receive thorough counseling on medications and follow-up care. Dedicated discharge teaching has reduced readmissions in multiple jurisdictions.
+                    </p>
                 </div>
+
+                <!-- Card 2 -->
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
-                    <div class="flex items-center mb-4"><div class="p-3 bg-purple-100 rounded-full text-purple-600 mr-4"><i class="fa-solid fa-file-medical"></i></div><h3 class="text-xl font-bold text-slate-900">Admission Interview &amp; Documentation</h3></div>
-                    <p class="text-slate-600">Admission assessments involve history-taking and documentation rather than hands-on care. Virtual RNs can guide patients through admission questions and enter data directly into the electronic health record (EHR). Henry Ford Health identified admissions as a primary task to shift to virtual care. This accelerates bed flow and maintains documentation accuracy.</p>
+                    <div class="flex items-center mb-4">
+                        <div class="p-3 bg-purple-100 rounded-full text-purple-600 mr-4">
+                            <i class="fa-solid fa-file-medical"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Admission Interview & Documentation</h3>
+                    </div>
+                    <p class="text-slate-600">
+                        Admission assessments involve history-taking and documentation rather than hands-on care. Virtual RNs can guide patients through admission questions and enter data directly into the electronic health record (EHR). Henry Ford Health identified admissions as a primary task to shift to virtual care. This accelerates bed flow and maintains documentation accuracy.
+                    </p>
                 </div>
+
+                <!-- Card 3 -->
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
-                    <div class="flex items-center mb-4"><div class="p-3 bg-orange-100 rounded-full text-orange-600 mr-4"><i class="fa-solid fa-chalkboard-user"></i></div><h3 class="text-xl font-bold text-slate-900">Patient Education &amp; Consults</h3></div>
-                    <p class="text-slate-600">Virtual RNs provide ongoing patient education during the hospital stay. They reinforce pre-surgery instructions and answer routine questions. Virtual nurses act as another face of care, which increases patient satisfaction. They can also coordinate consults by arranging virtual family meetings or specialist consultations.</p>
+                    <div class="flex items-center mb-4">
+                        <div class="p-3 bg-orange-100 rounded-full text-orange-600 mr-4">
+                            <i class="fa-solid fa-chalkboard-user"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Patient Education & Consults</h3>
+                    </div>
+                    <p class="text-slate-600">
+                        Virtual RNs provide ongoing patient education during the hospital stay. They reinforce pre-surgery instructions and answer routine questions. Virtual nurses act as another approachable face of care, which increases patient satisfaction. They can also coordinate consults by arranging virtual family meetings or specialist consultations.
+                    </p>
                 </div>
+
+                <!-- Card 4 -->
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
-                    <div class="flex items-center mb-4"><div class="p-3 bg-red-100 rounded-full text-red-600 mr-4"><i class="fa-solid fa-video"></i></div><h3 class="text-xl font-bold text-slate-900">Safety Monitoring (&ldquo;Virtual Sitter&rdquo;)</h3></div>
-                    <p class="text-slate-600">Hospitals require 1:1 patient sitters for those at risk of falls or delirium. Virtual &ldquo;tele-sitter&rdquo; technology allows one staff member to remotely monitor multiple patients via cameras. Virtual RNs can oversee camera feeds for acute cases where an RN&rsquo;s assessment skills might detect subtle signs of distress. This adds a layer of fall prevention without pulling bedside staff away.</p>
+                    <div class="flex items-center mb-4">
+                        <div class="p-3 bg-red-100 rounded-full text-red-600 mr-4">
+                            <i class="fa-solid fa-video"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Safety Monitoring ("Virtual Sitter")</h3>
+                    </div>
+                    <p class="text-slate-600">
+                        Hospitals often require 1:1 patient sitters for those at risk of falls or delirium. Virtual "tele-sitter" technology allows one staff member to remotely monitor multiple patients via cameras. Virtual RNs can oversee camera feeds for acute cases where an RN’s assessment skills might detect subtle signs of distress. This adds a layer of fall prevention without pulling bedside staff away.
+                    </p>
                 </div>
             </div>
         </section>
 
+        <!-- Strategy -->
         <section class="bg-slate-800 text-white rounded-xl shadow-lg p-8 section-anchor">
             <h2 class="text-2xl font-bold mb-6 border-b border-slate-600 pb-2">Low-Contention Rollout Strategy with Guardrails</h2>
-            <p class="mb-6 opacity-90">Introducing virtual nursing into the healthcare system requires careful planning to gain buy-in from frontline staff and unions. We propose a phased rollout starting with a pilot project under strict guardrails.</p>
+            <p class="mb-6 opacity-90">
+                Introducing virtual nursing into the healthcare system requires careful planning to gain buy-in from frontline staff and unions. We propose a phased rollout starting with a pilot project under strict guardrails.
+            </p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-slate-700 p-4 rounded-lg"><h4 class="font-bold text-blue-300 mb-2">No Reduction in Bedside RN Positions</h4><p class="text-sm opacity-80">Participating hospitals must commit that virtual RNs will not result in any reduction of budgeted in-person RN staffing lines. The virtual program augments capacity; it does not replace it.</p></div>
-                <div class="bg-slate-700 p-4 rounded-lg"><h4 class="font-bold text-blue-300 mb-2">Clear Delineation of Tasks</h4><p class="text-sm opacity-80">The program must establish a defined scope of practice. Virtual RNs may document admission history but will not perform wound care or administer medications.</p></div>
-                <div class="bg-slate-700 p-4 rounded-lg"><h4 class="font-bold text-blue-300 mb-2">Mandated Reporting</h4><p class="text-sm opacity-80">Hospitals must transparently track virtual RN usage. Data on tasks performed and key outcomes will allow evaluation of the program&rsquo;s impact.</p></div>
-                <div class="bg-slate-700 p-4 rounded-lg"><h4 class="font-bold text-blue-300 mb-2">Capped Pilot Scope</h4><p class="text-sm opacity-80">The initial rollout should be limited in size and duration. We recommend a 12-month pilot with roughly 50 RNs across volunteer hospitals.</p></div>
+                <div class="bg-slate-700 p-4 rounded-lg">
+                    <h4 class="font-bold text-blue-300 mb-2">No Reduction in Bedside RN Positions</h4>
+                    <p class="text-sm opacity-80">Participating hospitals must commit that virtual RNs will not result in any reduction of budgeted in-person RN staffing lines. The virtual program augments capacity; it does not replace it.</p>
+                </div>
+                <div class="bg-slate-700 p-4 rounded-lg">
+                    <h4 class="font-bold text-blue-300 mb-2">Clear Delineation of Tasks</h4>
+                    <p class="text-sm opacity-80">The program must establish a defined scope of practice. Virtual RNs may document admission history but will not perform wound care or administer medications.</p>
+                </div>
+                <div class="bg-slate-700 p-4 rounded-lg">
+                    <h4 class="font-bold text-blue-300 mb-2">Mandated Reporting</h4>
+                    <p class="text-sm opacity-80">Hospitals must transparently track virtual RN usage. Data on tasks performed and key outcomes will allow evaluation of the program’s impact.</p>
+                </div>
+                <div class="bg-slate-700 p-4 rounded-lg">
+                    <h4 class="font-bold text-blue-300 mb-2">Capped Pilot Scope</h4>
+                    <p class="text-sm opacity-80">The initial rollout should be limited in size and duration. We recommend a 12-month pilot with roughly 50 RNs across volunteer hospitals.</p>
+                </div>
             </div>
         </section>
 
+        <!-- Examples -->
         <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-8 section-anchor">
             <h2 class="text-2xl font-bold text-slate-900 mb-6 border-b border-blue-100 pb-2">Examples in Practice</h2>
             <div class="space-y-6">
-                <div><h3 class="text-lg font-bold text-blue-800">Henry Ford Health (Michigan, USA)</h3><p class="text-slate-600 mt-1">Henry Ford launched a virtual acute care nursing program across its hospital system in 2025. Virtual RNs operate from a 24/7 command center and appear on patients&rsquo; in-room smart TVs via secure video. They perform admission interviews, discharge prep, safety rounds, and chart checks. In the first full month, virtual nurses logged 600+ hours on patient calls and completed approximately 24,700 tasks.</p></div>
-                <div><h3 class="text-lg font-bold text-blue-800">Baptist Memorial Health Care (Southern USA)</h3><p class="text-slate-600 mt-1">Baptist began implementing virtual nurses in 2022. They utilize telepresence robots that the remote nurse can drive to patient rooms. Virtual nurses focus on admissions and discharges. By 2024, Baptist Memphis had virtual nurses handle approximately 6,000 hours of admission and discharge assessments in a year.</p></div>
-                <div><h3 class="text-lg font-bold text-blue-800">Canadian Telehealth Nursing Services</h3><p class="text-slate-600 mt-1">Programs like Health811 and Telehomecare demonstrate that nurses can successfully deliver remote assessments and health education at scale. Telehome Monitoring programs have achieved major improvements in outcomes and cost savings, illustrating the potential impact of remote nursing care.</p></div>
+                <div>
+                    <h3 class="text-lg font-bold text-blue-800">Henry Ford Health (Michigan, USA)</h3>
+                    <p class="text-slate-600 mt-1">
+                        Henry Ford launched a virtual acute care nursing program across its hospital system in 2025. Virtual RNs operate from a 24/7 command center and appear on patients’ in-room smart TVs via secure video. They perform admission interviews, discharge prep, safety rounds, and chart checks. In the first full month, virtual nurses logged 600+ hours on patient calls and completed approximately 24,700 tasks.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-blue-800">Baptist Memorial Health Care (Southern USA)</h3>
+                    <p class="text-slate-600 mt-1">
+                        Baptist began implementing virtual nurses in 2022. They utilize telepresence robots that the remote nurse can drive to patient rooms. Virtual nurses focus on admissions and discharges. By 2024, Baptist Memphis had virtual nurses handle approximately 6,000 hours of admission and discharge assessments in a year.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-blue-800">Canadian Telehealth Nursing Services</h3>
+                    <p class="text-slate-600 mt-1">
+                        Programs like Health811 and Telehomecare demonstrate that nurses can successfully deliver remote assessments and health education at scale. Telehome Monitoring programs have achieved major improvements in outcomes and cost savings, illustrating the potential impact of remote nursing care.
+                    </p>
+                </div>
             </div>
         </section>
 
+        <!-- Technology -->
         <section id="tech" class="bg-white rounded-xl shadow-sm border border-slate-200 p-8 section-anchor">
             <h2 class="text-2xl font-bold text-slate-900 mb-6 border-b border-blue-100 pb-2">Technology Infrastructure and Tools</h2>
             <ul class="space-y-4 text-slate-600">
-                <li class="flex items-start"><i class="fa-solid fa-server text-blue-500 mt-1.5 mr-3"></i><span><strong>Secure Remote Access to EHRs:</strong> Virtual RNs require secure VPN or cloud-based access to systems like Meditech, Cerner, or Epic to view charts and enter documentation in real time.</span></li>
-                <li class="flex items-start"><i class="fa-solid fa-video text-blue-500 mt-1.5 mr-3"></i><span><strong>Video and Audio Communication:</strong> Implement standardized platforms for two-way video, such as wall-mounted screens or mobile carts. Systems must be HIPAA/PHIPA-compliant.</span></li>
-                <li class="flex items-start"><i class="fa-solid fa-microchip text-blue-500 mt-1.5 mr-3"></i><span><strong>AI-Powered Documentation:</strong> Incorporate ambient clinical intelligence tools like Nuance Dragon Ambient eXperience (DAX) to assist with charting.</span></li>
-                <li class="flex items-start"><i class="fa-solid fa-house-laptop text-blue-500 mt-1.5 mr-3"></i><span><strong>Home Office Hardware:</strong> The health authority should cover costs for high-performance computers, HD webcams, and secure network connectivity for all virtual RNs.</span></li>
+                <li class="flex items-start">
+                    <i class="fa-solid fa-server text-blue-500 mt-1.5 mr-3"></i>
+                    <span><strong>Secure Remote Access to EHRs:</strong> Virtual RNs require secure VPN or cloud-based access to systems like Meditech, Cerner, or Epic to view charts and enter documentation in real time.</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fa-solid fa-video text-blue-500 mt-1.5 mr-3"></i>
+                    <span><strong>Video and Audio Communication:</strong> Implement standardized platforms for two-way video, such as wall-mounted screens or mobile carts. Systems must be HIPAA/PHIPA-compliant.</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fa-solid fa-microchip text-blue-500 mt-1.5 mr-3"></i>
+                    <span><strong>AI-Powered Documentation:</strong> Incorporate ambient clinical intelligence tools like Nuance Dragon Ambient eXperience (DAX) to assist with charting. This allows conversation to be auto-transcribed and summarized.</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fa-solid fa-house-laptop text-blue-500 mt-1.5 mr-3"></i>
+                    <span><strong>Home Office Hardware:</strong> The health authority should cover costs for high-performance computers, HD webcams, and secure network connectivity for all virtual RNs.</span>
+                </li>
             </ul>
         </section>
 
+        <!-- Operational -->
         <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-8 section-anchor">
             <h2 class="text-2xl font-bold text-slate-900 mb-6 border-b border-blue-100 pb-2">Operational Considerations</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div><h4 class="font-bold text-slate-800 mb-2">Scheduling and Shifts</h4><p class="text-slate-600 text-sm mb-4">We recommend starting with 8-hour shifts to maintain focus. Coverage will likely be needed 18&ndash;24 hours a day.</p><h4 class="font-bold text-slate-800 mb-2">Workflow Integration</h4><p class="text-slate-600 text-sm">Each hospital unit needs protocols for engaging the virtual nurse. A regional hub or software platform will triage requests.</p></div>
-                <div><h4 class="font-bold text-slate-800 mb-2">HR and Unions</h4><p class="text-slate-600 text-sm mb-4">Virtual RNs could be employed by the Health Authority or seconded from hospitals. Alignment with Collective Agreements (e.g. ONA, BCNU) is necessary to ensure parity in wages and benefits.</p><h4 class="font-bold text-slate-800 mb-2">Quality Assurance</h4><p class="text-slate-600 text-sm">Continuous evaluation is required. Key performance indicators include patient satisfaction, nurse burnout levels, documentation accuracy, and clinical outcomes like readmission rates.</p></div>
+                <div>
+                    <h4 class="font-bold text-slate-800 mb-2">Scheduling and Shifts</h4>
+                    <p class="text-slate-600 text-sm mb-4">
+                        We recommend starting with 8-hour shifts to maintain focus. Coverage will likely be needed 18–24 hours a day. Hospitals will book virtual RN time slots for predictable tasks and have the ability to call on them for urgent needs.
+                    </p>
+                    <h4 class="font-bold text-slate-800 mb-2">Workflow Integration</h4>
+                    <p class="text-slate-600 text-sm">
+                        Each hospital unit needs protocols for engaging the virtual nurse. A regional hub or software platform will triage requests. Regular virtual huddles between on-duty virtual RNs and site liaisons will ensure smooth operations.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-slate-800 mb-2">HR and Unions</h4>
+                    <p class="text-slate-600 text-sm mb-4">
+                        Virtual RNs could be employed by the Health Authority or seconded from hospitals. Alignment with Collective Agreements (e.g. ONA, BCNU) is necessary to ensure parity in wages and benefits.
+                    </p>
+                    <h4 class="font-bold text-slate-800 mb-2">Quality Assurance</h4>
+                    <p class="text-slate-600 text-sm">
+                        Continuous evaluation is required. Key performance indicators include patient satisfaction, nurse burnout levels, documentation accuracy, and clinical outcomes like readmission rates.
+                    </p>
+                </div>
             </div>
         </section>
 
+        <!-- Conclusion -->
         <section class="bg-blue-900 text-white rounded-xl shadow-lg p-8 section-anchor">
             <h2 class="text-2xl font-bold mb-4">Conclusion and Recommendations</h2>
-            <p class="mb-6 opacity-90 leading-relaxed">The Nursing and Professional Practice Divisions across the country have an opportunity to lead a transformative initiative. This proposal lays out the justification for a government-employer model that enables experienced RNs to provide virtual care. This is additive; it extends the reach of every nurse and relieves burden from on-site staff. Every month these frameworks remain unadopted, provinces continue paying agency premiums that could fund better solutions.</p>
+            <p class="mb-6 opacity-90 leading-relaxed">
+                The Nursing and Professional Practice Divisions across the country have an opportunity to lead a transformative initiative. This proposal lays out the justification for a government-employer model that enables experienced RNs to provide virtual care. This is additive; it extends the reach of every nurse and relieves burden from on-site staff.
+            </p>
             <div class="bg-blue-800 rounded-lg p-6 border border-blue-700">
                 <h3 class="font-bold text-lg mb-4 text-blue-200">Key Recommendations</h3>
                 <ol class="list-decimal list-inside space-y-3 opacity-90 text-sm">
-                    <li><span class="font-bold">Launch a Pilot:</span> Convene a project team and select 3&ndash;5 diverse hospitals.</li>
+                    <li><span class="font-bold">Launch a Pilot in 2026:</span> Convene a project team early in the year and select 3–5 diverse hospitals.</li>
                     <li><span class="font-bold">Establish Governance:</span> Create a steering committee and partner with technology providers.</li>
                     <li><span class="font-bold">Develop Training:</span> Conduct simulations and training for both virtual and unit staff.</li>
                     <li><span class="font-bold">Monitor Rigorously:</span> Define KPIs and produce a comprehensive evaluation after 12 months.</li>
                     <li><span class="font-bold">Plan for Scale-Up:</span> Draft an expansion strategy while maintaining core guardrails.</li>
                 </ol>
             </div>
+            <p class="mt-6 text-sm opacity-80 italic">
+                "It maximizes their impact by removing some physical barriers of location and allowing them to focus on their knowledge and therapeutic communication."
+            </p>
         </section>
 
         <section class="bg-slate-100 rounded-xl p-8 border border-slate-200">
             <h3 class="text-lg font-bold text-slate-800 mb-4">VN Proposal Sources Cited</h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-slate-600">
-                <p>Baptist Memorial Health Care &ndash; virtual nursing program overview.</p><p>Henry Ford Health &ndash; press release on virtual nursing launch.</p><p>Becker&rsquo;s Hospital Review &ndash; report on Henry Ford&rsquo;s pilot results.</p><p>Online Journal of Issues in Nursing &ndash; case study on community hospital programs.</p><p>Canadian Healthcare Technology &ndash; article on Health811 expansion.</p><p>Critical Care Services Ontario &ndash; description of Virtual Critical Care.</p><p>Ottawa Heart Institute &ndash; Telehome Monitoring program results.</p><p>American Hospital Association &ndash; notes on ambient AI documentation.</p><p>Chief Healthcare Executive &ndash; report on Nuance DAX AI tools.</p><p>Hospital News (Ontario) &ndash; nursing shortage projections.</p>
+                <p>Baptist Memorial Health Care – virtual nursing program overview.</p>
+                <p>Henry Ford Health – press release on virtual nursing launch.</p>
+                <p>Becker’s Hospital Review – report on Henry Ford’s pilot results.</p>
+                <p>Online Journal of Issues in Nursing – case study on community hospital programs.</p>
+                <p>Canadian Healthcare Technology – article on Health811 expansion.</p>
+                <p>Critical Care Services Ontario – description of Virtual Critical Care.</p>
+                <p>Ottawa Heart Institute – Telehome Monitoring program results.</p>
+                <p>American Hospital Association – notes on ambient AI documentation.</p>
+                <p>Chief Healthcare Executive – report on Nuance DAX AI tools.</p>
+                <p>Hospital News (Ontario) – nursing shortage projections.</p>
             </div>
         </section>
     </div>
 
+    <!-- POOL IMPLEMENTATION CONTENT START -->
+
     <section id="pool-implementation" class="relative bg-slate-50 pt-24 pb-16 border-t border-slate-200 section-anchor">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <span class="inline-block py-1 px-3 rounded-full bg-green-50 text-green-700 text-xs font-semibold tracking-wide uppercase mb-4">Workforce Strategy</span>
-                <h2 class="text-4xl tracking-tight font-extrabold text-slate-900 sm:text-5xl md:text-5xl mb-6">Provincial Nursing Pool and Scheduling Implementation</h2>
-                <p class="mt-3 max-w-md mx-auto text-base text-slate-600 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">A conceptual framework for addressing staffing shortages through centralized, publicly operated solutions. The longer provinces wait, the more they spend on agency premiums.</p>
+                <span class="inline-block py-1 px-3 rounded-full bg-green-50 text-green-700 text-xs font-semibold tracking-wide uppercase mb-4">
+                    Workforce Strategy
+                </span>
+                <h2 class="text-4xl tracking-tight font-extrabold text-slate-900 sm:text-5xl md:text-5xl mb-6">
+                    Provincial Nursing Pool and Scheduling Implementation
+                </h2>
+                <!-- Increased contrast from slate-500 to slate-600 -->
+                <p class="mt-3 max-w-md mx-auto text-base text-slate-600 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+                    Introduction and Background on addressing staffing shortages through centralized solutions.
+                </p>
             </div>
         </div>
     </section>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16 bg-slate-50 pb-24">
+
         <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-8">
             <h2 class="text-2xl font-bold text-slate-900 mb-4 border-b border-blue-100 pb-2">The Agency Challenge</h2>
-            <p class="text-slate-600 leading-relaxed mb-4">Many provinces lack a health workforce strategy with regional solutions to address nursing staffing shortages. Canada&rsquo;s public healthcare systems have seen a surging reliance on private nursing agencies, which has strained hospital and long-term care (LTC) budgets. Between 2013 and 2023, real per-capita spending on private agency staff has skyrocketed, even as direct hospital spending remained relatively flat.</p>
-            <p class="text-slate-600 leading-relaxed mb-4">Hospitals have paid billions to private, for-profit staffing agencies in the last decade. This stopgap comes at a high price: agencies charge double or even triple the normal hourly rate of in-house staff. For example, some LTC facilities have paid $88&ndash;$150/hour for agency RNs (versus about $43/hour in wages for a staff nurse) and even higher short-notice premiums. One small hospital reported rates up to $300/hour for agency nurses.</p>
-            <p class="text-slate-600 leading-relaxed">These practices have created a difficult cycle: higher pay and flexibility in agency work lure nurses from the public system, worsening staff shortages and forcing hospitals to rely even more on agencies. Now is the time for policymakers and stakeholders to explore a provincial nursing pool as a solution to reduce costs and stabilize the workforce by providing a centralized, public alternative to private agencies.</p>
+            <p class="text-slate-600 leading-relaxed mb-4">
+                Many provinces lack a health workforce strategy with regional solutions to address nursing staffing shortages. Canada's public healthcare systems have seen a surging reliance on private nursing agencies, which has strained hospital and long-term care (LTC) budgets. Between 2013 and 2023, real per-capita spending on private agency staff has skyrocketed, even as direct hospital spending remained relatively flat.
+            </p>
+            <p class="text-slate-600 leading-relaxed mb-4">
+                Hospitals have paid billions to private, for-profit staffing agencies in the last decade. This stopgap comes at a high price: agencies often charge double or even triple the normal hourly rate of in-house staff. For example, some LTC facilities have paid $88–$150/hour for agency RNs (versus about $43/hour in wages for a staff nurse) and even higher short-notice premiums. One small hospital reported rates up to $300/hour for agency nurses.
+            </p>
+            <p class="text-slate-600 leading-relaxed">
+                These practices have created a difficult cycle – higher pay and flexibility in agency work lure nurses from the public system, worsening staff shortages and forcing hospitals to rely even more on agencies. Now is the time for policymakers and stakeholders to explore a provincial nursing pool as a solution to reduce costs and stabilize the workforce by providing a centralized, public alternative to private agencies.
+            </p>
         </section>
 
         <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-8">
             <div class="flex flex-col md:flex-row gap-8">
-                <div class="md:w-1/3"><div class="bg-blue-50 p-6 rounded-lg h-full"><i class="fa-solid fa-chart-line text-blue-600 text-3xl mb-4"></i><h3 class="text-xl font-bold text-slate-900 mb-2">Financial Impact</h3><p class="text-sm text-slate-600">Agency expenditures have skyrocketed since the COVID-19 pandemic. In 2022&ndash;23, total agency staffing costs in Ontario alone neared $953 million.</p></div></div>
+                <div class="md:w-1/3">
+                    <div class="bg-blue-50 p-6 rounded-lg h-full">
+                        <i class="fa-solid fa-chart-line text-blue-600 text-3xl mb-4"></i>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Financial Impact</h3>
+                        <!-- Increased contrast from slate-500 to slate-600 -->
+                        <p class="text-sm text-slate-600">
+                            Agency expenditures have skyrocketed since the COVID-19 pandemic. In 2022–23, total agency staffing costs in Ontario alone neared $953 million.
+                        </p>
+                    </div>
+                </div>
                 <div class="md:w-2/3">
                     <h2 class="text-2xl font-bold text-slate-900 mb-4 border-b border-blue-100 pb-2">Financial Impact of Private Agency Nursing</h2>
-                    <p class="text-slate-600 leading-relaxed mb-4">Recent reports highlight the growing financial burden of agency nursing on healthcare budgets. A 2025 analysis revealed that public hospitals paid billions to private agencies over 10 years. Notably, agency-supplied staff account for a small fraction of total worked hours but consume a disproportionate percentage of total nurse staffing costs, due to their premium rates.</p>
-                    <p class="text-slate-600 leading-relaxed">Agency usage has roughly doubled year-over-year in many jurisdictions. This trend prompted warnings that &ldquo;agency costs are crowding out the budgets for care&rdquo; in core services. The current model is cost-inefficient, as private agencies charge 2&ndash;3 times the cost of hiring regular staff. Any plan for a Provincial nursing pool must address this financial imperative: rein in exorbitant agency fees and recapture budget capacity for public healthcare services.</p>
+                    <p class="text-slate-600 leading-relaxed mb-4">
+                        Recent reports highlight the growing financial burden of agency nursing on healthcare budgets. A 2025 analysis revealed that public hospitals paid billions to private agencies over 10 years. Notably, agency-supplied staff often account for a small fraction of total worked hours but consume a disproportionate percentage of total nurse staffing costs, due to their premium rates.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed">
+                        Agency usage has roughly doubled year-over-year in many jurisdictions. This trend prompted warnings that “agency costs are crowding out the budgets for care” in core services. The current model is cost-inefficient, as private agencies charge 2–3 times the cost of hiring regular staff. Any plan for a Provincial nursing pool must address this financial imperative: rein in exorbitant agency fees and recapture budget capacity for public healthcare services.
+                    </p>
                 </div>
             </div>
         </section>
 
         <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-8">
             <h2 class="text-2xl font-bold text-slate-900 mb-6 border-b border-blue-100 pb-2">Models of Centralized Nursing Staffing Pools</h2>
-            <p class="text-slate-600 leading-relaxed mb-6">Other jurisdictions have created centralized or government-sponsored nursing pools to reduce agency dependence. Common success factors include maintaining more than union-level pay/benefits for pool nurses, centralized scheduling systems, and support for travel or training.</p>
+            <p class="text-slate-600 leading-relaxed mb-6">
+                Other jurisdictions have created centralized or government-sponsored nursing pools to reduce agency dependence. Common success factors include maintaining more than union-level pay/benefits for pool nurses, centralized scheduling systems, and support for travel or training.
+            </p>
+            
             <div class="overflow-x-auto">
                 <table class="min-w-full text-sm text-left text-slate-600">
-                    <thead class="text-xs text-slate-700 uppercase bg-slate-50 border-b border-slate-200"><tr><th class="px-6 py-3 font-bold">Jurisdiction</th><th class="px-6 py-3 font-bold">Program</th><th class="px-6 py-3 font-bold">Key Features</th></tr></thead>
+                    <thead class="text-xs text-slate-700 uppercase bg-slate-50 border-b border-slate-200">
+                        <tr>
+                            <th class="px-6 py-3 font-bold">Jurisdiction</th>
+                            <th class="px-6 py-3 font-bold">Program</th>
+                            <th class="px-6 py-3 font-bold">Key Features</th>
+                        </tr>
+                    </thead>
                     <tbody class="divide-y divide-slate-100">
-                        <tr class="bg-white border-b border-slate-100"><td class="px-6 py-4 font-medium text-slate-900">United Kingdom</td><td class="px-6 py-4">NHS Professionals</td><td class="px-6 py-4">National &ldquo;bank&rdquo; of temporary staff. 39M hours filled in 2021-22. Central recruitment and booking; self-funded via fees charged to hospitals.</td></tr>
-                        <tr class="bg-white border-b border-slate-100"><td class="px-6 py-4 font-medium text-slate-900">British Columbia</td><td class="px-6 py-4">GoHealth BC</td><td class="px-6 py-4">Float pool of RNs who are regular health system employees. Nurses receive union wages, benefits, pension. Travel support provided.</td></tr>
-                        <tr class="bg-white border-b border-slate-100"><td class="px-6 py-4 font-medium text-slate-900">Manitoba</td><td class="px-6 py-4">Provincial Travel Nurse Team</td><td class="px-6 py-4">Internal float pool for flexible deployments. Created via union agreement to offer an alternative to agency gigs.</td></tr>
-                        <tr class="bg-white"><td class="px-6 py-4 font-medium text-slate-900">Quebec</td><td class="px-6 py-4">Regional Float Pools</td><td class="px-6 py-4">Phasing out private agencies entirely by 2025. Expanded internal float pools ensure coverage. Law imposes fines for non-compliance.</td></tr>
+                        <tr class="bg-white border-b border-slate-100">
+                            <td class="px-6 py-4 font-medium text-slate-900">United Kingdom</td>
+                            <td class="px-6 py-4">NHS Professionals</td>
+                            <td class="px-6 py-4">National “bank” of temporary staff. 39M hours filled in 2021-22. Central recruitment and booking; self-funded via fees charged to hospitals.</td>
+                        </tr>
+                        <tr class="bg-white border-b border-slate-100">
+                            <td class="px-6 py-4 font-medium text-slate-900">British Columbia</td>
+                            <td class="px-6 py-4">GoHealth BC</td>
+                            <td class="px-6 py-4">Float pool of RNs who are regular health system employees. Nurses receive union wages, benefits, pension. Travel support provided.</td>
+                        </tr>
+                        <tr class="bg-white border-b border-slate-100">
+                            <td class="px-6 py-4 font-medium text-slate-900">Manitoba</td>
+                            <td class="px-6 py-4">Provincial Travel Nurse Team</td>
+                            <td class="px-6 py-4">Internal float pool for flexible deployments. Created via union agreement to offer an alternative to agency gigs.</td>
+                        </tr>
+                        <tr class="bg-white">
+                            <td class="px-6 py-4 font-medium text-slate-900">Quebec</td>
+                            <td class="px-6 py-4">Regional Float Pools</td>
+                            <td class="px-6 py-4">Phasing out private agencies entirely by 2025. Expanded internal float pools ensure coverage. Law imposes fines for non-compliance.</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -442,112 +907,385 @@
 
         <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-8">
             <h2 class="text-2xl font-bold text-slate-900 mb-4 border-b border-blue-100 pb-2">Labor Relations and Legal Feasibility</h2>
-            <p class="text-slate-600 leading-relaxed mb-4">Any Provincial nursing pool must navigate the labor relations context, particularly the union collective agreements. Central agreements state the hospital &ldquo;shall not contract out&rdquo; bargaining unit nursing duties if it results in layoffs or loss of hours for union nurses. It carves out only a narrow exception for truly ad hoc, single-shift agency usage to cover unexpected absences.</p>
-            <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500 mb-4"><p class="text-slate-700 italic">The most feasible approach is to ensure the provincial pool operates within the public sector. For example, pool nurses could be employees of a new crown agency or of the Health Authority, with compensation aligned to collective agreements.</p></div>
-            <p class="text-slate-600 leading-relaxed">If pool nurses are not hospital employees or not covered by the union contract, the union may argue this violates no-contracting-out provisions. The safest path is treating the pool as an extension of hospital scheduling rather than a separate employer, which preserves union protection and removes contractor-misclassification risks.</p>
+            <p class="text-slate-600 leading-relaxed mb-4">
+                Any Provincial nursing pool must navigate the labor relations context, particularly the union collective agreements. Central agreements often state the hospital “shall not contract out” bargaining unit nursing duties if it results in layoffs or loss of hours for union nurses. It carves out only a narrow exception for truly ad hoc, single-shift agency usage to cover unexpected absences.
+            </p>
+            <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500 mb-4">
+                <p class="text-slate-700 italic">
+                    The most feasible approach is to ensure the provincial pool operates within the public sector. For example, pool nurses could be employees of a new crown agency or of the Health Authority, with compensation aligned to collective agreements.
+                </p>
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+                If pool nurses are not hospital employees or not covered by the union contract, the union may argue this violates no-contracting-out provisions. The safest path is treating the pool as an extension of hospital scheduling rather than a separate employer, which preserves union protection and removes contractor-misclassification risks.
+            </p>
         </section>
 
         <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-8">
             <h2 class="text-2xl font-bold text-slate-900 mb-6 border-b border-blue-100 pb-2">Infrastructure Needs: Technology and Logistics</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div><h4 class="font-bold text-slate-800 mb-2">Centralized Scheduling</h4><p class="text-slate-600 text-sm mb-4">A central scheduling platform is critical for matching pool nurses to vacant shifts. This should function as a real-time marketplace where hospitals post staffing needs and nurses can sign up for available shifts via mobile app.</p><h4 class="font-bold text-slate-800 mb-2">Credentialing Management</h4><p class="text-slate-600 text-sm mb-4">A centralized database should store and verify licenses, specialty certifications, and immunization status. Automating license verification speeds up onboarding new pool members.</p></div>
-                <div><h4 class="font-bold text-slate-800 mb-2">Information Systems Compatibility</h4><p class="text-slate-600 text-sm mb-4">Pool nurses must navigate different EMR systems (Epic, Cerner, Meditech). The program needs to invest in standardized EMR training so nurses can quickly learn the essentials of different systems before an assignment.</p><h4 class="font-bold text-slate-800 mb-2">Logistics and Support</h4><p class="text-slate-600 text-sm">Coordination of travel and housing is needed when nurses deploy outside their home area. A 24/7 support line ensures backup if a nurse has an issue finding a unit or if a shift changes last-minute.</p></div>
+                <div>
+                    <h4 class="font-bold text-slate-800 mb-2">Centralized Scheduling</h4>
+                    <p class="text-slate-600 text-sm mb-4">
+                        A central scheduling platform is critical for matching pool nurses to vacant shifts. This should function as a real-time marketplace where hospitals post staffing needs and nurses can sign up for available shifts via mobile app.
+                    </p>
+                    <h4 class="font-bold text-slate-800 mb-2">Credentialing Management</h4>
+                    <p class="text-slate-600 text-sm mb-4">
+                        A centralized database should store and verify licenses, specialty certifications, and immunization status. Automating license verification speeds up onboarding new pool members.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-slate-800 mb-2">Information Systems Compatibility</h4>
+                    <p class="text-slate-600 text-sm mb-4">
+                        Pool nurses must navigate different EMR systems (Epic, Cerner, Meditech). The program needs to invest in standardized EMR training so nurses can quickly learn the essentials of different systems before an assignment.
+                    </p>
+                    <h4 class="font-bold text-slate-800 mb-2">Logistics and Support</h4>
+                    <p class="text-slate-600 text-sm">
+                        Coordination of travel and housing is needed when nurses deploy outside their home area. A 24/7 support line ensures backup if a nurse has an issue finding a unit or if a shift changes last-minute.
+                    </p>
+                </div>
             </div>
         </section>
 
         <section class="bg-slate-800 text-white rounded-xl shadow-lg p-8">
             <h2 class="text-2xl font-bold mb-6 border-b border-slate-600 pb-2">Strategic Technology Approach</h2>
-            <p class="mb-6 opacity-90">Most hospitals use legacy Workforce Management systems like UKG or Infor. Do not attempt to replace these immediately. Instead, implement a <strong>Marketplace Overlay</strong>.</p>
+            <p class="mb-6 opacity-90">
+                Most hospitals use legacy Workforce Management systems like UKG or Infor. Do not attempt to replace these immediately. Instead, implement a <strong>Marketplace Overlay</strong>.
+            </p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-slate-700 p-4 rounded-lg"><h4 class="font-bold text-blue-300 mb-2">BookJane</h4><p class="text-sm opacity-80">Toronto-based. Highly aligned with the &ldquo;Uber-like&rdquo; marketplace vision. Focuses on mobilizing internal float pools with excellent user experience.</p></div>
-                <div class="bg-slate-700 p-4 rounded-lg"><h4 class="font-bold text-blue-300 mb-2">Andgo Systems</h4><p class="text-sm opacity-80">Saskatoon-based. Specializes in &ldquo;Intelligent Shift Fill Automation&rdquo; for unionized environments. Excels at automating call-out rules required by agreements.</p></div>
-                <div class="bg-slate-700 p-4 rounded-lg"><h4 class="font-bold text-blue-300 mb-2">QGenda</h4><p class="text-sm opacity-80">Strong in credentialing and provider scheduling. Offers a &ldquo;single source of truth&rdquo; for credential management.</p></div>
+                <div class="bg-slate-700 p-4 rounded-lg">
+                    <h4 class="font-bold text-blue-300 mb-2">BookJane</h4>
+                    <p class="text-sm opacity-80">Toronto-based. Highly aligned with the "Uber-like" marketplace vision. Focuses on mobilizing internal float pools with excellent user experience.</p>
+                </div>
+                <div class="bg-slate-700 p-4 rounded-lg">
+                    <h4 class="font-bold text-blue-300 mb-2">Andgo Systems</h4>
+                    <p class="text-sm opacity-80">Saskatoon-based. Specializes in "Intelligent Shift Fill Automation" for unionized environments. Excels at automating call-out rules required by agreements.</p>
+                </div>
+                <div class="bg-slate-700 p-4 rounded-lg">
+                    <h4 class="font-bold text-blue-300 mb-2">QGenda</h4>
+                    <p class="text-sm opacity-80">Strong in credentialing and provider scheduling. Offers a "single source of truth" for credential management.</p>
+                </div>
             </div>
         </section>
 
         <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-8">
             <h2 class="text-2xl font-bold text-slate-900 mb-6 border-b border-blue-100 pb-2">Implementation Roadmap</h2>
             <div class="space-y-6">
-                <div><h3 class="text-lg font-bold text-blue-800">1. Feasibility &amp; Consultation (Months 0&ndash;3)</h3><p class="text-slate-600 mt-1 text-sm">Establish project team &amp; advisory table (MOH, Health Authorities, Unions, Hospital Associations). Analyze agency spend. Address legal/HR feasibility. Secure stakeholder buy-in on the public-sector pool vision.</p></div>
-                <div><h3 class="text-lg font-bold text-blue-800">2. Governance &amp; Framework (Months 3&ndash;6)</h3><p class="text-slate-600 mt-1 text-sm">Decide host organization and secure funding. Draft enabling policy (e.g. require hospitals to use pool first). Design operational policies like travel reimbursement and nurse employment terms.</p></div>
-                <div><h3 class="text-lg font-bold text-blue-800">3. Recruitment &amp; Onboarding (Months 4&ndash;9)</h3><p class="text-slate-600 mt-1 text-sm">Launch recruitment targeting agency nurses. Process applications through centralized verification. Conduct training/orientation for first cohorts (EMR systems, clinical protocols).</p></div>
-                <div><h3 class="text-lg font-bold text-blue-800">4. Pilot Deployment (Months 9&ndash;15)</h3><p class="text-slate-600 mt-1 text-sm">Go-live in pilot hospitals/LTC homes. Pool nurses begin filling assignments. Provide 24/7 support. Collect data on fill rates and costs. Produce evaluation report.</p></div>
-                <div><h3 class="text-lg font-bold text-blue-800">5. Scale-Up Rollout (Months 15&ndash;24)</h3><p class="text-slate-600 mt-1 text-sm">Incorporate pilot learnings. Sequentially onboard remaining regions. Enforce policy shifts: hospitals now required to utilize pool for temps; begin phasing out existing agency contracts.</p></div>
-                <div><h3 class="text-lg font-bold text-blue-800">6. Full Implementation (Month 24+)</h3><p class="text-slate-600 mt-1 text-sm">Pool fully operational province-wide. Comprehensive outcome evaluation. Formalize long-term governance. Consider legislative ban on agencies beyond this point if pool is meeting needs.</p></div>
+                <div>
+                    <h3 class="text-lg font-bold text-blue-800">1. Feasibility & Consultation (Months 0–3)</h3>
+                    <p class="text-slate-600 mt-1 text-sm">
+                        Establish project team & advisory table (MOH, Health Authorities, Unions, Hospital Associations). Analyze agency spend. Address legal/HR feasibility. Secure stakeholder buy-in on the public-sector pool vision.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-blue-800">2. Governance & Framework (Months 3–6)</h3>
+                    <p class="text-slate-600 mt-1 text-sm">
+                        Decide host organization and secure funding. Draft enabling policy (e.g. require hospitals to use pool first). Design operational policies like travel reimbursement and nurse employment terms.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-blue-800">3. Recruitment & Onboarding (Months 4–9)</h3>
+                    <p class="text-slate-600 mt-1 text-sm">
+                        Launch recruitment targeting agency nurses. Process applications through centralized verification. Conduct training/orientation for first cohorts (EMR systems, clinical protocols).
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-blue-800">4. Pilot Deployment (Months 9–15)</h3>
+                    <p class="text-slate-600 mt-1 text-sm">
+                        Go-live in pilot hospitals/LTC homes. Pool nurses begin filling assignments. Provide 24/7 support. Collect data on fill rates and costs. Produce evaluation report.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-blue-800">5. Scale-Up Rollout (Months 15–24)</h3>
+                    <p class="text-slate-600 mt-1 text-sm">
+                        Incorporate pilot learnings. Sequentially onboard remaining regions. Enforce policy shifts: hospitals now required to utilize pool for temps; begin phasing out existing agency contracts.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-blue-800">6. Full Implementation (Month 24+)</h3>
+                    <p class="text-slate-600 mt-1 text-sm">
+                        Pool fully operational province-wide. Comprehensive outcome evaluation. Formalize long-term governance. Consider legislative ban on agencies beyond this point if pool is meeting needs.
+                    </p>
+                </div>
             </div>
         </section>
 
         <section class="bg-blue-900 text-white rounded-xl shadow-lg p-8">
             <h2 class="text-2xl font-bold mb-4">Conclusion</h2>
-            <p class="mb-6 opacity-90 leading-relaxed">By following these implementation steps, the Province can create a centralized nursing pool that addresses the root causes behind the agency boom. This strategy shifts the solution to the public realm, offering nurses flexible work opportunities with the security and standards of the public system. Financially, redirecting funds from agencies to an in-house pool should yield significant savings and better value for money, while also improving workforce morale and retention. The framework is ready. The question is whether decision-makers will act before the next shortage forces their hand.</p>
-            <p class="text-sm opacity-80 italic">A well-implemented Provincial Nursing Pool offers a feasible path to safeguarding the sustainability of the public healthcare budget.</p>
+            <p class="mb-6 opacity-90 leading-relaxed">
+                By following these implementation steps, the Province can create a centralized nursing pool that addresses the root causes behind the agency boom. This strategy shifts the solution to the public realm – offering nurses flexible work opportunities with the security and standards of the public system. Financially, redirecting funds from agencies to an in-house pool should yield significant savings and better value for money, while also improving workforce morale and retention.
+            </p>
+            <p class="text-sm opacity-80 italic">
+                A well-implemented Provincial Nursing Pool offers a feasible path to safeguarding the sustainability of the public healthcare budget.
+            </p>
         </section>
 
         <section class="bg-slate-100 rounded-xl p-8 border border-slate-200">
             <h3 class="text-lg font-bold text-slate-800 mb-4">Sources Cited</h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-slate-600">
-                <p>Canadian Health Coalition &ndash; &ldquo;The use of agency nursing is exploding&rdquo; (Aug 2023).</p><p>Global News / Canadian Press &ndash; &ldquo;Ontario hospitals spent over $9B on agency staff over 10 years&rdquo; (May 2025).</p><p>Policy Alternatives (CCPA) &ndash; &ldquo;Hollowed Out: Ontario public hospitals and the rise of private staffing agencies&rdquo; (Nov 2023).</p><p>BC Nurses&rsquo; Union &ndash; &ldquo;For Patients, Not Profit&rdquo; Update Magazine Spring 2025 (Mar 2025).</p><p>NHS England &ndash; &ldquo;Guidance for developing a healthy nursing staff bank&rdquo; (Apr 2025).</p><p>ONA Central Collective Agreement &ndash; Hospital Provincial Agreement (2018-2027).</p><p>ShiftMed Workforce Blog &ndash; &ldquo;Streamline Nurse Onboarding: Centralized Credential Verification&rdquo; (2025).</p><p>Healthcare Excellence Canada &ndash; &ldquo;Optimizing the Use of Staffing Agencies&rdquo; (Mar 2025).</p>
+                <p>Canadian Health Coalition – “The use of agency nursing is exploding” (Aug 2023).</p>
+                <p>Global News / Canadian Press – “Ontario hospitals spent over $9B on agency staff over 10 years” (May 2025).</p>
+                <p>Policy Alternatives (CCPA) – “Hollowed Out: Ontario public hospitals and the rise of private staffing agencies” (Nov 2023).</p>
+                <p>BC Nurses’ Union – “For Patients, Not Profit – Update Magazine Spring 2025” (Mar 2025).</p>
+                <p>NHS England – “Guidance for developing a healthy nursing staff bank” (Apr 2025).</p>
+                <p>ONA Central Collective Agreement – Hospital Provincial Agreement (2018-2027).</p>
+                <p>ShiftMed Workforce Blog – “Streamline Nurse Onboarding: Centralized Credential Verification” (2025).</p>
+                <p>Healthcare Excellence Canada – “Optimizing the Use of Staffing Agencies” (Mar 2025).</p>
             </div>
         </section>
+
     </div>
 
+    <!-- Footer -->
     <footer class="bg-slate-900 border-t border-slate-800">
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="text-center md:text-left"><span class="text-xl font-extrabold text-white">ProRN Inc.</span><p class="text-sm text-slate-300 mt-1">Clinical Workforce Implementation</p></div>
-            <div class="flex space-x-6">
-                <a href="https://www.linkedin.com/in/jag416" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-blue-500 transition-colors"><span class="sr-only">LinkedIn</span><i data-lucide="linkedin" class="w-6 h-6"></i></a>
-                <a href="#" onclick="contactFirm(event)" class="text-slate-300 hover:text-blue-500 transition-colors"><span class="sr-only">Email</span><i data-lucide="mail" class="w-6 h-6"></i></a>
+            <div class="text-center md:text-left">
+                <span class="text-xl font-extrabold text-white">ProRN Inc.</span>
+                <p class="text-sm text-slate-300 mt-1">Clinical Workforce Implementation</p>
             </div>
-            <div class="text-slate-500 text-sm">&copy; <span id="current-year"></span> ProRN Inc. Toronto, Ontario. All rights reserved.</div>
+            <div class="flex space-x-6">
+                <!-- LinkedIn Active Link -->
+                <a href="https://www.linkedin.com/in/jag416" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-blue-500 transition-colors">
+                    <span class="sr-only">LinkedIn</span>
+                    <i data-lucide="linkedin" class="w-6 h-6"></i>
+                </a>
+                <!-- Protected Email Icon -->
+                <a href="#" onclick="contactFirm(event)" class="text-slate-300 hover:text-blue-500 transition-colors">
+                    <span class="sr-only">Email</span>
+                    <i data-lucide="mail" class="w-6 h-6"></i>
+                </a>
+            </div>
+            <div class="text-slate-500 text-sm">
+                &copy; <span id="current-year"></span> ProRN Inc. Toronto, Ontario. All rights reserved.
+            </div>
         </div>
     </footer>
 
-    <div id="toast-notification" class="fixed bottom-4 right-4 z-[10000] transform transition-all duration-300 translate-y-24 opacity-0"><div class="bg-slate-800 text-white px-6 py-4 rounded-lg shadow-xl flex items-center gap-3 border border-slate-700"><i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i><span id="toast-message" class="font-medium text-sm">Notification</span></div></div>
-
+    <!-- Toast Notification (Replaces Alert) -->
+    <div id="toast-notification" class="fixed bottom-4 right-4 z-[10000] transform transition-all duration-300 translate-y-24 opacity-0">
+        <div class="bg-slate-800 text-white px-6 py-4 rounded-lg shadow-xl flex items-center gap-3 border border-slate-700">
+            <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+            <span id="toast-message" class="font-medium text-sm">Notification</span>
+        </div>
+    </div>
+    
+    <!-- Voice Assistant Chat Widget with Toggle -->
 <style>
-    #voice-assistant-widget { position: fixed; bottom: 20px; right: 20px; z-index: 9999; font-family: 'Inter', sans-serif; }
-    #voice-assistant-container { display: none; margin-bottom: 16px; width: 400px; }
-    #voice-assistant-iframe { width: 400px; height: 550px; border: none; border-radius: 0 0 10px 10px; display: block; }
+    #voice-assistant-widget {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 9999;
+        font-family: 'Inter', sans-serif;
+    }
+    
+    #voice-assistant-container {
+        display: none;
+        margin-bottom: 16px;
+        width: 400px;
+    }
+    
+    #voice-assistant-iframe {
+        width: 400px;
+        height: 550px;
+        border: none;
+        border-radius: 0 0 10px 10px;
+        display: block;
+    }
+    
+    /* Mobile Responsive */
     @media (max-width: 480px) {
-        #voice-assistant-widget { bottom: 0; right: 0; left: 0; padding: 0; }
-        #voice-assistant-widget.widget-open { top: 0; display: flex; flex-direction: column; background: rgba(0,0,0,0.5); padding: 10px; }
-        #voice-assistant-container { width: 100%; max-width: 100%; margin: auto 0 0 0; max-height: calc(100vh - 20px); }
-        #voice-assistant-iframe { width: 100%; height: calc(100vh - 80px); max-height: 600px; }
-        #voice-assistant-toggle { position: fixed; bottom: 16px; right: 16px; }
+        #voice-assistant-widget {
+            bottom: 0;
+            right: 0;
+            left: 0;
+            padding: 0;
+        }
+        
+        #voice-assistant-widget.widget-open {
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+        }
+        
+        #voice-assistant-container {
+            width: 100%;
+            max-width: 100%;
+            margin: auto 0 0 0;
+            max-height: calc(100vh - 20px);
+        }
+        
+        #voice-assistant-iframe {
+            width: 100%;
+            height: calc(100vh - 80px);
+            max-height: 600px;
+        }
+        
+        #voice-assistant-toggle {
+            position: fixed;
+            bottom: 16px;
+            right: 16px;
+        }
     }
 </style>
+
 <div id="voice-assistant-widget">
+    
+    <!-- Chat Window (Hidden by Default) -->
     <div id="voice-assistant-container">
-        <div style="background:#1e3a5f;color:white;padding:12px 16px;border-radius:10px 10px 0 0;display:flex;justify-content:space-between;align-items:center;">
-            <span style="font-weight:600;font-size:14px;">ProRN Assistant</span>
-            <button onclick="toggleVoiceAssistant()" style="background:none;border:none;color:white;cursor:pointer;padding:4px;display:flex;align-items:center;justify-content:center;" aria-label="Close assistant"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+        <div style="background: #1e3a5f; color: white; padding: 12px 16px; border-radius: 10px 10px 0 0; display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-weight: 600; font-size: 14px;">ProRN Assistant</span>
+            <button onclick="toggleVoiceAssistant()" style="background: none; border: none; color: white; cursor: pointer; padding: 4px; display: flex; align-items: center; justify-content: center;" aria-label="Close assistant">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
         </div>
-        <iframe id="voice-assistant-iframe" src="about:blank" data-src="https://prorn-inc-ai-voice-assistant-624237507602.us-west1.run.app/" allow="microphone" title="ProRN Voice Assistant"></iframe>
+        <iframe 
+            id="voice-assistant-iframe"
+            src="about:blank"
+            data-src="https://prorn-inc-ai-voice-assistant-624237507602.us-west1.run.app/"
+            allow="microphone"
+            title="ProRN Voice Assistant"
+        ></iframe>
     </div>
-    <button id="voice-assistant-toggle" onclick="toggleVoiceAssistant()" aria-label="Open voice assistant" style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#1e40af 0%,#1e3a8a 100%);border:none;cursor:pointer;box-shadow:0 4px 12px rgba(30,64,175,0.4);display:flex;align-items:center;justify-content:center;transition:transform 0.2s ease,box-shadow 0.2s ease;margin-left:auto;">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+    
+    <!-- Toggle Button -->
+    <button id="voice-assistant-toggle" onclick="toggleVoiceAssistant()" aria-label="Open voice assistant" style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%); border: none; cursor: pointer; box-shadow: 0 4px 12px rgba(30, 64, 175, 0.4); display: flex; align-items: center; justify-content: center; transition: transform 0.2s ease, box-shadow 0.2s ease; margin-left: auto;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+            <line x1="12" y1="19" x2="12" y2="23"></line>
+            <line x1="8" y1="23" x2="16" y2="23"></line>
+        </svg>
     </button>
 </div>
 
 <script>
+    // Initialize Icons
     lucide.createIcons();
+
+    // Set Current Year Dynamically
     document.getElementById('current-year').textContent = new Date().getFullYear();
-    let voiceAssistantOpen = false, voiceAssistantLoaded = false;
+
+    /* --- Voice Assistant Logic --- */
+    let voiceAssistantOpen = false;
+    let voiceAssistantLoaded = false;
+    
     function toggleVoiceAssistant() {
-        const w=document.getElementById('voice-assistant-widget'),c=document.getElementById('voice-assistant-container'),t=document.getElementById('voice-assistant-toggle'),i=document.getElementById('voice-assistant-iframe');
-        voiceAssistantOpen=!voiceAssistantOpen;
-        if(voiceAssistantOpen){if(!voiceAssistantLoaded){i.src=i.dataset.src;voiceAssistantLoaded=true;}c.style.display='block';t.style.display='none';w.classList.add('widget-open');if(window.innerWidth<=480)document.body.style.overflow='hidden';}
-        else{c.style.display='none';t.style.display='flex';w.classList.remove('widget-open');document.body.style.overflow='';}
+        const widget = document.getElementById('voice-assistant-widget');
+        const container = document.getElementById('voice-assistant-container');
+        const toggle = document.getElementById('voice-assistant-toggle');
+        const iframe = document.getElementById('voice-assistant-iframe');
+        
+        voiceAssistantOpen = !voiceAssistantOpen;
+        
+        if (voiceAssistantOpen) {
+            // Lazy load iframe on first open
+            if (!voiceAssistantLoaded) {
+                iframe.src = iframe.dataset.src;
+                voiceAssistantLoaded = true;
+            }
+            container.style.display = 'block';
+            toggle.style.display = 'none';
+            widget.classList.add('widget-open');
+            
+            // Prevent body scroll on mobile when widget is open
+            if (window.innerWidth <= 480) {
+                document.body.style.overflow = 'hidden';
+            }
+        } else {
+            container.style.display = 'none';
+            toggle.style.display = 'flex';
+            widget.classList.remove('widget-open');
+            document.body.style.overflow = '';
+        }
     }
-    const toggleBtn=document.getElementById('voice-assistant-toggle');
-    if(toggleBtn){toggleBtn.addEventListener('mouseenter',function(){this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 16px rgba(30,64,175,0.5)';});toggleBtn.addEventListener('mouseleave',function(){this.style.transform='scale(1)';this.style.boxShadow='0 4px 12px rgba(30,64,175,0.4)';});}
-    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&voiceAssistantOpen)toggleVoiceAssistant();});
-    function showToast(m){const c=document.getElementById('toast-notification'),s=document.getElementById('toast-message');s.textContent=m;c.classList.remove('translate-y-24','opacity-0');setTimeout(()=>{c.classList.add('translate-y-24','opacity-0');},3000);}
-    function contactFirm(e,subject){e.preventDefault();const a=String.fromCharCode(97,110,100,114,101,97,64,112,114,111,114,110,105,110,99,46,99,111,109);let m='mailto:'+a;if(subject)m+='?subject='+encodeURIComponent(subject);navigator.clipboard.writeText(a).then(()=>{showToast("Email copied to clipboard. Opening mail client...");setTimeout(()=>{window.location.href=m;},1000);}).catch(err=>{showToast("Could not copy automatically. Email: "+a);setTimeout(()=>{window.location.href=m;},2000);});}
-    const mobileMenu=document.getElementById('mobile-menu'),mobileBtn=document.getElementById('mobile-menu-btn');
-    if(mobileBtn)mobileBtn.addEventListener('click',function(){mobileMenu.classList.toggle('hidden');});
-    const mobileLinks=mobileMenu?mobileMenu.querySelectorAll('a'):[];
-    mobileLinks.forEach(link=>{link.addEventListener('click',()=>{mobileMenu.classList.add('hidden');});});
+    
+    // Hover effect for toggle button
+    const toggleBtn = document.getElementById('voice-assistant-toggle');
+    if (toggleBtn) {
+        toggleBtn.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.1)';
+            this.style.boxShadow = '0 6px 16px rgba(30, 64, 175, 0.5)';
+        });
+        toggleBtn.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+            this.style.boxShadow = '0 4px 12px rgba(30, 64, 175, 0.4)';
+        });
+    }
+    
+    // Close on escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && voiceAssistantOpen) {
+            toggleVoiceAssistant();
+        }
+    });
+
+    /* --- Main Site Logic --- */
+
+    // Toast Function
+    function showToast(message) {
+        const container = document.getElementById('toast-notification');
+        const msgSpan = document.getElementById('toast-message');
+        msgSpan.textContent = message;
+        
+        // Show
+        container.classList.remove('translate-y-24', 'opacity-0');
+        
+        // Hide after 3s
+        setTimeout(() => {
+            container.classList.add('translate-y-24', 'opacity-0');
+        }, 3000);
+    }
+
+    // Email Protection Script
+    function contactFirm(e, subject) {
+        e.preventDefault();
+        
+        // ASCII Character codes for andrea@prorninc.com to bypass static scrapers
+        const _0x1a2b = [97, 110, 100, 114, 101, 97, 64, 112, 114, 111, 114, 110, 105, 110, 99, 46, 99, 111, 109];
+        const address = String.fromCharCode(..._0x1a2b);
+        
+        let mailtoLink = 'mailto:' + address;
+        if (subject) {
+            mailtoLink += '?subject=' + encodeURIComponent(subject);
+        }
+        
+        navigator.clipboard.writeText(address).then(() => {
+            showToast("Email copied to clipboard. Opening mail client...");
+            setTimeout(() => {
+                window.location.href = mailtoLink;
+            }, 1000);
+        }).catch(err => {
+            showToast("Could not copy automatically. Email: " + address);
+            setTimeout(() => {
+                window.location.href = mailtoLink;
+            }, 2000);
+        });
+    }
+    
+    // Mobile Menu Toggle Script
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    
+    // Toggle menu visibility
+    if (mobileBtn) {
+        mobileBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+    }
+
+    // Close menu when a link inside it is clicked
+    const mobileLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    });
 </script>
 </body>
 </html>
+
