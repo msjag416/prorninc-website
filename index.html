@@ -133,7 +133,7 @@
                     <a href="#pool-implementation" class="text-sm font-medium text-green-700 bg-green-50 px-3 py-1 rounded-full hover:bg-green-100 transition-colors">RN Float Pool</a>
                 </div>
                 <div class="flex items-center gap-4">
-                    <a href="#" onclick="contactFirm(event)" class="inline-flex items-center px-4 py-2 sm:px-6 sm:py-2.5 border border-transparent text-sm font-semibold rounded-lg text-white bg-blue-900 hover:bg-blue-800 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-900 transition-all duration-200">Contact Us</a>
+                    <a href="/resume#contact" class="inline-flex items-center px-4 py-2 sm:px-6 sm:py-2.5 border border-transparent text-sm font-semibold rounded-lg text-white bg-blue-900 hover:bg-blue-800 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-900 transition-all duration-200">Contact Us</a>
                     <button id="mobile-menu-btn" class="md:hidden text-slate-600 hover:text-blue-700 focus:outline-none"><i data-lucide="menu" class="w-7 h-7"></i></button>
                 </div>
             </div>
@@ -283,7 +283,7 @@
                     <div class="md:col-span-4 bg-slate-100 border-l border-slate-200 p-10 flex flex-col justify-center relative">
                         <div class="absolute top-8 left-8 text-slate-200"><i data-lucide="quote" class="w-12 h-12 transform -scale-x-100"></i></div>
                         <blockquote class="text-xl font-medium text-slate-800 italic mb-8 relative z-10">&ldquo;You don&rsquo;t need just a plan; you need a translator who speaks &lsquo;bedside&rsquo;.&rdquo;</blockquote>
-                        <a href="#" onclick="contactFirm(event)" class="group inline-flex items-center justify-center w-full px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-700 hover:bg-blue-800 transition-all">Contact JoAnne <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i></a>
+                        <a href="/resume#contact" class="group inline-flex items-center justify-center w-full px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-700 hover:bg-blue-800 transition-all">Contact JoAnne <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i></a>
                         <a href="/resume" class="group inline-flex items-center justify-center w-full px-6 py-3 border border-slate-300 text-base font-medium rounded-md text-slate-700 bg-white hover:bg-slate-50 transition-all mt-3">View Full Resume <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i></a>
                     </div>
                 </div>
@@ -513,13 +513,13 @@
             <div class="text-center md:text-left"><span class="text-xl font-extrabold text-white">ProRN Inc.</span><p class="text-sm text-slate-300 mt-1">Clinical Workforce Implementation</p></div>
             <div class="flex space-x-6">
                 <a href="https://www.linkedin.com/in/jag416" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-blue-500 transition-colors"><span class="sr-only">LinkedIn</span><i data-lucide="linkedin" class="w-6 h-6"></i></a>
-                <a href="#" onclick="contactFirm(event)" class="text-slate-300 hover:text-blue-500 transition-colors"><span class="sr-only">Email</span><i data-lucide="mail" class="w-6 h-6"></i></a>
+                <a href="/resume#contact" class="text-slate-300 hover:text-blue-500 transition-colors"><span class="sr-only">Email</span><i data-lucide="mail" class="w-6 h-6"></i></a>
             </div>
             <div class="text-slate-500 text-sm">&copy; <span id="current-year"></span> ProRN Inc. Toronto, Ontario. All rights reserved.</div>
         </div>
     </footer>
 
-    <div id="toast-notification" class="fixed bottom-4 right-4 z-[10000] transform transition-all duration-300 translate-y-24 opacity-0"><div class="bg-slate-800 text-white px-6 py-4 rounded-lg shadow-xl flex items-center gap-3 border border-slate-700"><i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i><span id="toast-message" class="font-medium text-sm">Notification</span></div></div>
+
 
 <style>
     #voice-assistant-widget { position: fixed; bottom: 20px; right: 20px; z-index: 9999; font-family: 'Inter', sans-serif; }
@@ -559,8 +559,7 @@
     const toggleBtn=document.getElementById('voice-assistant-toggle');
     if(toggleBtn){toggleBtn.addEventListener('mouseenter',function(){this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 16px rgba(30,64,175,0.5)';});toggleBtn.addEventListener('mouseleave',function(){this.style.transform='scale(1)';this.style.boxShadow='0 4px 12px rgba(30,64,175,0.4)';});}
     document.addEventListener('keydown',function(e){if(e.key==='Escape'&&voiceAssistantOpen)toggleVoiceAssistant();});
-    function showToast(m){const c=document.getElementById('toast-notification'),s=document.getElementById('toast-message');s.textContent=m;c.classList.remove('translate-y-24','opacity-0');setTimeout(()=>{c.classList.add('translate-y-24','opacity-0');},3000);}
-    function contactFirm(e,subject){e.preventDefault();const a=String.fromCharCode(97,110,100,114,101,97,64,112,114,111,114,110,105,110,99,46,99,111,109);let m='mailto:'+a;if(subject)m+='?subject='+encodeURIComponent(subject);navigator.clipboard.writeText(a).then(()=>{showToast("Email copied to clipboard. Opening mail client...");setTimeout(()=>{window.location.href=m;},1000);}).catch(err=>{showToast("Could not copy automatically. Email: "+a);setTimeout(()=>{window.location.href=m;},2000);});}
+    
     const mobileMenu=document.getElementById('mobile-menu'),mobileBtn=document.getElementById('mobile-menu-btn');
     if(mobileBtn)mobileBtn.addEventListener('click',function(){mobileMenu.classList.toggle('hidden');});
     const mobileLinks=mobileMenu?mobileMenu.querySelectorAll('a'):[];
