@@ -63,7 +63,7 @@
             { "@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "name": "Bachelor of Arts in English", "recognizedBy": { "@type": "CollegeOrUniversity", "name": "University of Nebraska" } }
           ],
           "knowsAbout": ["Ontario Healthcare Crisis","Ontario Nursing Shortage","Canadian Nursing Crisis","Healthcare Costs Canada","Doug Ford Health Policy","Provincial Healthcare Policy","Virtual Nursing","Provincial Float Pools","Nursing Retention","Safe Staffing Ratios","Bill 124","Healthcare Workforce Planning","ICU Nursing","Critical Care","Union Collective Agreements","Nursing Burnout","Nursing Agency Cost Reduction","ONA","RNAO","Hallway Medicine","Good Clinical Practice","Medical Writing","Healthcare AI","HIPAA","PHIPA","GDPR"],
-          "sameAs": ["https://medium.com/@msjag416","https://www.linkedin.com/in/jag416/","https://burnouttobalanceguide.com/","https://prorninc.com/resume"]
+          "sameAs": ["https://medium.com/@msjag416","https://www.linkedin.com/in/jag416/","https://burnouttobalanceguide.com/"]
         },
         {
           "@type": "FAQPage",
@@ -110,10 +110,9 @@
                     <a href="#forecast" class="text-sm font-medium text-slate-600 hover:text-blue-700 transition-colors">Forecast</a>
                     <a href="#solutions" class="text-sm font-semibold text-blue-700 bg-blue-50 px-3 py-1.5 rounded-full hover:bg-blue-100 transition-colors border border-blue-100">The Solutions</a>
                     <a href="#about" class="text-sm font-medium text-slate-600 hover:text-blue-700 transition-colors">About</a>
-                    <a href="/resume" class="text-sm font-medium text-slate-600 hover:text-blue-700 transition-colors">Resume</a>
                 </div>
                 <div class="flex items-center gap-4">
-                    <a href="/resume#contact" class="inline-flex items-center px-4 py-2 sm:px-6 sm:py-2.5 border border-transparent text-sm font-semibold rounded-lg text-white bg-blue-900 hover:bg-blue-800 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-900 transition-all duration-200">Contact</a>
+                    <a href="#contact" class="inline-flex items-center px-4 py-2 sm:px-6 sm:py-2.5 border border-transparent text-sm font-semibold rounded-lg text-white bg-blue-900 hover:bg-blue-800 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-900 transition-all duration-200">Contact</a>
                     <button id="mobile-menu-btn" class="md:hidden text-slate-600 hover:text-blue-700 focus:outline-none"><i data-lucide="menu" class="w-7 h-7"></i></button>
                 </div>
             </div>
@@ -125,7 +124,6 @@
                 <a href="#forecast" class="block px-4 py-3 rounded-lg text-base font-medium text-slate-600 hover:text-blue-700 hover:bg-slate-50 transition-colors">Forecast</a>
                 <a href="#solutions" class="block px-4 py-3 rounded-lg text-base font-semibold text-blue-700 bg-blue-50 hover:bg-blue-100 transition-colors">The Solutions</a>
                 <a href="#about" class="block px-4 py-3 rounded-lg text-base font-medium text-slate-600 hover:text-blue-700 hover:bg-slate-50 transition-colors">About</a>
-                <a href="/resume" class="block px-4 py-3 rounded-lg text-base font-medium text-slate-600 hover:text-blue-700 hover:bg-slate-50 transition-colors">Resume</a>
             </div>
         </div>
     </nav>
@@ -308,8 +306,7 @@
                     </div>
                     <div class="md:col-span-4 bg-slate-900 text-white p-10 flex flex-col justify-center">
                         <blockquote class="text-xl font-medium italic mb-8 text-slate-200">&ldquo;The proposals are ready. The financial models are built. The evidence is published. The only thing missing is a government willing to fund the solutions that would save them billions.&rdquo;</blockquote>
-                        <a href="/resume#contact" class="group inline-flex items-center justify-center w-full px-6 py-3 text-base font-medium rounded-md text-slate-900 bg-white hover:bg-slate-100 transition-all">Contact JoAnne <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i></a>
-                        <a href="/resume" class="group inline-flex items-center justify-center w-full px-6 py-3 border border-white/30 text-base font-medium rounded-md text-white hover:bg-white/10 transition-all mt-3">Full Resume <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i></a>
+                        <a href="#contact" class="group inline-flex items-center justify-center w-full px-6 py-3 text-base font-medium rounded-md text-slate-900 bg-white hover:bg-slate-100 transition-all">Contact JoAnne <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i></a>
                     </div>
                 </div>
             </div>
@@ -560,9 +557,49 @@
         </section>
     </div>
 
-    <footer class="bg-slate-900 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+    <!-- ═══ CONTACT FORM ═══ -->
+    <section id="contact" class="py-20 bg-white border-t border-slate-200 section-anchor">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <span class="text-blue-600 font-bold tracking-wider uppercase text-sm">Get In Touch</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-2 mb-4">Contact ProRN Inc.</h2>
+                <p class="text-lg text-slate-600">Have questions about the proposals, the data, or how these frameworks could work for your organization? Reach out directly.</p>
+            </div>
 
+            <div class="bg-white rounded-2xl shadow-xl border border-slate-200 p-8 md:p-10">
+                <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="f4373079-8e8c-4e61-8185-63414b463401">
+                    <input type="hidden" name="subject" value="ProRN Inc. Website Inquiry - Healthcare Workforce Solutions">
+                    <input type="hidden" name="from_name" value="ProRN Inc. Website">
+                    <input type="hidden" name="botcheck" class="hidden" style="display: none;">
+
+                    <div class="mb-5">
+                        <label class="block text-slate-700 text-sm font-bold mb-2" for="name">Name</label>
+                        <input class="w-full px-4 py-3 border border-slate-300 rounded-lg text-slate-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors" id="name" type="text" name="name" placeholder="Your Name or Organization" required>
+                    </div>
+
+                    <div class="mb-5">
+                        <label class="block text-slate-700 text-sm font-bold mb-2" for="email">Email</label>
+                        <input class="w-full px-4 py-3 border border-slate-300 rounded-lg text-slate-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors" id="email" type="email" name="email" placeholder="email@organization.com" required>
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="block text-slate-700 text-sm font-bold mb-2" for="message">Message</label>
+                        <textarea class="w-full px-4 py-3 border border-slate-300 rounded-lg text-slate-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors" id="message" name="message" rows="4" placeholder="Tell me about your inquiry, project, or how I can help..." required></textarea>
+                    </div>
+
+                    <div id="form-status" class="hidden mb-4 p-3 rounded-lg text-sm font-medium" role="alert"></div>
+
+                    <button id="submit-btn" class="w-full bg-blue-900 text-white font-bold py-3.5 px-6 rounded-lg hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-900 transition-all duration-200 flex justify-center items-center text-base" type="submit">
+                        <span id="btn-text">Send Message</span>
+                        <i data-lucide="send" class="w-4 h-4 ml-2" id="btn-icon"></i>
+                    </button>
+                </form>
+
+                <p class="text-center text-xs text-slate-400 mt-6">Messages go directly to <strong>prorninc@gmail.com</strong></p>
+            </div>
+        </div>
+    </section>
 
     <footer class="bg-slate-900 border-t border-slate-800">
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
@@ -570,17 +607,9 @@
             <div class="flex space-x-6">
                 <a href="https://www.linkedin.com/in/jag416" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-blue-500 transition-colors"><span class="sr-only">LinkedIn</span><i data-lucide="linkedin" class="w-6 h-6"></i></a>
                 <a href="https://medium.com/@msjag416" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-blue-500 transition-colors"><span class="sr-only">Medium</span><i data-lucide="pen-line" class="w-6 h-6"></i></a>
-                <a href="/resume#contact" class="text-slate-300 hover:text-blue-500 transition-colors"><span class="sr-only">Email</span><i data-lucide="mail" class="w-6 h-6"></i></a>
+                <a href="#contact" class="text-slate-300 hover:text-blue-500 transition-colors"><span class="sr-only">Email</span><i data-lucide="mail" class="w-6 h-6"></i></a>
             </div>
             <div class="text-slate-500 text-sm">&copy; <span id="current-year"></span> ProRN Inc. All rights reserved.</div>
-        </div>
-    </footer>
-
-            <div class="flex space-x-6">
-                <a href="https://www.linkedin.com/in/jag416" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-blue-500 transition-colors"><span class="sr-only">LinkedIn</span><i data-lucide="linkedin" class="w-6 h-6"></i></a>
-                <a href="/resume#contact" class="text-slate-300 hover:text-blue-500 transition-colors"><span class="sr-only">Email</span><i data-lucide="mail" class="w-6 h-6"></i></a>
-            </div>
-            <div class="text-slate-500 text-sm">&copy; <span id="current-year"></span> ProRN Inc. Toronto, Ontario. All rights reserved.</div>
         </div>
     </footer>
 
@@ -612,6 +641,37 @@
 <script>
     lucide.createIcons();
     document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Contact form handler
+    const form = document.getElementById('contact-form');
+    if (form) {
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const btn = document.getElementById('submit-btn');
+            const btnText = document.getElementById('btn-text');
+            const status = document.getElementById('form-status');
+            btn.disabled = true;
+            btnText.textContent = 'Sending...';
+            try {
+                const res = await fetch(form.action, { method: 'POST', body: new FormData(form) });
+                const data = await res.json();
+                if (data.success) {
+                    status.className = 'mb-4 p-3 rounded-lg text-sm font-medium bg-green-50 border border-green-200 text-green-800';
+                    status.textContent = 'Message sent successfully. Thank you for reaching out.';
+                    status.classList.remove('hidden');
+                    form.reset();
+                } else {
+                    throw new Error('Submission failed');
+                }
+            } catch (err) {
+                status.className = 'mb-4 p-3 rounded-lg text-sm font-medium bg-red-50 border border-red-200 text-red-800';
+                status.textContent = 'Something went wrong. Please try again or email prorninc@gmail.com directly.';
+                status.classList.remove('hidden');
+            }
+            btn.disabled = false;
+            btnText.textContent = 'Send Message';
+        });
+    }
     let voiceAssistantOpen = false, voiceAssistantLoaded = false;
     function toggleVoiceAssistant() {
         const w=document.getElementById('voice-assistant-widget'),c=document.getElementById('voice-assistant-container'),t=document.getElementById('voice-assistant-toggle'),i=document.getElementById('voice-assistant-iframe');
