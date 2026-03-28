@@ -778,27 +778,9 @@
         </div>
     </footer>
 
-<style>
-    #voice-assistant-widget { position: fixed; bottom: 20px; right: 20px; z-index: 9999; font-family: 'Inter', sans-serif; }
-    #voice-assistant-container { display: none; margin-bottom: 16px; width: 400px; }
-    #voice-assistant-iframe { width: 400px; height: 550px; border: none; border-radius: 0 0 10px 10px; display: block; }
-    @media (max-width: 480px) {
-        #voice-assistant-widget { bottom: 0; right: 0; left: 0; padding: 0; }
-        #voice-assistant-widget.widget-open { top: 0; display: flex; flex-direction: column; background: rgba(0,0,0,0.5); padding: 10px; }
-        #voice-assistant-container { width: 100%; max-width: 100%; margin: auto 0 0 0; max-height: calc(100vh - 20px); }
-        #voice-assistant-iframe { width: 100%; height: calc(100vh - 80px); max-height: 600px; }
-        #voice-assistant-toggle { position: fixed; bottom: 16px; right: 16px; }
-    }
-</style>
-<div id="voice-assistant-widget">
-    <div id="voice-assistant-container">
-        <div style="background:#1e3a5f;color:white;padding:12px 16px;border-radius:10px 10px 0 0;display:flex;justify-content:space-between;align-items:center;">
-            <span style="font-weight:600;font-size:14px;">ProRN Assistant</span>
-            <button onclick="toggleVoiceAssistant()" style="background:none;border:none;color:white;cursor:pointer;padding:4px;display:flex;align-items:center;justify-content:center;" aria-label="Close assistant"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
-        </div>
-        <iframe id="voice-assistant-iframe" src="https://prorn-inc-ai-voice-assistant-624237507602.us-west1.run.app/" allow="microphone" title="ProRN Voice Assistant"></iframe>
-    </div>
-    <button id="voice-assistant-toggle" onclick="toggleVoiceAssistant()" aria-label="Open voice assistant" style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#1e40af 0%,#1e3a8a 100%);border:none;cursor:pointer;box-shadow:0 4px 12px rgba(30,64,175,0.4);display:flex;align-items:center;justify-content:center;transition:transform 0.2s ease,box-shadow 0.2s ease;margin-left:auto;">
+<!-- Voice Assistant Popup Button -->
+<div id="voice-assistant-widget" style="position:fixed;bottom:20px;right:20px;z-index:9999;">
+    <button id="voice-assistant-toggle" onclick="openVoiceAssistant()" aria-label="Open voice assistant" style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#1e40af 0%,#1e3a8a 100%);border:none;cursor:pointer;box-shadow:0 4px 12px rgba(30,64,175,0.4);display:flex;align-items:center;justify-content:center;transition:transform 0.2s ease,box-shadow 0.2s ease;margin-left:auto;">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
     </button>
 </div>
@@ -838,17 +820,15 @@
         });
     }
 
-    // Voice assistant toggle — app is already loaded in the iframe on page load
-    let voiceAssistantOpen = false;
-    function toggleVoiceAssistant() {
-        const w=document.getElementById('voice-assistant-widget'),c=document.getElementById('voice-assistant-container'),t=document.getElementById('voice-assistant-toggle');
-        voiceAssistantOpen=!voiceAssistantOpen;
-        if(voiceAssistantOpen){c.style.display='block';t.style.display='none';w.classList.add('widget-open');if(window.innerWidth<=480)document.body.style.overflow='hidden';}
-        else{c.style.display='none';t.style.display='flex';w.classList.remove('widget-open');document.body.style.overflow='';}
+    // Voice assistant opens in a popup window for full microphone access
+    function openVoiceAssistant() {
+        var w = 420, h = 620;
+        var left = window.screenX + window.outerWidth - w - 40;
+        var top = window.screenY + window.outerHeight - h - 40;
+        window.open('https://prorn-inc-ai-voice-assistant-624237507602.us-west1.run.app/', 'ProRN_Assistant', 'width='+w+',height='+h+',left='+left+',top='+top+',resizable=yes,scrollbars=no,toolbar=no,menubar=no,location=no,status=no');
     }
     const toggleBtn=document.getElementById('voice-assistant-toggle');
     if(toggleBtn){toggleBtn.addEventListener('mouseenter',function(){this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 16px rgba(30,64,175,0.5)';});toggleBtn.addEventListener('mouseleave',function(){this.style.transform='scale(1)';this.style.boxShadow='0 4px 12px rgba(30,64,175,0.4)';});}
-    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&voiceAssistantOpen)toggleVoiceAssistant();});
     
     const mobileMenu=document.getElementById('mobile-menu'),mobileBtn=document.getElementById('mobile-menu-btn');
     if(mobileBtn)mobileBtn.addEventListener('click',function(){mobileMenu.classList.toggle('hidden');});
