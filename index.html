@@ -778,12 +778,7 @@
         </div>
     </footer>
 
-<!-- Voice Assistant Popup Button -->
-<div id="voice-assistant-widget" style="position:fixed;bottom:20px;right:20px;z-index:9999;">
-    <button id="voice-assistant-toggle" onclick="openVoiceAssistant()" aria-label="Open voice assistant" style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#1e40af 0%,#1e3a8a 100%);border:none;cursor:pointer;box-shadow:0 4px 12px rgba(30,64,175,0.4);display:flex;align-items:center;justify-content:center;transition:transform 0.2s ease,box-shadow 0.2s ease;margin-left:auto;">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
-    </button>
-</div>
+
 
 <script>
     lucide.createIcons();
@@ -820,15 +815,7 @@
         });
     }
 
-    // Voice assistant opens in a popup window for full microphone access
-    function openVoiceAssistant() {
-        var w = 420, h = 620;
-        var left = window.screenX + window.outerWidth - w - 40;
-        var top = window.screenY + window.outerHeight - h - 40;
-        window.open('https://prorn-inc-ai-voice-assistant-624237507602.us-west1.run.app/', 'ProRN_Assistant', 'width='+w+',height='+h+',left='+left+',top='+top+',resizable=yes,scrollbars=no,toolbar=no,menubar=no,location=no,status=no');
-    }
-    const toggleBtn=document.getElementById('voice-assistant-toggle');
-    if(toggleBtn){toggleBtn.addEventListener('mouseenter',function(){this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 16px rgba(30,64,175,0.5)';});toggleBtn.addEventListener('mouseleave',function(){this.style.transform='scale(1)';this.style.boxShadow='0 4px 12px rgba(30,64,175,0.4)';});}
+
     
     const mobileMenu=document.getElementById('mobile-menu'),mobileBtn=document.getElementById('mobile-menu-btn');
     if(mobileBtn)mobileBtn.addEventListener('click',function(){mobileMenu.classList.toggle('hidden');});
