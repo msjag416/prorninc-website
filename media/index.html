@@ -8,18 +8,16 @@
     <meta name="keywords" content="healthcare commentator, nurse expert source, ICU nurse expert, nursing workforce commentary, patient safety expert, healthcare burnout expert, nurse staffing crisis, hospital policy commentary, critical care nursing expert, healthcare opinion writer, nursing thought leader, medical commentary, healthcare policy analyst, registered nurse author, Toronto healthcare expert, expert source nursing, Qwoted healthcare expert, op-ed healthcare contributor, nurse speaker, healthcare panel expert, nurse available for interview, healthcare expert quote, nursing opinion editorial, critical care expert media, Canadian nurse expert">
     <meta name="author" content="JoAnne Andrea Gomez, RN">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://prorninc.com/media">
+    <link rel="canonical" href="https://prorninc.com/media/">
 
     <!-- Open Graph / Social Sharing -->
     <meta property="og:type" content="profile">
     <meta property="og:title" content="JoAnne Andrea Gomez, RN | Healthcare Commentator & Expert Source">
     <meta property="og:description" content="27+ years of critical care ICU experience. Available for expert quotes, interviews, op-eds, and panel discussions on nurse staffing, patient safety, healthcare burnout, and hospital policy.">
-    <meta property="og:url" content="https://prorninc.com/media">
+    <meta property="og:url" content="https://prorninc.com/media/">
     <meta property="og:site_name" content="ProRN Inc.">
     <meta property="og:image" content="https://prorninc.com/media/hero.jpg">
     <meta property="og:image:alt" content="JoAnne Andrea Gomez, RN - Healthcare Commentator">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
     <meta property="og:locale" content="en_CA">
     <meta property="profile:first_name" content="JoAnne">
     <meta property="profile:last_name" content="Gomez">
@@ -39,6 +37,7 @@
         "jobTitle": "Healthcare Commentator",
         "description": "Registered Nurse and healthcare commentator with 27+ years of critical care ICU experience. Expert source on nurse staffing, patient safety, healthcare burnout, hospital policy, and the nursing workforce crisis. Available for interviews, expert quotes, op-ed contributions, and panel discussions.",
         "image": "https://prorninc.com/media/hero.jpg",
+        "email": "mailto:prorninc@gmail.com",
         "knowsAbout": [
             "Critical Care Nursing",
             "ICU Patient Safety",
@@ -47,6 +46,7 @@
             "Hospital Policy Impact on Patient Care",
             "Trauma-Neuro ICU",
             "Medical-Surgical ICU",
+            "Post-Operative Recovery Nursing",
             "Healthcare System Reform",
             "Nursing Retention and Recruitment",
             "Workplace Safety in Healthcare",
@@ -95,7 +95,7 @@
                 "name": "George Brown College"
             }
         ],
-        "url": "https://prorninc.com/media",
+        "url": "https://prorninc.com/media/",
         "sameAs": [
             "https://medium.com/@msjag416",
             "https://www.linkedin.com/in/jag416",
@@ -169,7 +169,7 @@
     }
     </script>
 
-    <!-- Schema.org: FAQPage for Rich Snippets -->
+    <!-- Schema.org: FAQPage (matches the visible FAQ section below) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -188,7 +188,7 @@
                 "name": "How can journalists contact JoAnne Andrea Gomez for expert commentary?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Journalists and editors can contact JoAnne directly through the contact form at prorninc.com/media. She is available for expert quotes, interviews, op-ed contributions, and panel discussions. She is also available on Qwoted. She typically responds within 24 hours and accommodates urgent deadlines."
+                    "text": "Journalists and editors can email JoAnne directly at prorninc@gmail.com or use the contact form at prorninc.com/media. She is available for expert quotes, interviews, op-ed contributions, and panel discussions, and is also listed on Qwoted. She typically responds within 24 hours and accommodates urgent deadlines."
                 }
             },
             {
@@ -269,7 +269,7 @@
             color: rgba(255,255,255,0.9); letter-spacing: 0.02em;
         }
 
-        .nav-links { display: flex; gap: 1.6rem; list-style: none; }
+        .nav-links { display: flex; gap: 1.4rem; list-style: none; }
 
         .nav-links a {
             font-size: 0.73rem; font-weight: 500; text-transform: uppercase;
@@ -467,6 +467,7 @@
             transition: border-color 0.2s;
         }
         .credential-card:hover { border-color: var(--teal); }
+        .credential-card.span-full { grid-column: 1 / -1; }
 
         .credential-icon {
             width: 40px; height: 40px; border-radius: 8px;
@@ -546,6 +547,25 @@
         }
         .press-btn.copied { border-color: var(--teal); color: var(--teal-light); }
 
+        /* ═══ FAQ ═══ */
+        .faq-list { display: flex; flex-direction: column; gap: 1rem; }
+
+        .faq-item {
+            background: var(--white); border: 1px solid var(--border);
+            border-radius: 6px; padding: 1.6rem 1.8rem;
+            transition: border-color 0.2s;
+        }
+        .faq-item:hover { border-color: var(--border-hover); }
+
+        .faq-item h3 {
+            font-family: 'Fraunces', serif; font-size: 1.02rem; font-weight: 600;
+            color: var(--text-dark); margin-bottom: 0.5rem; line-height: 1.4;
+        }
+
+        .faq-item p { font-size: 0.9rem; color: var(--text-light); line-height: 1.7; }
+        .faq-item a { color: var(--teal); text-decoration: none; font-weight: 500; }
+        .faq-item a:hover { text-decoration: underline; }
+
         /* ═══ CONTACT ═══ */
         .contact-section { background: var(--off-white); padding: 5rem 2.5rem 5.5rem; }
         .contact-inner { max-width: 720px; margin: 0 auto; }
@@ -557,8 +577,19 @@
 
         .contact-intro {
             font-size: 0.95rem; color: var(--text-light);
-            margin-bottom: 2.5rem; line-height: 1.7;
+            margin-bottom: 1.5rem; line-height: 1.7;
         }
+
+        .contact-direct {
+            display: flex; align-items: center; gap: 0.7rem;
+            background: var(--white); border: 1px solid var(--border);
+            border-left: 3px solid var(--teal);
+            border-radius: 6px; padding: 1rem 1.3rem; margin-bottom: 1.5rem;
+            font-size: 0.9rem; color: var(--text-body);
+        }
+        .contact-direct svg { stroke: var(--teal); flex-shrink: 0; }
+        .contact-direct a { color: var(--teal-dark); font-weight: 600; text-decoration: none; }
+        .contact-direct a:hover { text-decoration: underline; }
 
         .form-card {
             background: var(--white); border: 1px solid var(--border);
@@ -656,6 +687,7 @@
         .reveal-stagger.visible > *:nth-child(6) { transition-delay: 0.3s; }
         .reveal-stagger.visible > *:nth-child(7) { transition-delay: 0.35s; }
         .reveal-stagger.visible > *:nth-child(8) { transition-delay: 0.4s; }
+        .reveal-stagger.visible > *:nth-child(9) { transition-delay: 0.45s; }
 
         .hero-text > * {
             opacity: 0; transform: translateY(16px);
@@ -674,6 +706,14 @@
 
         @keyframes heroReveal { to { opacity: 1; transform: translateY(0); } }
         @keyframes heroPhotoReveal { to { opacity: 1; transform: translateX(0); } }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            .reveal, .reveal-stagger > *, .hero-text > *, .hero-photo-wrapper {
+                opacity: 1 !important; transform: none !important;
+                transition: none !important; animation: none !important;
+            }
+        }
 
         /* ═══ RESPONSIVE ═══ */
         @media (max-width: 900px) {
@@ -712,6 +752,7 @@
             .form-card { padding: 1.5rem; }
             .hero h1 { font-size: 2rem; }
             .press-actions { justify-content: center; }
+            .contact-direct { align-items: flex-start; }
         }
 
         @media (max-width: 480px) {
@@ -742,6 +783,7 @@
             <li><a href="#credentials">Credentials</a></li>
             <li><a href="#published">Published</a></li>
             <li><a href="#bio">Media Bio</a></li>
+            <li><a href="#faq">FAQ</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -825,7 +867,7 @@
                 </div>
                 <div class="credential-card">
                     <div class="credential-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-                    <div class="credential-text"><h4>Specializations</h4><p>Trauma-Neuro ICU &amp; Medical-Surgical ICU</p></div>
+                    <div class="credential-text"><h4>Specializations</h4><p>Trauma-Neuro ICU, Medical-Surgical ICU, Post-Op Recovery</p></div>
                 </div>
                 <div class="credential-card">
                     <div class="credential-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M9 8h1"/><path d="M9 12h1"/><path d="M9 16h1"/><path d="M14 8h1"/><path d="M14 12h1"/><path d="M14 16h1"/><path d="M5 21V5a2 2 0 012-2h10a2 2 0 012 2v16"/></svg></div>
@@ -836,8 +878,12 @@
                     <div class="credential-text"><h4>Active License</h4><p>Registered Nurse, College of Nurses of Ontario</p></div>
                 </div>
                 <div class="credential-card">
+                    <div class="credential-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M9 15l2 2 4-4"/></svg></div>
+                    <div class="credential-text"><h4>Research Certification</h4><p>ICH GCP E6(R3), TransCelerate recognized</p></div>
+                </div>
+                <div class="credential-card">
                     <div class="credential-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg></div>
-                    <div class="credential-text"><h4>Published Author</h4><p>2 books on Amazon, 50+ articles on Medium</p></div>
+                    <div class="credential-text"><h4>Published Author</h4><p>2 books on Amazon, 106 articles on Medium</p></div>
                 </div>
                 <div class="credential-card">
                     <div class="credential-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 2 6 2s6-.9 6-2v-5"/></svg></div>
@@ -847,7 +893,7 @@
                     <div class="credential-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg></div>
                     <div class="credential-text"><h4>Company</h4><p>Founder, ProRN Inc. (Healthcare Consulting)</p></div>
                 </div>
-                <div class="credential-card">
+                <div class="credential-card span-full">
                     <div class="credential-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
                     <div class="credential-text"><h4>Availability</h4><p>Toronto, ON. Available nationally &amp; remotely.</p></div>
                 </div>
@@ -867,7 +913,7 @@
                 <a href="https://www.amazon.com/dp/B0F1L3KFLY" target="_blank" rel="noopener" class="work-card">
                     <div class="work-type">Book</div>
                     <h3>Burnout to Balance</h3>
-                    <p>Your 8-Step Guide to Thriving in a Messy Workplace. Written from decades of firsthand experience in high-stress healthcare settings.</p>
+                    <p>Your 8-Step Guide to Thriving in a Messy Workplace. Written from 27 years of firsthand experience in high-stress healthcare settings.</p>
                     <div class="work-link">View on Amazon <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg></div>
                 </a>
                 <a href="https://www.amazon.com/dp/B0DTFMFZTT" target="_blank" rel="noopener" class="work-card">
@@ -879,7 +925,7 @@
                 <a href="https://medium.com/@msjag416" target="_blank" rel="noopener" class="work-card">
                     <div class="work-type">Ongoing Commentary</div>
                     <h3>Medium: @msjag416</h3>
-                    <p>Regular articles on healthcare policy, workplace psychology, AI in nursing, and systemic healthcare issues.</p>
+                    <p>106 articles on healthcare policy, workplace psychology, AI in nursing, and systemic healthcare issues.</p>
                     <div class="work-link">Read on Medium <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg></div>
                 </a>
             </div>
@@ -894,15 +940,19 @@
                 <h2>Media Bio &amp; Press Kit</h2>
                 <p class="section-intro">Copy the bio below directly into your story attribution. Download the headshot for publication use.</p>
             </div>
-            <div class="media-bio-text" id="bioText">JoAnne Andrea Gomez is a registered nurse, healthcare commentator, and published author based in Toronto, Ontario. With more than 27 years of critical care experience in Trauma-Neuro and Medical-Surgical ICUs at St. Michael's Hospital and Toronto Western Hospital (University Health Network), she provides expert commentary on nurse staffing, patient safety, healthcare burnout, hospital policy, and the nursing workforce crisis. She is the author of "Burnout to Balance: Your 8-Step Guide to Thriving in a Messy Workplace" and "Stronger Than You Think: A Guide for Teens Overcoming Anxiety and Childhood Trauma," and writes regularly on healthcare and workplace issues at medium.com/@msjag416. She is the founder of ProRN Inc., a healthcare consulting company, and holds an active nursing license with the College of Nurses of Ontario. She is available for interviews, expert quotes, op-ed contributions, and panel discussions.</div>
+            <div class="media-bio-text" id="bioText">JoAnne Andrea Gomez is a registered nurse, healthcare commentator, and published author based in Toronto, Ontario. With more than 27 years of critical care experience in Trauma-Neuro and Medical-Surgical ICUs at St. Michael's Hospital and Toronto Western Hospital (University Health Network), she provides expert commentary on nurse staffing, patient safety, healthcare burnout, hospital policy, and the nursing workforce crisis. She currently practises post-operative recovery nursing at a Toronto cosmetic surgery clinic. She is the author of "Burnout to Balance: Your 8-Step Guide to Thriving in a Messy Workplace" and "Stronger Than You Think: A Guide for Teens Overcoming Anxiety and Childhood Trauma," and writes regularly on healthcare and workplace issues at medium.com/@msjag416. She is the founder of ProRN Inc., a healthcare consulting company, holds ICH GCP E6(R3) certification, and holds an active nursing license with the College of Nurses of Ontario. She is available for interviews, expert quotes, op-ed contributions, and panel discussions.</div>
             <div class="press-actions">
-                <button class="press-btn" onclick="copyBio()">
+                <button class="press-btn" id="copyBioBtn" onclick="copyBio()">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
                     Copy Bio
                 </button>
                 <a href="hero.jpg" download="JoAnne-Andrea-Gomez-RN-Headshot.jpg" class="press-btn">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                     Download Headshot
+                </a>
+                <a href="mailto:prorninc@gmail.com" class="press-btn">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg>
+                    Email Me
                 </a>
                 <a href="https://www.linkedin.com/in/jag416" target="_blank" rel="noopener" class="press-btn">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
@@ -916,6 +966,31 @@
         </div>
     </section>
 
+    <!-- FAQ -->
+    <section class="section" id="faq">
+        <div class="section-inner">
+            <div class="section-header reveal">
+                <div class="section-label">Common Questions</div>
+                <h2>Working With Me</h2>
+                <p class="section-intro">The details editors and producers ask about most before reaching out.</p>
+            </div>
+            <div class="faq-list reveal-stagger">
+                <div class="faq-item">
+                    <h3>What topics does JoAnne Andrea Gomez provide expert commentary on?</h3>
+                    <p>JoAnne provides expert commentary on nurse staffing and the workforce crisis, patient safety in critical care, healthcare burnout and moral injury, hospital policy and its bedside impact, healthcare system reform, and mental health and youth wellbeing. Her commentary is grounded in 27+ years of direct clinical experience in Trauma-Neuro and Medical-Surgical ICUs.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How can journalists contact JoAnne Andrea Gomez for expert commentary?</h3>
+                    <p>Journalists and editors can email JoAnne directly at <a href="mailto:prorninc@gmail.com">prorninc@gmail.com</a> or use the contact form at prorninc.com/media. She is available for expert quotes, interviews, op-ed contributions, and panel discussions, and is also listed on Qwoted. She typically responds within 24 hours and accommodates urgent deadlines.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What are JoAnne Andrea Gomez's credentials as a healthcare commentator?</h3>
+                    <p>JoAnne is a Registered Nurse with an active license from the College of Nurses of Ontario. She has 27+ years of critical care experience at St. Michael's Hospital and Toronto Western Hospital (UHN), holds ICH GCP E6(R3) certification, dual bachelor's degrees in Psychology and English, and is the published author of two books. She is the founder of ProRN Inc., a healthcare consulting company.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CONTACT FORM -->
     <div class="contact-section" id="contact">
         <div class="contact-inner reveal">
@@ -923,6 +998,10 @@
                 <div class="section-label">Get in Touch</div>
                 <h2>Request Commentary or a Contribution</h2>
                 <p class="contact-intro">Whether you need an expert source for a story, a contributor for an op-ed, or a speaker for a panel on healthcare issues, I'm available and responsive.</p>
+            </div>
+            <div class="contact-direct">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg>
+                <span>On deadline? Email <a href="mailto:prorninc@gmail.com">prorninc@gmail.com</a> and skip the form.</span>
             </div>
             <div class="form-card">
                 <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
@@ -986,7 +1065,8 @@
         <p>ProRN Inc. &middot; Healthcare Commentary &amp; Clinical Workforce Solutions<br>
         <a href="https://prorninc.com">ProRN Inc.</a> &middot;
         <a href="https://medium.com/@msjag416" target="_blank" rel="noopener">Medium</a> &middot;
-        <a href="https://www.linkedin.com/in/jag416" target="_blank" rel="noopener">LinkedIn</a><br>
+        <a href="https://www.linkedin.com/in/jag416" target="_blank" rel="noopener">LinkedIn</a> &middot;
+        <a href="mailto:prorninc@gmail.com">Email</a><br>
         &copy; <span id="copyrightYear"></span> ProRN Inc. Toronto, Ontario. All rights reserved.</p>
     </footer>
 
@@ -1004,7 +1084,7 @@
         function copyBio() {
             const bioText = document.getElementById('bioText').innerText;
             navigator.clipboard.writeText(bioText).then(() => {
-                const btn = document.querySelector('.press-btn');
+                const btn = document.getElementById('copyBioBtn');
                 btn.classList.add('copied');
                 const original = btn.innerHTML;
                 btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Copied';
@@ -1024,8 +1104,8 @@
                 if (response.ok) {
                     form.style.display = 'none';
                     document.getElementById('formSuccess').classList.add('show');
-                } else { btn.innerHTML = 'Error — Try Again'; btn.disabled = false; }
-            } catch (error) { btn.innerHTML = 'Error — Try Again'; btn.disabled = false; }
+                } else { btn.innerHTML = 'Error, try again'; btn.disabled = false; }
+            } catch (error) { btn.innerHTML = 'Error, try again'; btn.disabled = false; }
         });
     </script>
 </body>
