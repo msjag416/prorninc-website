@@ -9,7 +9,7 @@ file (`assets/css/site.css`) is built by hand and committed (see below).
 - `index.html` — the main one-page site (story, forecast, budget, solutions, proposals, contact).
 - `media/index.html` — media page (prorninc.com/media).
 - `resume/index.html` — resume page (prorninc.com/resume).
-- `sitemap.xml`, `BingSiteAuth.xml` — search engine files.
+- `sitemap.xml` (lists /, /media/, /resume/; add a line when you add a page), `robots.txt` (points Google to the sitemap), `BingSiteAuth.xml` — search engine files.
 
 ## Libraries (self-hosted on index.html since Nov 3, 2026; no outside requests)
 - `assets/css/site.css` — Tailwind CSS 3.4.17, compiled and minified. It only contains the
