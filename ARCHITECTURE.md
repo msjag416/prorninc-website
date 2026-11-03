@@ -20,7 +20,7 @@ All theme styling lives in the `<style>` block in the `<head>` of `index.html`.
 - **Theme layer:** recolors the existing Tailwind classes (white/slate/blue) into a dark
   background with neon green (`--neon: #c8ff2e`). The page markup was left as is, so
   content edits work the same as before. Colors are set once as variables in `:root`.
-- **Kinetic hero:** "We have the ___ solutions." The middle word cycles through
+- **Kinetic hero:** "We have the ___ ideas." The middle word cycles through
   staffing, funding, nursing (script at the bottom of the page, element `#k-word`).
 - **Scroll progress bar:** thin neon line at the top (`#scroll-progress`).
 - **Scroll reveal:** sections fade up as they come into view. Only turns on when
