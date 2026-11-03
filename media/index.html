@@ -863,7 +863,7 @@
         .desk-head { display: flex; align-items: baseline; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem; }
         .desk-kicker { font-size: .68rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--teal); }
         .desk-prompt { font-family: 'Stack Sans Headline', 'Inter', sans-serif; font-size: 1.25rem; font-weight: 600; color: var(--text-dark); letter-spacing: -0.01em; }
-        .desk-beats { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: .6rem; margin-bottom: 1rem; }
+        .desk-beats { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: .6rem; margin-bottom: 1rem; }
         .beat { text-align: left; background: #1a1d21; border: 1px solid var(--border); border-radius: 14px; padding: .85rem .9rem; cursor: pointer; color: var(--text-body); font-family: 'Inter', sans-serif; display: flex; flex-direction: column; gap: .15rem; transition: border-color .2s, background .2s, transform .2s, box-shadow .2s; min-width: 0; }
         .beat:hover { border-color: var(--border-hover); transform: translateY(-2px); }
         .beat:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
@@ -964,10 +964,15 @@
                             <span class="beat-name">Burnout</span>
                             <span class="beat-sub">System drivers of frontline exhaustion</span>
                         </button>
-                        <button class="beat" role="tab" aria-selected="false" data-beat="postop" id="beat-postop">
+                        <button class="beat" role="tab" aria-selected="false" data-beat="mental" id="beat-mental">
                             <span class="beat-num">04</span>
-                            <span class="beat-name">Post-op recovery</span>
-                            <span class="beat-sub">Cosmetic surgery aftercare standards</span>
+                            <span class="beat-name">Mental health &amp; wellness</span>
+                            <span class="beat-sub">Anxiety, youth and workplace trauma</span>
+                        </button>
+                        <button class="beat" role="tab" aria-selected="false" data-beat="postop" id="beat-postop">
+                            <span class="beat-num">05</span>
+                            <span class="beat-name">Plastic surgery recovery</span>
+                            <span class="beat-sub">Post-op aftercare standards</span>
                         </button>
                     </div>
                     <div class="desk-pack" role="tabpanel" aria-live="polite" id="desk-pack">
@@ -1345,8 +1350,12 @@
                 topic: 'Healthcare burnout and moral injury',
                 quote: 'Workplace burnout is not an individual resilience failure. It happens when dedicated professionals are forced to operate in broken systems that make safe care impossible.'
             },
+            mental: {
+                topic: 'Mental health and wellness',
+                quote: 'Anxiety in young people is rarely a character flaw. It is a nervous system doing exactly what it learned to do, and with the right support it can learn something new.'
+            },
             postop: {
-                topic: 'Post-operative recovery standards after cosmetic surgery',
+                topic: 'Plastic surgery recovery and post-operative care standards',
                 quote: 'The first 24 hours after cosmetic surgery are a clinical phase, not a hotel stay. Most preventable complications begin when a patient goes home without a nurse watching the basics.'
             }
         };

@@ -89,7 +89,7 @@ change them in `media-sheet.html` too, then rebuild the PDF by printing that pag
 
 ## Story Desk in the media hero (Nov 3, 2026)
 The hero on `media/index.html` is now a press-pack builder (`#story-desk`). The static topic tags and
-the two hero buttons were replaced by four beat buttons (`.beat`, keyed by `data-beat`). Tapping one:
+the two hero buttons were replaced by five beat buttons (`.beat`, keyed by `data-beat`). Tapping one:
 - shows the cleared quote for that beat in `#pack-quote` and the attribution line;
 - rewrites the "Email JoAnne about this" link into a mailto with a subject line and a short
   fill-in-the-blanks body for that beat;
