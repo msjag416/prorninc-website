@@ -22,7 +22,7 @@ file (`assets/css/site.css`) is built by hand and committed (see below).
   so Tailwind's line heights win, as they did before.
 - `assets/js/lucide.min.js` — Lucide icons 1.67.0. Note: Lucide has no brand logos, so the footer
   LinkedIn icon uses Font Awesome (`fa-brands fa-linkedin`).
-- `/media` and `/resume` still load their own outside libraries; they were not changed.
+- `/media` now uses the same self-hosted fonts (from `../assets/fonts/`); `/resume` still loads its own outside libraries.
 
 ## Accessibility notes
 - The moving hero word is hidden from screen readers; a hidden full sentence
@@ -61,3 +61,12 @@ The script at the bottom of `index.html` shows the success or error message.
   change the date, title, text, and source link, then change the "Last updated" date.
   Only add entries with a real, linked source.
 - **Media callout** (`.media-callout` in "Who Is Behind This"): sends journalists to `/media/#contact`.
+
+## Media page theme (Nov 3, 2026)
+`media/index.html` keeps its own layout and CSS but now matches the main site's dark + neon look.
+- Colors are set in the `:root` block at the top of its `<style>`. The old variable names were kept
+  (`--teal` now holds the neon green `#c8ff2e`, `--navy` is the dark background, `--card` is the card color),
+  so nothing else in the page had to change.
+- Fonts: Inter and Stack Sans Headline, loaded from `../assets/fonts/` (no Google Fonts).
+- The block marked `MAIN-SITE LOOK` at the end of its `<style>` adds the big headings, glassy nav,
+  neon Contact button, rounded cards, and the neon scroll progress bar (`#scroll-progress`).
