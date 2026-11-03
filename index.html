@@ -202,6 +202,52 @@
             .ring-card .rc-num { font-size: 3.5rem; }
             .ring-card .rc-title { font-size: 1.2rem; }
         }
+        /* Start-here band: action paths + executive summary */
+        .start-band { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+        .paths { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+        .path { display: flex; flex-direction: column; gap: .4rem; padding: 1.25rem 1.35rem; border-radius: 16px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); transition: border-color .25s, transform .25s; min-width: 0; }
+        .path:hover, .path:focus-visible { border-color: var(--neon); transform: translateY(-2px); outline: none; }
+        .path .p-who { font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--dim); }
+        .path .p-title { font-family: 'Stack Sans Headline', 'Inter', sans-serif; font-size: 1.25rem; font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; }
+        .path .p-go { margin-top: auto; padding-top: .35rem; font-size: .8rem; font-weight: 700; color: var(--neon); }
+        .path.p-media { background: var(--neon); color: var(--bg); border-color: var(--neon); }
+        .path.p-media .p-who, .path.p-media .p-go { color: var(--bg); }
+        .path.p-media:hover, .path.p-media:focus-visible { background: #d9ff6b; }
+        .exec { display: grid; grid-template-columns: minmax(0, 15rem) minmax(0, 1fr); gap: 2rem; align-items: start; margin-top: 3rem; }
+        .exec h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.05; color: var(--ink); font-weight: 700; }
+        .exec ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.1rem; }
+        .exec li { display: grid; grid-template-columns: 2.25rem minmax(0, 1fr); gap: .75rem; font-size: 1.1rem; line-height: 1.55; color: var(--ink-2); }
+        .exec li::before { content: ""; width: 2.25rem; height: 3px; margin-top: .8rem; background: var(--neon); border-radius: 2px; }
+        .exec li strong { color: var(--ink); }
+
+        /* Forecast data cards */
+        .metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-bottom: 3rem; }
+        .metric { padding: 1.5rem; border-radius: 16px; background: var(--surface); border: 1px solid var(--line); display: flex; flex-direction: column; gap: .35rem; min-width: 0; }
+        .metric .m-num { font-family: 'Stack Sans Headline', 'Inter', sans-serif; font-weight: 700; font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1; letter-spacing: -0.04em; color: var(--red); font-variant-numeric: tabular-nums; }
+        .metric.good .m-num { color: var(--neon); }
+        .metric .m-label { font-size: .95rem; font-weight: 600; color: var(--ink); line-height: 1.35; }
+        .metric .m-src { font-size: .72rem; color: var(--dim); margin-top: auto; padding-top: .4rem; }
+
+        /* Budget tracker timeline */
+        .tracker { border: 1px solid var(--line); border-radius: 20px; background: var(--surface); padding: 2rem; margin-bottom: 3rem; }
+        .tracker-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .5rem 1.5rem; margin-bottom: 1.75rem; }
+        .tracker-head h3 { font-size: 1.6rem; font-weight: 700; color: var(--ink); }
+        .tracker-updated { font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--neon); display: inline-flex; align-items: center; gap: .5rem; }
+        .tracker-updated::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--neon); box-shadow: 0 0 10px var(--neon); }
+        .tracker ol { list-style: none; margin: 0; padding: 0; }
+        .t-item { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 1.25rem; padding: 1.1rem 0; border-top: 1px solid var(--line); }
+        .t-date { font-size: .82rem; font-weight: 700; color: var(--muted); font-variant-numeric: tabular-nums; padding-top: .15rem; }
+        .t-title { font-weight: 700; color: var(--ink); font-size: 1.05rem; line-height: 1.35; }
+        .t-text { color: var(--muted); line-height: 1.6; margin-top: .3rem; }
+        .t-src { display: inline-block; margin-top: .4rem; font-size: .8rem; font-weight: 600; color: var(--neon); text-decoration: underline; text-underline-offset: 3px; }
+        @media (max-width: 767px) {
+            .paths { grid-template-columns: minmax(0, 1fr); }
+            .exec { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
+            .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .metric { padding: 1.1rem; }
+            .tracker { padding: 1.35rem; }
+            .t-item { grid-template-columns: minmax(0, 1fr); gap: .3rem; }
+        }
         @media (prefers-reduced-motion: reduce) {
             .js-reveal .reveal { opacity: 1; transform: none; transition: none; }
             .kinetic .k-word::after { animation: none; }
@@ -294,6 +340,38 @@
         </div>
     </header>
 
+    <!-- ═══ START HERE: ACTION PATHS + EXECUTIVE SUMMARY ═══ -->
+    <section id="start-here" class="start-band py-14 section-anchor" aria-labelledby="exec-title">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="paths">
+                <a class="path" href="#pool-implementation">
+                    <span class="p-who">Policy makers &amp; health executives</span>
+                    <span class="p-title">Read the Provincial Nursing Float Pool Proposal</span>
+                    <span class="p-go">Go to the full proposal &rarr;</span>
+                </a>
+                <a class="path" href="#proposal-start">
+                    <span class="p-who">Policy makers &amp; health executives</span>
+                    <span class="p-title">Read the Virtual Nursing Program Proposal</span>
+                    <span class="p-go">Go to the full proposal &rarr;</span>
+                </a>
+                <a class="path p-media" href="/media/#contact">
+                    <span class="p-who">Journalists, producers &amp; event planners</span>
+                    <span class="p-title">Media Inquiries &amp; Speaking</span>
+                    <span class="p-go">Request an interview or speaker &rarr;</span>
+                </a>
+            </div>
+
+            <div class="exec">
+                <h2 id="exec-title">The 10&#8209;Second Version</h2>
+                <ol>
+                    <li><span><strong>Ontario hospitals spend about $1.5 billion a year on private nursing agencies,</strong> paying two to three times what permanent staff nurses cost.</span></li>
+                    <li><span><strong>Funding is falling behind need.</strong> The Financial Accountability Office projects fewer funded nurses and fewer hospital beds by 2028-29 under the current plan.</span></li>
+                    <li><span><strong>Two ready-to-use fixes already exist.</strong> A Provincial Nursing Float Pool and a Virtual Nursing Program were presented to Ontario Health and the Ministry of Health in 2024 and turned down for lack of budget.</span></li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
     <!-- ═══ GOVERNMENT MEETINGS ═══ -->
     <section id="meetings" class="py-20 bg-white section-anchor">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -350,6 +428,16 @@
                 <span class="text-red-600 font-bold tracking-wider uppercase text-sm">Ontario Healthcare Forecast &mdash; 2026 to 2027</span>
                 <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-2 mb-4">Ontario Healthcare Funding Shortfall 2026: What Happens If Nothing Changes</h2>
                 <p class="max-w-3xl mx-auto text-lg text-slate-600">The FAO projects a $10.7 billion health sector funding shortfall by 2027-28. The province budgets for 1% annual health spending growth in a system where costs grow at 4 to 5%. Every data point below comes from independent public sources. None of it is speculation.</p>
+            </div>
+
+            <!-- Key metrics at a glance -->
+            <div class="metrics" role="list" aria-label="Key numbers">
+                <div class="metric" role="listitem"><span class="m-num">$10.7B</span><span class="m-label">Health funding shortfall projected by 2027-28</span><span class="m-src">FAO Winter 2026 Outlook</span></div>
+                <div class="metric good" role="listitem"><span class="m-num">4.4:1</span><span class="m-label">Benefit-cost ratio of adequate nurse staffing</span><span class="m-src">2022 study</span></div>
+                <div class="metric" role="listitem"><span class="m-num">1,572</span><span class="m-label">Patients a day treated in hallways and other unconventional spaces</span><span class="m-src">Ontario hospitals, Sept 2025</span></div>
+                <div class="metric" role="listitem"><span class="m-num">8,000</span><span class="m-label">Nurses who left Ontario&rsquo;s health sector in 2024</span><span class="m-src">ONA</span></div>
+                <div class="metric" role="listitem"><span class="m-num">1,117</span><span class="m-label">Emergency department closures in 2024</span><span class="m-src">Ontario Health Coalition</span></div>
+                <div class="metric" role="listitem"><span class="m-num">$1.5B</span><span class="m-label">Spent a year on private staffing agencies</span><span class="m-src">Projected annual spending</span></div>
             </div>
 
             <div class="space-y-8">
@@ -415,9 +503,75 @@
     <section id="budget-2026" class="py-20 bg-white border-t border-slate-200 section-anchor">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-14">
-                <span class="text-amber-600 font-bold tracking-wider uppercase text-sm">Ontario Budget &mdash; March 26, 2026</span>
+                <span class="text-amber-600 font-bold tracking-wider uppercase text-sm">2026 Budget Tracker &mdash; Budget Released March 26, 2026</span>
                 <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-2 mb-4">2026 Ontario Budget and Nursing: The Funding Arrived. The Problems Remain.</h2>
                 <p class="max-w-3xl mx-auto text-lg text-slate-600">On March 26, 2026, Finance Minister Peter Bethlenfalvy released the provincial budget. It included new money for home care, nursing education, and hospital operations. It did not include funding for safe staffing ratios, nurse retention measures, or any centralized workforce model.</p>
+            </div>
+
+            <!-- ═══ BUDGET TRACKER: newest first. To add an update, copy one <li class="t-item"> block, put it at the top, and change "Last updated". ═══ -->
+            <div class="tracker" id="budget-tracker">
+                <div class="tracker-head">
+                    <h3>What&rsquo;s Happened Since the Budget</h3>
+                    <span class="tracker-updated">Last updated November 3, 2026</span>
+                </div>
+                <ol>
+                    <li class="t-item">
+                        <span class="t-date">Oct 29, 2026</span>
+                        <div>
+                            <p class="t-title">Fall Economic Statement trims health spending slightly</p>
+                            <p class="t-text">The province now forecasts $100.7 billion in health spending for 2026-27, down from $101.2 billion in the spring budget. New money goes mainly to primary care, emergency wait times, and hospital construction. The health chapter names no new nurse retention measure and does not mention staffing agencies.</p>
+                            <a class="t-src" href="https://budget.ontario.ca/2026/fallstatement/chapter-1b-services.html" target="_blank" rel="noopener noreferrer">Ontario 2026 Fall Statement</a>
+                        </div>
+                    </li>
+                    <li class="t-item">
+                        <span class="t-date">Sep 23, 2026</span>
+                        <div>
+                            <p class="t-title">FAO: plan falls short of current service levels by 2027-28</p>
+                            <p class="t-text">The Financial Accountability Office found the budget plan grows health spending 3.2% a year, while keeping today&rsquo;s service levels needs 4.4%. That leaves a gap of $2.0 billion in 2027-28 and $3.8 billion in 2028-29. The FAO projects funding for 2,522 fewer nurses and 2,407 fewer hospital beds by 2028-29.</p>
+                            <a class="t-src" href="https://fao-on.org/en/report/estimates-2026-health/" target="_blank" rel="noopener noreferrer">FAO, Ontario Health Sector: 2026 Spending Plan Review</a>
+                        </div>
+                    </li>
+                    <li class="t-item">
+                        <span class="t-date">Jul 15, 2026</span>
+                        <div>
+                            <p class="t-title">Health spending ran $1.2 billion over plan last year</p>
+                            <p class="t-text">The FAO reported unaudited 2025-26 health spending of $97.2 billion, about $1.2 billion more than the revised plan and $6.1 billion more than the plan at the start of the year.</p>
+                            <a class="t-src" href="https://fao-on.org/en/report/2025-26-expenditure-monitor-q4/" target="_blank" rel="noopener noreferrer">FAO, Expenditure Monitor 2025-26: Q4</a>
+                        </div>
+                    </li>
+                    <li class="t-item">
+                        <span class="t-date">Apr 24, 2026</span>
+                        <div>
+                            <p class="t-title">More than 70% of hospitals forecast deficits as cuts spread</p>
+                            <p class="t-text">The Canadian Press reported job cuts at The Ottawa Hospital, London Health Sciences Centre (more than 200 nursing positions through attrition), and Chatham-Kent Health Alliance (49 positions, about half from shrinking its float staff pool).</p>
+                            <a class="t-src" href="https://www.cp24.com/politics/queens-park/2026/04/24/ontario-hospitals-announce-job-cuts-nearly-three-quarters-of-hospitals-in-deficit/" target="_blank" rel="noopener noreferrer">CP24 / The Canadian Press</a>
+                        </div>
+                    </li>
+                    <li class="t-item">
+                        <span class="t-date">Apr 17, 2026</span>
+                        <div>
+                            <p class="t-title">The Ottawa Hospital to cut more than 200 nursing positions</p>
+                            <p class="t-text">The Ontario Nurses&rsquo; Association said the cuts include registered nurses, clinical care leaders, nurse specialists, and nurse educators, and linked them to provincial underfunding.</p>
+                            <a class="t-src" href="https://ona.org/news/20260417-ottawa-hospital-cuts/" target="_blank" rel="noopener noreferrer">Ontario Nurses&rsquo; Association</a>
+                        </div>
+                    </li>
+                    <li class="t-item">
+                        <span class="t-date">Apr 13, 2026</span>
+                        <div>
+                            <p class="t-title">FAO: budget plans less for health than its own outlook</p>
+                            <p class="t-text">The FAO&rsquo;s budget note found the province plans $3.1 billion less health spending from 2025-26 to 2028-29 than the FAO projected in its winter outlook, including $3.8 billion less in 2028-29 alone.</p>
+                            <a class="t-src" href="https://fao-on.org/en/report/2026-ontario-budget-note/" target="_blank" rel="noopener noreferrer">FAO, 2026 Ontario Budget Note</a>
+                        </div>
+                    </li>
+                    <li class="t-item">
+                        <span class="t-date">Mar 26, 2026</span>
+                        <div>
+                            <p class="t-title">Budget released; nurses call for accountability</p>
+                            <p class="t-text">The Ontario Nurses&rsquo; Association responded to the new home care money by calling for accountability on job cuts, privatization, and chronic underfunding. The full budget breakdown follows below.</p>
+                            <a class="t-src" href="https://ona.org/news/20260326-ontario-budget-2026/" target="_blank" rel="noopener noreferrer">Ontario Nurses&rsquo; Association</a>
+                        </div>
+                    </li>
+                </ol>
             </div>
 
             <!-- Non-Obvious Financial Gap Lead -->

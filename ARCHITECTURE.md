@@ -34,3 +34,15 @@ All theme styling lives in the `<style>` block in the `<head>` of `index.html`.
 ## Contact form
 Posts to Web3Forms (`api.web3forms.com/submit`) using the access key in the form.
 The script at the bottom of `index.html` shows the success or error message.
+
+## Page sections added Nov 3, 2026
+- **Start here band** (`#start-here`, right under the hero): three action cards.
+  Two link to the full proposals on the page (`#pool-implementation`, `#proposal-start`);
+  the neon one links journalists to the media page request form (`/media/#contact`).
+  Below them, "The 10-Second Version": a three-point executive summary.
+- **Forecast data cards** (`.metrics` at the top of `#forecast`): six big-number cards.
+  Each has the number, a label, and a short source line. Edit the text directly.
+- **Budget tracker** (`#budget-tracker` inside `#budget-2026`): dated updates, newest first.
+  To add an update: copy one `<li class="t-item">` block, paste it at the top of the list,
+  change the date, title, text, and source link, then change the "Last updated" date.
+  Only add entries with a real, linked source.
