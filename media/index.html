@@ -38,7 +38,7 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "JoAnne Andrea Gomez",
-        "jobTitle": "Healthcare Commentator",
+        "jobTitle": "Registered Nurse",
         "description": "Registered Nurse and healthcare commentator with 27+ years of critical care ICU experience. Expert source on nurse staffing, patient safety, healthcare burnout, hospital policy, and the nursing workforce crisis. Available for interviews, expert quotes, op-ed contributions, and panel discussions.",
         "image": "https://prorninc.com/media/hero.jpg",
         "email": "mailto:prorninc@gmail.com",
@@ -103,6 +103,7 @@
         "sameAs": [
             "https://medium.com/@msjag416",
             "https://www.linkedin.com/in/jag416",
+            "https://www.instagram.com/msjag_writer",
             "https://www.amazon.com/dp/B0F1L3KFLY",
             "https://www.amazon.com/dp/B0DTFMFZTT",
             "https://prorninc.com"
@@ -791,6 +792,9 @@
         .hero::before { display: none; }
         .hero h1 { font-size: clamp(2.6rem, 6.5vw, 5.25rem); line-height: .98; letter-spacing: -0.045em; }
         .hero h1 .hl { color: var(--teal); }
+        .hero-photo-wrapper picture { display: block; }
+        .hero-photo { height: auto; }
+        .hero h1 .h1-sub { display: block; font-size: clamp(1.2rem, 2.4vw, 1.8rem); font-weight: 500; color: rgba(255,255,255,0.7); letter-spacing: -0.01em; margin-top: .5rem; line-height: 1.2; }
         .hero-photo, .hero-photo-wrapper::before { border-radius: 22px; }
         .hero-photo-wrapper::before { border-color: var(--teal); opacity: .45; }
         .hero-tag { border-radius: 999px; }
@@ -935,12 +939,15 @@
         </div>
         <div class="hero-inner">
             <div class="hero-photo-wrapper">
-                <img src="hero.jpg" alt="JoAnne Andrea Gomez, RN - Healthcare Commentator and Expert Source" class="hero-photo">
+                <picture>
+                    <source srcset="hero.webp" type="image/webp">
+                    <img src="hero.jpg" width="1000" height="993" alt="JoAnne Andrea Gomez, RN, Toronto ICU nurse and expert source for journalists" class="hero-photo">
+                </picture>
                 <div class="hero-photo-caption">Toronto, Ontario</div>
             </div>
             <div class="hero-text">
-                <div class="hero-label">Healthcare Commentator &amp; Expert Source</div>
-                <h1>JoAnne Andrea Gomez, <span class="hl">RN</span></h1>
+                <div class="hero-label">Media &amp; Press Kit</div>
+                <h1>JoAnne Andrea Gomez, <span class="hl">RN</span><span class="h1-sub">Toronto ICU Nurse &amp; Expert Source</span></h1>
                 <p class="hero-subtitle">27 years in Trauma-Neuro and Medical-Surgical ICUs. Published author. Founder of ProRN Inc. Pick the beat your story is about and your press pack is ready in one tap.</p>
 
                 <!-- STORY DESK: tap a beat, get the quote, attribution and a ready-to-send request -->

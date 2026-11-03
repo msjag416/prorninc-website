@@ -103,3 +103,8 @@ the buttons stack full width. People with "reduce motion" on get no swap animati
 ## Media page mobile menu (Nov 3, 2026)
 The hamburger (`#nav-toggle`) opens `#nav-links`. The menu closes when a link is tapped, when you tap
 anywhere outside it, or on Escape (script near the top of the page's `<script>`).
+
+## Media page SEO notes (Nov 3, 2026)
+- Hero photo loads `hero.webp` (about 70 KB) with `hero.jpg` as the fallback and as the download/share image. If you replace the headshot, replace both files.
+- The hidden "Person" data uses job title "Registered Nurse" and lists Medium, LinkedIn, Instagram, the two books and prorninc.com under `sameAs`.
+- The H1 is the name plus a smaller second line, "Toronto ICU Nurse & Expert Source" (`.h1-sub`).
