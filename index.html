@@ -82,20 +82,134 @@
       ]
     }
     </script>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect x=%220%22 y=%220%22 width=%2264%22 height=%2264%22 rx=%2212%22 fill=%22%231d4ed8%22/><path d=%22M32 12v40M12 32h12l4-8 8 16 4-8h12%22 stroke=%22white%22 stroke-width=%226%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect x=%220%22 y=%220%22 width=%2264%22 height=%2264%22 rx=%2212%22 fill=%22%230a0b0d%22/><path d=%22M32 12v40M12 32h12l4-8 8 16 4-8h12%22 stroke=%22%23c8ff2e%22 stroke-width=%226%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/></svg>">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Stack+Sans+Headline:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <meta name="theme-color" content="#0a0b0d">
     <style>
         body { font-family: 'Inter', sans-serif; }
         .fade-in-up { animation: fadeInUp 0.8s ease-out; }
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         .section-anchor { scroll-margin-top: 100px; }
+
+        /* ═══ SWASH-STYLE DARK + NEON THEME ═══
+           This layer recolors the existing Tailwind classes, so the page markup stays the same. */
+        :root {
+            --bg: #0a0b0d; --surface: #121417; --surface-2: #1a1d21; --line: #26292e;
+            --ink: #f2f4f1; --ink-2: #d4d8d3; --muted: #a9afa8; --dim: #80867f;
+            --neon: #c8ff2e; --neon-soft: rgba(200,255,46,.12); --neon-line: rgba(200,255,46,.35);
+            --red: #ff6b5e; --red-soft: rgba(255,107,94,.12); --amber: #ffc24a; --amber-soft: rgba(255,194,74,.12);
+        }
+        html { background: var(--bg); color-scheme: dark; }
+        body.antialiased { background: var(--bg); color: var(--ink-2); }
+        ::selection { background: var(--neon); color: var(--bg); }
+        h1, h2, h3, .font-display { font-family: 'Stack Sans Headline', 'Inter', sans-serif; letter-spacing: -0.025em; }
+        body h2.text-3xl, body h2.text-4xl { font-size: clamp(2.1rem, 5.2vw, 4.25rem); line-height: 1.02; font-weight: 700; }
+
+        /* Surfaces */
+        body .bg-white, body .bg-slate-50 { background-color: var(--bg); }
+        body section .bg-white, body .bg-slate-100 { background-color: var(--surface); }
+        body section section.bg-white, body section .rounded-xl.bg-white, body section .rounded-2xl.bg-white { background-color: var(--surface); }
+        body .bg-slate-200 { background-color: var(--line); }
+        body .bg-slate-900 { background-color: var(--bg); }
+        body .bg-slate-800 { background-color: var(--surface); }
+        body .bg-slate-700 { background-color: var(--surface-2); }
+        body nav.bg-white\/95 { background-color: rgba(10,11,13,.82); }
+        body #mobile-menu { background-color: var(--surface); }
+        body .bg-blue-900, body .bg-blue-800 { background-color: #10170a; }
+        body .bg-blue-900 { border: 1px solid var(--neon-line); }
+        body .bg-blue-50, body .bg-green-50, body .bg-blue-100, body .bg-green-100, body .bg-blue-900\/50, body .bg-green-900\/50, body .bg-sky-100 { background-color: var(--neon-soft); }
+        body .bg-red-50, body .bg-red-100, body .bg-red-500\/20 { background-color: var(--red-soft); }
+        body .bg-amber-50, body .bg-amber-100, body .bg-orange-100 { background-color: var(--amber-soft); }
+        body .bg-purple-100 { background-color: rgba(196,165,255,.12); }
+        body .bg-red-800 { background-color: #5a1d18; }
+
+        /* Text */
+        body .text-slate-900, body .text-slate-800 { color: var(--ink); }
+        body .text-slate-700, body .text-slate-300, body .text-slate-200 { color: var(--ink-2); }
+        body .text-slate-600 { color: var(--muted); }
+        body .text-slate-500, body .text-slate-400 { color: var(--dim); }
+        body [class^="text-blue-"], body [class*=" text-blue-"], body [class^="text-green-"], body [class*=" text-green-"] { color: var(--neon); }
+        body .text-red-400, body .text-red-500, body .text-red-600, body .text-red-700, body .text-red-800 { color: var(--red); }
+        body .text-amber-600, body .text-amber-700, body .text-orange-600 { color: var(--amber); }
+        body .text-purple-600 { color: #c4a5ff; }
+        body .text-sky-600 { color: #6cd3ff; }
+
+        /* Borders */
+        body .border-slate-100, body .border-slate-200, body .border-slate-300 { border-color: var(--line); }
+        body .border-slate-600, body .border-slate-700, body .border-slate-800 { border-color: #2e3238; }
+        body [class^="border-blue-"], body [class*=" border-blue-"], body [class^="border-green-"], body [class*=" border-green-"] { border-color: var(--neon-line); }
+        body .border-blue-600, body .border-blue-500 { border-color: var(--neon); }
+        body .border-red-100, body .border-red-200 { border-color: rgba(255,107,94,.3); }
+        body .border-amber-100, body .border-amber-300 { border-color: rgba(255,194,74,.35); }
+
+        /* Accent bars and glows */
+        body .from-blue-600, body .from-green-600 { background-image: none; background-color: var(--neon); }
+        body #crisis > .absolute:first-child { background: radial-gradient(60% 70% at 85% 10%, rgba(200,255,46,.16), transparent 60%), radial-gradient(50% 60% at 0% 100%, rgba(200,255,46,.07), transparent 60%), var(--bg); opacity: 1; }
+        body #solutions > .bg-blue-600 { background-color: var(--neon); mix-blend-mode: normal; opacity: .08; }
+
+        /* Buttons: neon fill, dark text */
+        body a.bg-blue-900, body button.bg-blue-900, body #crisis a.bg-white { background-color: var(--neon); color: var(--bg); border-color: transparent; }
+        body a.bg-blue-900:hover, body button.bg-blue-900:hover, body #crisis a.bg-white:hover { background-color: #d9ff6b; box-shadow: 0 0 0 6px rgba(200,255,46,.15); }
+        body .hover\:bg-slate-50:hover, body .hover\:bg-slate-100:hover { background-color: var(--surface-2); }
+        body .hover\:bg-blue-100:hover { background-color: rgba(200,255,46,.2); }
+        body .hover\:bg-red-100:hover { background-color: rgba(255,107,94,.2); }
+        body .hover\:bg-amber-100:hover { background-color: rgba(255,194,74,.2); }
+        body [class*="hover:text-blue-"]:hover, body [class*="hover:text-green-"]:hover { color: #e4ff9a; }
+        body [class*="hover:border-blue-"]:hover, body [class*="hover:border-green-"]:hover { border-color: var(--neon); }
+
+        /* Form fields */
+        body input, body select, body textarea { background-color: var(--surface-2); color: var(--ink); }
+        body input::placeholder, body textarea::placeholder { color: var(--dim); }
+        body [class*="focus:ring-blue-"]:focus { --tw-ring-color: var(--neon); border-color: var(--neon); }
+
+        /* Scroll progress bar */
+        #scroll-progress { position: fixed; top: 0; left: 0; height: 3px; width: 100%; transform-origin: 0 50%; transform: scaleX(0); background: var(--neon); z-index: 60; box-shadow: 0 0 12px var(--neon); }
+
+        /* Kinetic hero line */
+        .kinetic { font-family: 'Stack Sans Headline', 'Inter', sans-serif; font-weight: 700; line-height: .9; letter-spacing: -0.045em; color: var(--ink); font-size: clamp(3rem, 16vw, 10.5rem); margin: 0 0 2.5rem; }
+        .kinetic > span { display: block; }
+        .kinetic .k-small { font-size: .42em; letter-spacing: -0.03em; color: var(--muted); font-weight: 500; margin-bottom: .15em; }
+        .kinetic .k-word { color: var(--neon); position: relative; height: .95em; overflow: hidden; }
+        .kinetic .k-word b { display: inline-block; font-weight: 700; transition: transform .55s cubic-bezier(.7,0,.2,1), opacity .55s, filter .55s; }
+        .kinetic .k-word b.out { transform: translateY(-105%) skewY(-6deg); opacity: 0; filter: blur(6px); }
+        .kinetic .k-word b.in { transform: translateY(105%) skewY(6deg); opacity: 0; filter: blur(6px); transition: none; }
+        .kinetic .k-word::after { content: ""; display: inline-block; width: .08em; height: .7em; margin-left: .06em; background: var(--neon); vertical-align: -0.02em; animation: caret 1s steps(1) infinite; }
+        @keyframes caret { 50% { opacity: 0; } }
+
+        /* Scroll reveal (only when JS runs) */
+        .js-reveal .reveal { opacity: 0; transform: translateY(36px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1); }
+        .js-reveal .reveal.is-in { opacity: 1; transform: none; }
+
+        /* 3D rotating showcase */
+        .ring-stage { perspective: 1400px; height: 380px; margin: 0 auto 3.5rem; position: relative; touch-action: pan-y; cursor: grab; user-select: none; }
+        .ring-stage.dragging { cursor: grabbing; }
+        .ring3d { --r: 290px; position: absolute; left: 50%; top: 20px; width: 240px; height: 320px; margin-left: -120px; transform-style: preserve-3d; transform: rotateY(var(--rot, 0deg)); }
+        .ring-card { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 1.5rem; border-radius: 22px; background: linear-gradient(160deg, #1b1f23, #101215); border: 1px solid var(--line); color: var(--ink); transform: rotateY(calc(var(--i) * 60deg)) translateZ(var(--r)); backface-visibility: hidden; -webkit-backface-visibility: hidden; transition: border-color .3s, box-shadow .3s; }
+        .ring-card:hover, .ring-card:focus-visible { border-color: var(--neon); box-shadow: 0 0 40px rgba(200,255,46,.18); outline: none; }
+        .ring-card .rc-num { font-family: 'Stack Sans Headline', sans-serif; font-size: 4.5rem; line-height: 1; color: var(--neon); letter-spacing: -0.05em; }
+        .ring-card .rc-title { font-family: 'Stack Sans Headline', sans-serif; font-size: 1.45rem; line-height: 1.1; font-weight: 700; letter-spacing: -0.02em; margin: .5rem 0 .4rem; }
+        .ring-card .rc-text { font-size: .9rem; color: var(--muted); line-height: 1.45; }
+        .ring-card .rc-go { font-size: .8rem; font-weight: 700; color: var(--neon); text-transform: uppercase; letter-spacing: .08em; }
+        .ring-hint { text-align: center; font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; color: var(--dim); margin-top: -2.5rem; margin-bottom: 3rem; }
+        @media (max-width: 640px) {
+            .ring-stage { height: 330px; }
+            .ring3d { --r: 175px; width: 180px; height: 270px; margin-left: -90px; }
+            .ring-card { padding: 1.2rem; }
+            .ring-card .rc-num { font-size: 3.5rem; }
+            .ring-card .rc-title { font-size: 1.2rem; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .js-reveal .reveal { opacity: 1; transform: none; transition: none; }
+            .kinetic .k-word::after { animation: none; }
+        }
     </style>
 </head>
 <body class="text-slate-800 bg-white antialiased">
+    <div id="scroll-progress" aria-hidden="true"></div>
 
     <!-- ═══ NAVIGATION ═══ -->
     <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all duration-300">
@@ -137,6 +251,11 @@
         <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900 opacity-95"></div>
         <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-red-900/10 to-transparent"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <p class="kinetic fade-in-up" aria-label="We have the solutions.">
+                <span class="k-small" aria-hidden="true">We have the</span>
+                <span class="k-word" aria-hidden="true"><b id="k-word">staffing</b></span>
+                <span aria-hidden="true">solutions.</span>
+            </p>
             <div class="max-w-4xl fade-in-up">
                 <p class="text-red-400 font-bold tracking-wider uppercase text-sm mb-6">Ontario Healthcare Funding Crisis &mdash; March 2026</p>
                 <h1 class="text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.1] mb-8 tracking-tight">
@@ -474,6 +593,17 @@
                 <h2 class="text-3xl md:text-4xl font-extrabold mt-2 mb-4">Provincial Nursing Workforce Frameworks Ready for Adoption</h2>
                 <p class="text-slate-300 mt-4 max-w-3xl mx-auto text-lg">ProRN Inc. provides the intellectual property, strategic roadmap, and operational design. Funding and implementation decisions rest with the Province or Hospital Corporation. Both proposals below include full financial models, union compliance strategies, and phased rollout plans.</p>
             </div>
+            <div class="ring-stage" id="ring-stage" aria-label="Explore the proposals and evidence">
+                <div class="ring3d" id="ring">
+                    <a class="ring-card" style="--i:0" href="#proposal-start"><span class="rc-num">01</span><span><span class="rc-title block">Virtual Nursing Program</span><span class="rc-text block">Experienced RNs caring for patients remotely, from admission to discharge.</span></span><span class="rc-go">Read proposal &rarr;</span></a>
+                    <a class="ring-card" style="--i:1" href="#pool-implementation"><span class="rc-num">02</span><span><span class="rc-title block">Provincial Nursing Float Pool</span><span class="rc-text block">A public alternative to $1.5B a year in private agency spending.</span></span><span class="rc-go">Read proposal &rarr;</span></a>
+                    <a class="ring-card" style="--i:2" href="#forecast"><span class="rc-num">$10.7B</span><span><span class="rc-title block">The Forecast</span><span class="rc-text block">What happens to Ontario care if nothing changes by 2027-28.</span></span><span class="rc-go">See forecast &rarr;</span></a>
+                    <a class="ring-card" style="--i:3" href="#budget-2026"><span class="rc-num">2026</span><span><span class="rc-title block">The Budget</span><span class="rc-text block">What the March 2026 budget funds, and what it leaves out.</span></span><span class="rc-go">See budget &rarr;</span></a>
+                    <a class="ring-card" style="--i:4" href="#meetings"><span class="rc-num">2&times;</span><span><span class="rc-title block">Government Meetings</span><span class="rc-text block">Two proposals taken to provincial leadership in 2024.</span></span><span class="rc-go">Read story &rarr;</span></a>
+                    <a class="ring-card" style="--i:5" href="#use-cases"><span class="rc-num">RN</span><span><span class="rc-title block">Use Cases</span><span class="rc-text block">Where virtual RNs help bedside teams first.</span></span><span class="rc-go">See use cases &rarr;</span></a>
+                </div>
+            </div>
+            <p class="ring-hint">Drag to spin &middot; Tap a card to jump</p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <a href="#proposal-start" class="block group bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-400 hover:bg-slate-800/80 transition-all duration-300">
                     <div class="w-14 h-14 bg-blue-900/50 rounded-xl flex items-center justify-center mb-6 text-blue-400 group-hover:text-blue-300 group-hover:scale-110 transition-all"><i data-lucide="monitor" class="w-7 h-7"></i></div>
@@ -821,6 +951,103 @@
     if(mobileBtn)mobileBtn.addEventListener('click',function(){mobileMenu.classList.toggle('hidden');});
     const mobileLinks=mobileMenu?mobileMenu.querySelectorAll('a'):[];
     mobileLinks.forEach(link=>{link.addEventListener('click',()=>{mobileMenu.classList.add('hidden');});});
+
+    // ═══ SWASH-STYLE MOTION ═══
+    (function () {
+        const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        // 1. Hero word cycle: staffing → funding → nursing
+        const word = document.getElementById('k-word');
+        const words = ['staffing', 'funding', 'nursing'];
+        let w = 0;
+        if (word && !reduce) {
+            setInterval(function () {
+                word.classList.add('out');
+                setTimeout(function () {
+                    w = (w + 1) % words.length;
+                    word.textContent = words[w];
+                    word.classList.remove('out');
+                    word.classList.add('in');
+                    void word.offsetWidth;
+                    word.classList.remove('in');
+                }, 550);
+            }, 2400);
+        }
+
+        // 2. Scroll progress bar
+        const bar = document.getElementById('scroll-progress');
+        function onScroll() {
+            const max = document.documentElement.scrollHeight - window.innerHeight;
+            if (bar) bar.style.transform = 'scaleX(' + (max > 0 ? window.scrollY / max : 0) + ')';
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+
+        // 3. Sections slide in as you scroll
+        if ('IntersectionObserver' in window && !reduce) {
+            const items = document.querySelectorAll('main section > div > *, body > section > div > *, body > section > section, body > section > div > section, #contact > div > *');
+            const seen = new Set();
+            document.documentElement.classList.add('js-reveal');
+            const io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) {
+                    if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+                });
+            }, { rootMargin: '0px 0px -6% 0px' });
+            items.forEach(function (el) {
+                if (seen.has(el) || el.closest('#crisis') || el.id === 'ring-stage') return;
+                seen.add(el);
+                el.classList.add('reveal');
+                io.observe(el);
+            });
+        }
+
+        // 4. 3D ring: slow spin, drag to rotate, tap to jump
+        const stage = document.getElementById('ring-stage');
+        const ring = document.getElementById('ring');
+        if (stage && ring) {
+            let rot = 0, dragging = false, moved = 0, lastX = 0, paused = false;
+            const cards = ring.querySelectorAll('.ring-card');
+            function draw() {
+                ring.style.setProperty('--rot', rot + 'deg');
+                // Hide cards facing away and fade the side cards for depth
+                cards.forEach(function (card, i) {
+                    const c = Math.cos((i * 60 + rot) * Math.PI / 180);
+                    const show = c > 0.05;
+                    card.style.pointerEvents = show ? 'auto' : 'none';
+                    card.style.opacity = show ? (0.25 + 0.75 * c).toFixed(3) : '0';
+                });
+            }
+            function tick() {
+                if (!dragging && !paused && !reduce) rot -= 0.12;
+                draw();
+                requestAnimationFrame(tick);
+            }
+            stage.addEventListener('pointerdown', function (e) {
+                dragging = true; moved = 0; lastX = e.clientX;
+                stage.classList.add('dragging');
+            });
+            window.addEventListener('pointermove', function (e) {
+                if (!dragging) return;
+                const dx = e.clientX - lastX;
+                lastX = e.clientX; moved += Math.abs(dx); rot += dx * 0.35;
+            });
+            window.addEventListener('pointerup', function () {
+                if (dragging) setTimeout(function () { moved = 0; }, 0);
+                dragging = false; stage.classList.remove('dragging');
+            });
+            // A drag should spin, not open a card
+            cards.forEach(function (card, i) {
+                card.addEventListener('click', function (e) { if (moved > 6) e.preventDefault(); });
+                card.addEventListener('dragstart', function (e) { e.preventDefault(); });
+                // Keyboard users: bring the focused card to the front
+                card.addEventListener('focus', function () { paused = true; rot = -i * 60; });
+                card.addEventListener('blur', function () { paused = false; });
+            });
+            stage.addEventListener('mouseenter', function () { paused = true; });
+            stage.addEventListener('mouseleave', function () { paused = false; });
+            requestAnimationFrame(tick);
+        }
+    })();
 </script>
 </body>
 </html>
