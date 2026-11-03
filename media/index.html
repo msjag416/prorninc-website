@@ -912,10 +912,10 @@
             <div class="nav-divider"></div>
             <span class="nav-title">Healthcare Commentator</span>
         </div>
-        <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
             <span></span><span></span><span></span>
         </button>
-        <ul class="nav-links">
+        <ul class="nav-links" id="nav-links">
             <li><a href="#expertise">Beats</a></li>
             <li><a href="#credentials">Credentials</a></li>
             <li><a href="#published">Published</a></li>
@@ -1304,6 +1304,15 @@
 
     <script>
         document.getElementById('copyrightYear').textContent = new Date().getFullYear();
+
+        // Mobile menu: opens on the hamburger, closes on a link tap, a tap outside, or Escape
+        const navToggle = document.getElementById('nav-toggle');
+        const navLinks = document.getElementById('nav-links');
+        const setMenu = (open) => { navLinks.classList.toggle('open', open); navToggle.setAttribute('aria-expanded', open ? 'true' : 'false'); };
+        navToggle.addEventListener('click', (e) => { e.stopPropagation(); setMenu(!navLinks.classList.contains('open')); });
+        navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+        document.addEventListener('click', (e) => { if (!navLinks.contains(e.target)) setMenu(false); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
 
         // Neon scroll progress bar (same as the main site)
         const bar = document.getElementById('scroll-progress');

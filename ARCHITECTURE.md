@@ -99,3 +99,7 @@ The quotes, topics and subject lines live in the `BEATS` object in the page scri
 edit it there (the Soundbites section further down has its own copy of the three original quotes).
 Styles are in the `STORY DESK` block at the end of the `<style>`. On phones the beats go two across and
 the buttons stack full width. People with "reduce motion" on get no swap animation.
+
+## Media page mobile menu (Nov 3, 2026)
+The hamburger (`#nav-toggle`) opens `#nav-links`. The menu closes when a link is tapped, when you tap
+anywhere outside it, or on Escape (script near the top of the page's `<script>`).
