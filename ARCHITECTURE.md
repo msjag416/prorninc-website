@@ -70,3 +70,19 @@ The script at the bottom of `index.html` shows the success or error message.
 - Fonts: Inter and Stack Sans Headline, loaded from `../assets/fonts/` (no Google Fonts).
 - The block marked `MAIN-SITE LOOK` at the end of its `<style>` adds the big headings, glassy nav,
   neon Contact button, rounded cards, and the neon scroll progress bar (`#scroll-progress`).
+
+## Media page press kit (Nov 3, 2026)
+Built for Qwoted journalists. Sections on `media/index.html`, top to bottom:
+- **Deadline banner** (`.deadline-banner`, top of the hero): availability and "replies within 24 hours".
+- **Fast Facts** (`.fast-facts`, under the hero): location, formats, reply time, clinical and policy focus.
+- **Commentary Beats** (`#expertise`): the four beats from the press sheet.
+- **Press Soundbites** (`#soundbites`): three quotes, each with a Copy Quote button.
+- **Bios** (`#bio`): short and full bio, each with a Copy button. The full bio keeps
+  `id="bioText"` and class `media-bio-text` (used by the search engine "speakable" data).
+- Copy buttons all use one function, `copyText(id, button)`, in the script at the bottom.
+- Only email and the contact form are offered (no phone number on purpose).
+
+**Media sheet PDF:** `media/JoAnne-Andrea-Gomez-RN-Media-Sheet.pdf`, made from
+`media/media-sheet.html` (hidden from search engines). If you change the bios or quotes on the page,
+change them in `media-sheet.html` too, then rebuild the PDF by printing that page to PDF
+(Letter size, no headers/footers) and check it is still one page.

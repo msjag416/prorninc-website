@@ -808,6 +808,50 @@
             .nav-links { top: 72px; background: #121417; }
             .nav-links li:last-child a { display: inline-block; }
         }
+        /* ═══ JOURNALIST PRESS KIT PIECES (Nov 2026) ═══ */
+        .deadline-banner { margin-top: 72px; position: relative; z-index: 2; display: flex; align-items: center; justify-content: center; gap: .7rem; padding: .75rem 1.25rem; background: #10170a; border-bottom: 1px solid rgba(200,255,46,.35); color: var(--teal); font-size: .9rem; font-weight: 600; text-align: center; line-height: 1.45; }
+        .pulse { position: relative; flex: none; width: 10px; height: 10px; border-radius: 50%; background: var(--teal); }
+        .pulse::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: var(--teal); animation: pulse 1.6s ease-out infinite; }
+        @keyframes pulse { to { transform: scale(2.8); opacity: 0; } }
+        .hero .hero-inner { padding-top: 4rem; }
+        .hero-cta-ghost { background: transparent; color: var(--text-dark); border: 1px solid var(--border-hover); box-shadow: none; margin-left: .6rem; }
+        .hero-cta-ghost:hover { background: transparent; border-color: var(--teal); color: var(--teal); box-shadow: none; }
+        .fast-facts { background: var(--navy); border-bottom: 1px solid var(--border); padding: 2.25rem 2.5rem; }
+        .ff-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 13rem minmax(0,1fr); gap: 2rem; align-items: center; }
+        .ff-title { font-family: 'Stack Sans Headline', 'Inter', sans-serif; font-size: 1.35rem; font-weight: 700; line-height: 1.1; color: var(--text-dark); }
+        .ff-grid { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 1rem; }
+        .ff-grid > div { border-left: 2px solid var(--teal); padding-left: .85rem; min-width: 0; }
+        .ff-grid dt { font-size: .68rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--mid-gray); margin-bottom: .2rem; }
+        .ff-grid dd { font-size: .92rem; font-weight: 600; color: var(--text-dark); line-height: 1.35; }
+        .ff-grid dd.ff-neon { color: var(--teal); }
+        .soundbites { display: grid; gap: 1.25rem; }
+        .soundbite { margin: 0; background: var(--card); border: 1px solid var(--border); border-left: 3px solid var(--teal); border-radius: 16px; padding: 1.8rem 2rem; }
+        .sb-topic { font-size: .7rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--teal); margin-bottom: .7rem; }
+        .soundbite blockquote { font-family: 'Stack Sans Headline', 'Inter', sans-serif; font-size: clamp(1.15rem, 2.2vw, 1.45rem); line-height: 1.4; font-weight: 500; color: var(--text-dark); letter-spacing: -0.01em; }
+        .sb-foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .8rem; margin-top: 1.1rem; }
+        .sb-attr { font-size: .82rem; color: var(--text-light); }
+        .press-btn { display: inline-flex; align-items: center; gap: .45rem; cursor: pointer; text-decoration: none; }
+        .bio-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.6fr); gap: 1.25rem; margin-bottom: 1.5rem; }
+        .bio-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 1.6rem 1.8rem; }
+        .bio-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: .9rem; }
+        .bio-head h3 { font-size: 1.15rem; font-weight: 700; color: var(--text-dark); line-height: 1.25; }
+        .bio-head h3 span { display: block; font-family: 'Inter', sans-serif; font-size: .78rem; font-weight: 500; color: var(--text-light); letter-spacing: 0; margin-top: .2rem; }
+        .bio-card p { font-size: .95rem; line-height: 1.75; color: var(--text-body); }
+        .bio-card .media-bio-text { background: none; border: none; padding: 0; }
+        .bio-card .media-bio-text::before { display: none; }
+        @media (max-width: 900px) {
+            .ff-inner { grid-template-columns: minmax(0,1fr); gap: 1rem; text-align: left; }
+            .ff-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+            .bio-grid { grid-template-columns: minmax(0,1fr); }
+            .hero .hero-inner { padding-top: 3rem; }
+        }
+        @media (max-width: 768px) {
+            .fast-facts { padding: 1.75rem 1.5rem; }
+            .soundbite { padding: 1.4rem 1.3rem; }
+            .hero-cta-ghost { margin-left: 0; margin-top: .6rem; }
+            .deadline-banner { font-size: .82rem; }
+        }
+        @media (prefers-reduced-motion: reduce) { .pulse::after { animation: none; } }
     </style>
 </head>
 <body>
@@ -827,10 +871,11 @@
             <span></span><span></span><span></span>
         </button>
         <ul class="nav-links">
-            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#expertise">Beats</a></li>
             <li><a href="#credentials">Credentials</a></li>
             <li><a href="#published">Published</a></li>
-            <li><a href="#bio">Media Bio</a></li>
+            <li><a href="#soundbites">Soundbites</a></li>
+            <li><a href="#bio">Bios</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -838,6 +883,10 @@
 
     <!-- HERO -->
     <header class="hero">
+        <div class="deadline-banner">
+            <span class="pulse" aria-hidden="true"></span>
+            <span>Available for media commentary: print, digital, TV, radio and podcasts. Replies within 24 hours (Toronto, Eastern Time).</span>
+        </div>
         <div class="hero-inner">
             <div class="hero-photo-wrapper">
                 <img src="hero.jpg" alt="JoAnne Andrea Gomez, RN - Healthcare Commentator and Expert Source" class="hero-photo">
@@ -859,49 +908,93 @@
                     Request Commentary
                     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
                 </a>
+                <a href="#soundbites" class="hero-cta hero-cta-ghost">Read the Soundbites</a>
             </div>
         </div>
     </header>
+
+    <!-- FAST FACTS -->
+    <section class="fast-facts" aria-label="Fast facts for journalists">
+        <div class="ff-inner">
+            <div class="ff-title">Fast Facts for Journalists</div>
+            <dl class="ff-grid">
+                <div><dt>Location</dt><dd>Toronto, ON (Eastern Time)</dd></div>
+                <div><dt>Formats</dt><dd>TV, radio, print, digital, podcasts</dd></div>
+                <div><dt>Reply time</dt><dd class="ff-neon">Within 24 hours</dd></div>
+                <div><dt>Clinical focus</dt><dd>Trauma-Neuro &amp; Med-Surg ICU</dd></div>
+                <div><dt>Policy focus</dt><dd>Agency costs &amp; float pools</dd></div>
+            </dl>
+        </div>
+    </section>
 
     <!-- EXPERTISE -->
     <section class="section section-alt" id="expertise">
         <div class="section-inner">
             <div class="section-header reveal">
                 <div class="section-label">Areas of Commentary</div>
-                <h2>What I Cover</h2>
-                <p class="section-intro">My commentary is drawn from direct clinical experience in two of Toronto's highest-acuity hospitals. Every position I take is rooted in what I've seen happen when policy meets the patient.</p>
+                <h2>Commentary Beats</h2>
+                <p class="section-intro">Available for interviews and background briefings on these four beats, drawn from 27+ years at the bedside in two of Toronto's highest-acuity hospitals.</p>
             </div>
             <div class="expertise-grid reveal-stagger">
                 <div class="expertise-card">
-                    <h3>Nurse Staffing &amp; the Workforce Crisis</h3>
-                    <p>How staffing ratios affect patient outcomes, nursing retention, and the long-term sustainability of the healthcare workforce. The gap between what administrators plan and what bedside nurses experience.</p>
+                    <h3>Healthcare System Economics &amp; Agency Costs</h3>
+                    <p>Provincial health budgets, the $1.5 billion a year Ontario spends on private staffing agencies, public float pool financial models, and Financial Accountability Office (FAO) health sector projections.</p>
                 </div>
                 <div class="expertise-card">
-                    <h3>Patient Safety in Critical Care</h3>
-                    <p>What keeps patients alive in the ICU and what puts them at risk. The clinical realities of monitoring, early intervention, and how systemic failures translate into preventable harm.</p>
+                    <h3>Nursing Workforce Strategy &amp; Retention</h3>
+                    <p>Why six of every ten nurses Ontario hires leave, bedside workload, safe staffing ratios, and virtual nursing pilot frameworks.</p>
                 </div>
                 <div class="expertise-card">
-                    <h3>Healthcare Burnout &amp; Moral Injury</h3>
-                    <p>The psychological cost of working in a system that demands more than it supports. Why nurses leave, what makes them stay, and what recovery looks like for a depleted workforce.</p>
+                    <h3>Workplace Burnout &amp; Occupational Stress</h3>
+                    <p>The system drivers of frontline exhaustion, employee retention, workplace trauma, and recovery. Author of <em>Burnout to Balance</em>.</p>
                 </div>
                 <div class="expertise-card">
-                    <h3>Hospital Policy &amp; Its Bedside Impact</h3>
-                    <p>Translating institutional policy into human terms. What budget cuts, restructuring, and administrative decisions look like when they reach the patient room.</p>
-                </div>
-                <div class="expertise-card">
-                    <h3>Healthcare System Reform</h3>
-                    <p>What's broken, what's fixable, and what reform looks like from the perspective of someone who has worked inside the system for close to three decades. Including virtual nursing and provincial float pool models.</p>
-                </div>
-                <div class="expertise-card">
-                    <h3>Mental Health &amp; Youth Wellbeing</h3>
-                    <p>Anxiety, childhood trauma, and the systems that are supposed to help young people but don't. Informed by clinical observation and published work on teen mental health.</p>
+                    <h3>Post-Operative Recovery Standards</h3>
+                    <p>High-acuity post-op patient care, clinical oversight standards, and cosmetic surgery recovery protocols, from current practice as a post-operative recovery nurse.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- SOUNDBITES -->
+    <section class="section" id="soundbites">
+        <div class="section-inner">
+            <div class="section-header reveal">
+                <div class="section-label">On the Record</div>
+                <h2>Press Soundbites</h2>
+                <p class="section-intro">These quotes are cleared for use with attribution in print and digital stories. Need something specific to your angle? Send your questions and deadline below.</p>
+            </div>
+            <div class="soundbites reveal-stagger">
+                <figure class="soundbite">
+                    <figcaption class="sb-topic">On Private Agency Spending</figcaption>
+                    <blockquote id="q1">&ldquo;Spending $1.5 billion annually on private staffing agencies while cutting permanent bedside lines is not a funding scarcity issue; it is a structural misallocation of public health dollars.&rdquo;</blockquote>
+                    <div class="sb-foot">
+                        <span class="sb-attr">JoAnne Andrea Gomez, RN, Founder of ProRN Inc.</span>
+                        <button class="press-btn" type="button" onclick="copyText('q1', this)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copy Quote</button>
+                    </div>
+                </figure>
+                <figure class="soundbite">
+                    <figcaption class="sb-topic">On Nurse Retention</figcaption>
+                    <blockquote id="q2">&ldquo;Training new nurses without fixing bedside working conditions is like pouring water into a leaky bucket, because for every ten nurses Ontario hires, six leave.&rdquo;</blockquote>
+                    <div class="sb-foot">
+                        <span class="sb-attr">JoAnne Andrea Gomez, RN, Founder of ProRN Inc.</span>
+                        <button class="press-btn" type="button" onclick="copyText('q2', this)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copy Quote</button>
+                    </div>
+                </figure>
+                <figure class="soundbite">
+                    <figcaption class="sb-topic">On Workplace Burnout</figcaption>
+                    <blockquote id="q3">&ldquo;Workplace burnout is not an individual resilience failure. It happens when dedicated professionals are forced to operate in broken systems that make safe care impossible.&rdquo;</blockquote>
+                    <div class="sb-foot">
+                        <span class="sb-attr">JoAnne Andrea Gomez, RN, Founder of ProRN Inc.</span>
+                        <button class="press-btn" type="button" onclick="copyText('q3', this)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copy Quote</button>
+                    </div>
+                </figure>
+            </div>
+        </div>
+    </section>
+
     <!-- CREDENTIALS -->
-    <section class="section" id="credentials">
+    <section class="section section-alt" id="credentials">
         <div class="section-inner">
             <div class="section-header reveal">
                 <div class="section-label">Authority</div>
@@ -923,7 +1016,7 @@
                 </div>
                 <div class="credential-card">
                     <div class="credential-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg></div>
-                    <div class="credential-text"><h4>Active License</h4><p>Registered Nurse, College of Nurses of Ontario</p></div>
+                    <div class="credential-text"><h4>Active License</h4><p>Registered Nurse in Ontario (CNO) and Nova Scotia</p></div>
                 </div>
                 <div class="credential-card">
                     <div class="credential-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M9 15l2 2 4-4"/></svg></div>
@@ -950,7 +1043,7 @@
     </section>
 
     <!-- PUBLISHED WORK -->
-    <section class="section section-alt" id="published">
+    <section class="section" id="published">
         <div class="section-inner">
             <div class="section-header reveal">
                 <div class="section-label">Published Work</div>
@@ -985,15 +1078,26 @@
         <div class="section-inner reveal">
             <div class="section-header">
                 <div class="section-label">For Journalists &amp; Editors</div>
-                <h2>Media Bio &amp; Press Kit</h2>
-                <p class="section-intro">Copy the bio below directly into your story attribution. Download the headshot for publication use.</p>
+                <h2>Media Bios &amp; Press Kit</h2>
+                <p class="section-intro">Copy the bio that fits your format. Download the headshot and one-page media sheet for publication use.</p>
             </div>
-            <div class="media-bio-text" id="bioText">JoAnne Andrea Gomez is a registered nurse, healthcare commentator, and published author based in Toronto, Ontario. With more than 27 years of critical care experience in Trauma-Neuro and Medical-Surgical ICUs at St. Michael's Hospital and Toronto Western Hospital (University Health Network), she provides expert commentary on nurse staffing, patient safety, healthcare burnout, hospital policy, and the nursing workforce crisis. She currently practises post-operative recovery nursing at a Toronto cosmetic surgery clinic. She is the author of "Burnout to Balance: Your 8-Step Guide to Thriving in a Messy Workplace" and "Stronger Than You Think: A Guide for Teens Overcoming Anxiety and Childhood Trauma," and writes regularly on healthcare and workplace issues at medium.com/@msjag416. She is the founder of ProRN Inc., a healthcare consulting company, holds ICH GCP E6(R3) certification, and holds an active nursing license with the College of Nurses of Ontario. She is available for interviews, expert quotes, op-ed contributions, and panel discussions.</div>
+            <div class="bio-grid">
+                <div class="bio-card">
+                    <div class="bio-head"><h3>Short Bio <span>About 50 words, for quick attribution</span></h3>
+                        <button class="press-btn" type="button" onclick="copyText('bioShort', this)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copy</button></div>
+                    <p id="bioShort">JoAnne Andrea Gomez, RN, is a critical care nurse with more than 27 years of intensive care experience in Toronto teaching hospitals. She is the founder of ProRN Inc., author of Burnout to Balance, and a healthcare policy consultant specializing in public float pool frameworks, nursing retention models, and healthcare agency spending.</p>
+                </div>
+                <div class="bio-card">
+                    <div class="bio-head"><h3>Full Bio <span>About 135 words, for features and event programs</span></h3>
+                        <button class="press-btn" type="button" onclick="copyText('bioText', this)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copy</button></div>
+                    <p class="media-bio-text" id="bioText">JoAnne Andrea Gomez, RN, is a veteran intensive care nurse, healthcare policy consultant, and founder of ProRN Inc. With more than 27 years of high-acuity experience across Trauma-Neuro and Medical-Surgical ICUs in Toronto, she connects frontline clinical realities with health system economics. She has presented detailed policy frameworks for a Provincial Nursing Float Pool and a Virtual Nursing Program to Ontario health leadership. She holds a Bachelor of Arts in Psychology and English from the University of Nebraska, active nursing registration in Ontario (CNO) and Nova Scotia, and ICH GCP E6(R3) certification. JoAnne is the author of two books: Burnout to Balance: Your 8-Step Guide to Thriving in a Messy Workplace and Stronger Than You Think: A Guide for Teens Overcoming Anxiety and Childhood Trauma. She writes regularly on healthcare and workforce psychology at medium.com/@msjag416.</p>
+                </div>
+            </div>
             <div class="press-actions">
-                <button class="press-btn" id="copyBioBtn" onclick="copyBio()">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
-                    Copy Bio
-                </button>
+                <a href="JoAnne-Andrea-Gomez-RN-Media-Sheet.pdf" download class="press-btn">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M12 18v-6"/><path d="M9 15l3 3 3-3"/></svg>
+                    Media Sheet (PDF)
+                </a>
                 <a href="hero.jpg" download="JoAnne-Andrea-Gomez-RN-Headshot.jpg" class="press-btn">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                     Download Headshot
@@ -1134,15 +1238,21 @@
 
         document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => revealObserver.observe(el));
 
-        function copyBio() {
-            const bioText = document.getElementById('bioText').innerText;
-            navigator.clipboard.writeText(bioText).then(() => {
-                const btn = document.getElementById('copyBioBtn');
-                btn.classList.add('copied');
+        // Copy a quote or bio to the clipboard, then show "Copied" on the button
+        function copyText(id, btn) {
+            const text = document.getElementById(id).innerText.trim();
+            const done = () => {
                 const original = btn.innerHTML;
+                btn.classList.add('copied');
                 btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Copied';
                 setTimeout(() => { btn.classList.remove('copied'); btn.innerHTML = original; }, 2500);
-            });
+            };
+            if (navigator.clipboard) navigator.clipboard.writeText(text).then(done, () => fallbackCopy(text, done));
+            else fallbackCopy(text, done);
+        }
+        function fallbackCopy(text, done) {
+            const t = document.createElement('textarea'); t.value = text; document.body.appendChild(t);
+            t.select(); try { document.execCommand('copy'); done(); } catch (e) {} t.remove();
         }
 
         document.getElementById('contactForm').addEventListener('submit', async function(e) {
