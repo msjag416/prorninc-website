@@ -1,0 +1,13 @@
+/* Source for assets/css/site.css. Rebuild with:
+   npx tailwindcss@3.4.17 -c src/tailwind.config.js -i src/tailwind-input.css -o assets/css/site.css --minify */
+
+/* Self-hosted fonts (from Fontsource, SIL Open Font License) */
+@font-face { font-family: 'Inter'; font-style: normal; font-display: swap; font-weight: 100 900; src: url('../fonts/inter-latin-wght-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Stack Sans Headline'; font-style: normal; font-display: swap; font-weight: 400; src: url('../fonts/stack-sans-headline-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Stack Sans Headline'; font-style: normal; font-display: swap; font-weight: 500; src: url('../fonts/stack-sans-headline-latin-500-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Stack Sans Headline'; font-style: normal; font-display: swap; font-weight: 600; src: url('../fonts/stack-sans-headline-latin-600-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Stack Sans Headline'; font-style: normal; font-display: swap; font-weight: 700; src: url('../fonts/stack-sans-headline-latin-700-normal.woff2') format('woff2'); }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

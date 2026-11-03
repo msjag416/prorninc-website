@@ -2,7 +2,8 @@
 
 ## Hosting
 Plain static files served by GitHub Pages at prorninc.com (set by the `CNAME` file).
-Pushing to the `main` branch updates the live site. There is no build step.
+Pushing to the `main` branch updates the live site. GitHub runs no build; the one compiled
+file (`assets/css/site.css`) is built by hand and committed (see below).
 
 ## Pages
 - `index.html` — the main one-page site (story, forecast, budget, solutions, proposals, contact).
@@ -10,10 +11,23 @@ Pushing to the `main` branch updates the live site. There is no build step.
 - `resume/index.html` — resume page (prorninc.com/resume).
 - `sitemap.xml`, `BingSiteAuth.xml` — search engine files.
 
-## Libraries (loaded from CDNs, nothing to install)
-- Tailwind CSS (cdn.tailwindcss.com) for layout and spacing classes.
-- Lucide icons (unpkg) and Font Awesome (cdnjs).
-- Google Fonts: Inter (body text) and Stack Sans Headline (headings).
+## Libraries (self-hosted on index.html since Nov 3, 2026; no outside requests)
+- `assets/css/site.css` — Tailwind CSS 3.4.17, compiled and minified. It only contains the
+  classes `index.html` uses, plus the @font-face rules for the fonts below.
+  **If you add a Tailwind class that the page didn't use before, rebuild it** from the repo folder:
+  `npx tailwindcss@3.4.17 -c src/tailwind.config.js -i src/tailwind-input.css -o assets/css/site.css --minify`
+  (source files: `src/tailwind-input.css`, `src/tailwind.config.js`).
+- `assets/fonts/` — Inter (variable, body text) and Stack Sans Headline 400–700 (headings), from Fontsource.
+- `assets/fontawesome/` — Font Awesome Free 6.4.0 (CSS + woff2 fonts). Loaded before site.css on purpose,
+  so Tailwind's line heights win, as they did before.
+- `assets/js/lucide.min.js` — Lucide icons 1.67.0. Note: Lucide has no brand logos, so the footer
+  LinkedIn icon uses Font Awesome (`fa-brands fa-linkedin`).
+- `/media` and `/resume` still load their own outside libraries; they were not changed.
+
+## Accessibility notes
+- The moving hero word is hidden from screen readers; a hidden full sentence
+  ("We have the staffing, funding, and nursing ideas.") is read instead.
+- The two wide tables sit in focusable, labeled regions so keyboard users can scroll them.
 
 ## Look and feel (Swash-style redesign, Nov 2026)
 All theme styling lives in the `<style>` block in the `<head>` of `index.html`.
@@ -46,3 +60,4 @@ The script at the bottom of `index.html` shows the success or error message.
   To add an update: copy one `<li class="t-item">` block, paste it at the top of the list,
   change the date, title, text, and source link, then change the "Last updated" date.
   Only add entries with a real, linked source.
+- **Media callout** (`.media-callout` in "Who Is Behind This"): sends journalists to `/media/#contact`.

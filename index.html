@@ -83,11 +83,12 @@
     }
     </script>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect x=%220%22 y=%220%22 width=%2264%22 height=%2264%22 rx=%2212%22 fill=%22%230a0b0d%22/><path d=%22M32 12v40M12 32h12l4-8 8 16 4-8h12%22 stroke=%22%23c8ff2e%22 stroke-width=%226%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/></svg>">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Stack+Sans+Headline:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Self-hosted styles, fonts and icons (no outside requests). See ARCHITECTURE.md to rebuild site.css. -->
+    <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/stack-sans-headline-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/site.css">
+    <script src="assets/js/lucide.min.js"></script>
     <meta name="theme-color" content="#0a0b0d">
     <style>
         body { font-family: 'Inter', sans-serif; }
@@ -202,6 +203,12 @@
             .ring-card .rc-num { font-size: 3.5rem; }
             .ring-card .rc-title { font-size: 1.2rem; }
         }
+        /* Media callout in About */
+        .media-callout { margin-top: 1.5rem; padding: 1.25rem; border-radius: 14px; border: 1px solid var(--neon-line); background: var(--neon-soft); }
+        .media-callout .mc-label { font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--neon); margin-bottom: .4rem; }
+        .media-callout .mc-text { font-size: .95rem; line-height: 1.5; color: var(--ink-2); margin-bottom: .6rem; }
+        .media-callout .mc-link { font-weight: 700; font-size: .9rem; color: var(--neon); text-decoration: underline; text-underline-offset: 3px; }
+        .overflow-x-auto[tabindex]:focus-visible { outline: 2px solid var(--neon); outline-offset: 4px; border-radius: 6px; }
         /* Start-here band: action paths + executive summary */
         .start-band { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
         .paths { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
@@ -297,7 +304,8 @@
         <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900 opacity-95"></div>
         <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-red-900/10 to-transparent"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <p class="kinetic fade-in-up" aria-label="We have the ideas.">
+            <p class="kinetic fade-in-up">
+                <span class="sr-only">We have the staffing, funding, and nursing ideas.</span>
                 <span class="k-small" aria-hidden="true">We have the</span>
                 <span class="k-word" aria-hidden="true"><b id="k-word">staffing</b></span>
                 <span aria-hidden="true">ideas.</span>
@@ -588,7 +596,7 @@
             <!-- Fast Facts Comparison Table -->
             <div class="mb-12">
                 <h3 class="text-2xl font-bold text-slate-900 mb-6 flex items-center"><span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-200 text-slate-600 mr-3"><i data-lucide="bar-chart-3" class="w-5 h-5"></i></span> 2026 Budget: Announcement vs. Bedside Reality</h3>
-                <div class="overflow-x-auto">
+                <div class="overflow-x-auto" tabindex="0" role="region" aria-label="2026 Budget announcements compared with bedside reality">
                     <table class="min-w-full text-sm text-left">
                         <thead class="text-xs uppercase tracking-wider">
                             <tr>
@@ -732,6 +740,11 @@
                     <div class="md:col-span-4 bg-slate-900 text-white p-10 flex flex-col justify-center">
                         <blockquote class="text-xl font-medium italic mb-8 text-slate-200">&ldquo;The proposals are ready. The financial models are built. The evidence is published. The only thing missing is a government willing to fund the solutions that would save them billions.&rdquo;</blockquote>
                         <a href="#contact" class="group inline-flex items-center justify-center w-full px-6 py-3 text-base font-medium rounded-md text-slate-900 bg-white hover:bg-slate-100 transition-all">Contact JoAnne <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i></a>
+                        <div class="media-callout">
+                            <p class="mc-label">Media &amp; Speaking Inquiries</p>
+                            <p class="mc-text">Journalists, producers, and event planners: request an interview, expert commentary, or a speaker on Ontario&rsquo;s nursing workforce.</p>
+                            <a href="/media/#contact" class="mc-link">Go to the media request form &rarr;</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -929,7 +942,7 @@
         <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-8">
             <h2 class="text-2xl font-bold text-slate-900 mb-6 border-b border-blue-100 pb-2">Models of Centralized Nursing Staffing Pools</h2>
             <p class="text-slate-600 leading-relaxed mb-6">Other jurisdictions have created centralized or government-sponsored nursing pools to reduce agency dependence. Common success factors include maintaining more than union-level pay/benefits for pool nurses, centralized scheduling systems, and support for travel or training.</p>
-            <div class="overflow-x-auto">
+            <div class="overflow-x-auto" tabindex="0" role="region" aria-label="Models of centralized nursing staffing pools">
                 <table class="min-w-full text-sm text-left text-slate-600">
                     <thead class="text-xs text-slate-700 uppercase bg-slate-50 border-b border-slate-200"><tr><th class="px-6 py-3 font-bold">Jurisdiction</th><th class="px-6 py-3 font-bold">Program</th><th class="px-6 py-3 font-bold">Key Features</th></tr></thead>
                     <tbody class="divide-y divide-slate-100">
@@ -1054,7 +1067,7 @@
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="text-center md:text-left"><span class="text-xl font-extrabold text-white">ProRN Inc.</span><p class="text-sm text-slate-300 mt-1">Clinical Workforce Solutions &mdash; Toronto, Ontario</p></div>
             <div class="flex space-x-6">
-                <a href="https://www.linkedin.com/in/jag416" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-blue-500 transition-colors"><span class="sr-only">LinkedIn</span><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+                <a href="https://www.linkedin.com/in/jag416" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-blue-500 transition-colors"><span class="sr-only">LinkedIn</span><i class="fa-brands fa-linkedin text-2xl leading-none" aria-hidden="true"></i></a>
                 <a href="https://medium.com/@msjag416" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-blue-500 transition-colors"><span class="sr-only">Medium</span><i data-lucide="pen-line" class="w-6 h-6"></i></a>
                 <a href="#contact" class="text-slate-300 hover:text-blue-500 transition-colors"><span class="sr-only">Email</span><i data-lucide="mail" class="w-6 h-6"></i></a>
             </div>
