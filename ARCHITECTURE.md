@@ -40,8 +40,8 @@ All theme styling lives in the `<style>` block in the `<head>` of `index.html`.
 - **Scroll reveal:** sections fade up as they come into view. Only turns on when
   JavaScript runs, so the page still reads fine without it.
 - **3D card ring:** in the Solutions section (`#ring-stage` / `.ring3d`). Six cards that
-  link to page sections. It spins slowly, can be dragged, pauses on hover, and turns a
-  card to the front when it gets keyboard focus. Note: don't name a class `ring`;
+  link to page sections. It spins slowly, can be dragged, pauses only while the mouse is over a card
+  (not the whole strip), and turns a card to the front only for keyboard focus (a mouse click won't freeze it). Note: don't name a class `ring`;
   Tailwind already uses that name and draws a blue outline.
 - People who set "reduce motion" on their device get no spinning or animation.
 
