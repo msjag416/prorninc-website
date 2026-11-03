@@ -833,6 +833,9 @@
         .soundbite { margin: 0; background: var(--card); border: 1px solid var(--border); border-left: 3px solid var(--teal); border-radius: 16px; padding: 1.8rem 2rem; }
         .sb-topic { font-size: .7rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--teal); margin-bottom: .7rem; }
         .soundbite blockquote { font-family: 'Stack Sans Headline', 'Inter', sans-serif; font-size: clamp(1.15rem, 2.2vw, 1.45rem); line-height: 1.4; font-weight: 500; color: var(--text-dark); letter-spacing: -0.01em; }
+        .sb-src { font-size: .78rem; color: var(--mid-gray); margin-top: .8rem; }
+        .sb-src a { color: var(--text-light); text-decoration: underline; text-underline-offset: 3px; }
+        .sb-src a:hover { color: var(--teal); }
         .sb-foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .8rem; margin-top: 1.1rem; }
         .sb-attr { font-size: .82rem; color: var(--text-light); }
         .press-btn { display: inline-flex; align-items: center; gap: .45rem; cursor: pointer; text-decoration: none; }
@@ -960,12 +963,12 @@
                         <button class="beat is-active" role="tab" aria-selected="true" data-beat="agency" id="beat-agency">
                             <span class="beat-num">01</span>
                             <span class="beat-name">Agency costs</span>
-                            <span class="beat-sub">The $1.5B Ontario spends on private staffing</span>
+                            <span class="beat-sub">$725M a year in Ontario hospitals, $1.5B across Canada</span>
                         </button>
                         <button class="beat" role="tab" aria-selected="false" data-beat="retention" id="beat-retention">
                             <span class="beat-num">02</span>
                             <span class="beat-name">Nurse retention</span>
-                            <span class="beat-sub">Why six of every ten new hires leave</span>
+                            <span class="beat-sub">Why 35 of every 100 new nurses leave by age 35</span>
                         </button>
                         <button class="beat" role="tab" aria-selected="false" data-beat="burnout" id="beat-burnout">
                             <span class="beat-num">03</span>
@@ -1026,11 +1029,11 @@
             <div class="expertise-grid reveal-stagger">
                 <div class="expertise-card">
                     <h3>Healthcare System Economics &amp; Agency Costs</h3>
-                    <p>Provincial health budgets, the $1.5 billion a year Ontario spends on private staffing agencies, public float pool financial models, and Financial Accountability Office (FAO) health sector projections.</p>
+                    <p>Provincial health budgets, the <a href="https://www.policyalternatives.ca/news-research/hollowed-out/" target="_blank" rel="noopener">$725 million a year Ontario hospitals pay private staffing agencies</a> (<a href="https://nursesunions.ca/billions-of-public-health-dollars-spent-on-for-profit-nursing-agencies-new-report-reveals/" target="_blank" rel="noopener">over $1.5 billion across Canada</a>), public float pool financial models, and Financial Accountability Office (FAO) health sector projections.</p>
                 </div>
                 <div class="expertise-card">
                     <h3>Nursing Workforce Strategy &amp; Retention</h3>
-                    <p>Why six of every ten nurses Ontario hires leave, bedside workload, safe staffing ratios, and virtual nursing pilot frameworks.</p>
+                    <p>Why <a href="https://www.iedm.org/which-provinces-struggle-the-most-to-keep-young-nurses/" target="_blank" rel="noopener">35 of every 100 new Ontario nurses leave the profession before age 35</a>, bedside workload, safe staffing ratios, and virtual nursing pilot frameworks.</p>
                 </div>
                 <div class="expertise-card">
                     <h3>Workplace Burnout &amp; Occupational Stress</h3>
@@ -1055,7 +1058,8 @@
             <div class="soundbites reveal-stagger">
                 <figure class="soundbite">
                     <figcaption class="sb-topic">On Private Agency Spending</figcaption>
-                    <blockquote id="q1">&ldquo;Spending $1.5 billion annually on private staffing agencies while cutting permanent bedside lines is not a funding scarcity issue; it is a structural misallocation of public health dollars.&rdquo;</blockquote>
+                    <blockquote id="q1">&ldquo;Ontario hospitals paid private staffing agencies $725 million in a single year, and Canada-wide the bill has passed $1.5 billion, while permanent bedside lines are cut. That is not a funding scarcity issue; it is a structural misallocation of public health dollars.&rdquo;</blockquote>
+                    <p class="sb-src">Figures: <a href="https://www.policyalternatives.ca/news-research/hollowed-out/" target="_blank" rel="noopener">CCPA, Hollowed Out (Ontario hospitals, 2022-23)</a> and <a href="https://nursesunions.ca/billions-of-public-health-dollars-spent-on-for-profit-nursing-agencies-new-report-reveals/" target="_blank" rel="noopener">CFNU / Queen's University (Canada, 2023-24)</a></p>
                     <div class="sb-foot">
                         <span class="sb-attr">JoAnne Andrea Gomez, RN, Founder of ProRN Inc.</span>
                         <button class="press-btn" type="button" onclick="copyText('q1', this)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copy Quote</button>
@@ -1063,7 +1067,8 @@
                 </figure>
                 <figure class="soundbite">
                     <figcaption class="sb-topic">On Nurse Retention</figcaption>
-                    <blockquote id="q2">&ldquo;Training new nurses without fixing bedside working conditions is like pouring water into a leaky bucket, because for every ten nurses Ontario hires, six leave.&rdquo;</blockquote>
+                    <blockquote id="q2">&ldquo;Training new nurses without fixing bedside working conditions is like pouring water into a leaky bucket. In Ontario, 35 of every 100 new nurses leave the profession before they turn 35, nearly double the rate of a decade ago.&rdquo;</blockquote>
+                    <p class="sb-src">Figures: <a href="https://www.iedm.org/which-provinces-struggle-the-most-to-keep-young-nurses/" target="_blank" rel="noopener">Montreal Economic Institute, from CIHI data (2013 vs 2022)</a></p>
                     <div class="sb-foot">
                         <span class="sb-attr">JoAnne Andrea Gomez, RN, Founder of ProRN Inc.</span>
                         <button class="press-btn" type="button" onclick="copyText('q2', this)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copy Quote</button>
@@ -1361,11 +1366,11 @@
         const BEATS = {
             agency: {
                 topic: 'Private staffing agency costs in Ontario',
-                quote: 'Spending $1.5 billion annually on private staffing agencies while cutting permanent bedside lines is not a funding scarcity issue; it is a structural misallocation of public health dollars.'
+                quote: 'Ontario hospitals paid private staffing agencies $725 million in a single year, and Canada-wide the bill has passed $1.5 billion, while permanent bedside lines are cut. That is not a funding scarcity issue; it is a structural misallocation of public health dollars.'
             },
             retention: {
                 topic: 'Nurse retention and bedside working conditions',
-                quote: 'Training new nurses without fixing bedside working conditions is like pouring water into a leaky bucket, because for every ten nurses Ontario hires, six leave.'
+                quote: 'Training new nurses without fixing bedside working conditions is like pouring water into a leaky bucket. In Ontario, 35 of every 100 new nurses leave the profession before they turn 35, nearly double the rate of a decade ago.'
             },
             burnout: {
                 topic: 'Healthcare burnout and moral injury',
