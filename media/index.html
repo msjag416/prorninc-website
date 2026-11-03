@@ -813,7 +813,7 @@
         .pulse { position: relative; flex: none; width: 10px; height: 10px; border-radius: 50%; background: var(--teal); }
         .pulse::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: var(--teal); animation: pulse 1.6s ease-out infinite; }
         @keyframes pulse { to { transform: scale(2.8); opacity: 0; } }
-        .hero .hero-inner { padding-top: 4rem; }
+        .hero .hero-inner { padding-top: 3rem; padding-bottom: 4rem; }
         .hero-cta-ghost { background: transparent; color: var(--text-dark); border: 1px solid var(--border-hover); box-shadow: none; margin-left: .6rem; }
         .hero-cta-ghost:hover { background: transparent; border-color: var(--teal); color: var(--teal); box-shadow: none; }
         .fast-facts { background: var(--navy); border-bottom: 1px solid var(--border); padding: 2.25rem 2.5rem; }
@@ -852,6 +852,51 @@
             .deadline-banner { font-size: .82rem; }
         }
         @media (prefers-reduced-motion: reduce) { .pulse::after { animation: none; } }
+
+        /* ═══ STORY DESK (hero press-pack builder, Nov 2026) ═══ */
+        .hero-inner { grid-template-columns: 240px minmax(0,1fr); align-items: start; }
+        .hero-text { padding-right: 0; }
+        .hero h1 { font-size: clamp(2.4rem, 5.2vw, 4.2rem); margin-bottom: .9rem; }
+        .hero-subtitle { margin-bottom: 1.6rem; max-width: 600px; }
+        .desk { background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 1.4rem; position: relative; overflow: hidden; }
+        .desk::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--teal), transparent 70%); }
+        .desk-head { display: flex; align-items: baseline; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem; }
+        .desk-kicker { font-size: .68rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--teal); }
+        .desk-prompt { font-family: 'Stack Sans Headline', 'Inter', sans-serif; font-size: 1.25rem; font-weight: 600; color: var(--text-dark); letter-spacing: -0.01em; }
+        .desk-beats { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: .6rem; margin-bottom: 1rem; }
+        .beat { text-align: left; background: #1a1d21; border: 1px solid var(--border); border-radius: 14px; padding: .85rem .9rem; cursor: pointer; color: var(--text-body); font-family: 'Inter', sans-serif; display: flex; flex-direction: column; gap: .15rem; transition: border-color .2s, background .2s, transform .2s, box-shadow .2s; min-width: 0; }
+        .beat:hover { border-color: var(--border-hover); transform: translateY(-2px); }
+        .beat:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+        .beat.is-active { border-color: var(--teal); background: #141a0c; box-shadow: 0 0 0 1px var(--teal), 0 8px 30px rgba(200,255,46,.12); }
+        .beat-num { font-size: .65rem; font-weight: 700; letter-spacing: .14em; color: var(--mid-gray); }
+        .beat.is-active .beat-num { color: var(--teal); }
+        .beat-name { font-family: 'Stack Sans Headline', 'Inter', sans-serif; font-size: 1.02rem; font-weight: 700; color: var(--text-dark); line-height: 1.15; }
+        .beat-sub { font-size: .74rem; line-height: 1.35; color: var(--text-light); }
+        .desk-pack { border-top: 1px solid var(--border); padding-top: 1.1rem; }
+        .desk-pack.is-swapping { animation: packIn .35s ease; }
+        @keyframes packIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+        .pack-label { display: inline-flex; align-items: center; gap: .45rem; font-size: .68rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--teal); margin-bottom: .7rem; }
+        .pack-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--teal); box-shadow: 0 0 10px var(--teal); }
+        .pack-quote { margin: 0; font-family: 'Stack Sans Headline', 'Inter', sans-serif; font-size: clamp(1.15rem, 1.9vw, 1.5rem); line-height: 1.38; font-weight: 500; color: var(--text-dark); letter-spacing: -0.01em; }
+        .pack-attr { font-size: .82rem; color: var(--text-light); margin-top: .7rem; }
+        .pack-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; margin-top: 1.1rem; }
+        .pack-actions .hero-cta { font-size: .92rem; padding: .8rem 1.3rem; }
+        .pack-actions .hero-cta-ghost { margin-left: 0; }
+        .pack-copy.copied { background: var(--teal-light); }
+        .pack-form { font-size: .85rem; color: var(--text-light); text-decoration: underline; text-underline-offset: 3px; margin-left: auto; }
+        .pack-form:hover { color: var(--teal); }
+        @media (max-width: 900px) {
+            .hero-inner { grid-template-columns: minmax(0,1fr); gap: 2.5rem; }
+            .hero-photo-wrapper { position: static; max-width: 220px; margin: 0 auto; }
+            .desk-beats { grid-template-columns: repeat(2, minmax(0,1fr)); }
+        }
+        @media (max-width: 768px) {
+            .desk { padding: 1.1rem; border-radius: 16px; text-align: left; }
+            .pack-actions .hero-cta { width: 100%; justify-content: center; }
+            .pack-form { margin-left: 0; }
+            .hero-cta-ghost { margin-top: 0; }
+        }
+        @media (prefers-reduced-motion: reduce) { .desk-pack.is-swapping { animation: none; } .beat:hover { transform: none; } }
     </style>
 </head>
 <body>
@@ -895,20 +940,50 @@
             <div class="hero-text">
                 <div class="hero-label">Healthcare Commentator &amp; Expert Source</div>
                 <h1>JoAnne Andrea Gomez, <span class="hl">RN</span></h1>
-                <p class="hero-subtitle">27 years of critical care experience in Trauma-Neuro and Medical-Surgical ICUs. Published author. Founder of ProRN Inc. Available for expert commentary, interviews, op-ed contributions, and panel discussions.</p>
-                <div class="hero-tags">
-                    <span class="hero-tag">Nurse Staffing</span>
-                    <span class="hero-tag">Patient Safety</span>
-                    <span class="hero-tag">Healthcare Burnout</span>
-                    <span class="hero-tag">Hospital Policy</span>
-                    <span class="hero-tag">Workforce Crisis</span>
-                    <span class="hero-tag">Healthcare Reform</span>
+                <p class="hero-subtitle">27 years in Trauma-Neuro and Medical-Surgical ICUs. Published author. Founder of ProRN Inc. Pick the beat your story is about and your press pack is ready in one tap.</p>
+
+                <!-- STORY DESK: tap a beat, get the quote, attribution and a ready-to-send request -->
+                <div class="desk" id="story-desk">
+                    <div class="desk-head">
+                        <span class="desk-kicker">Story Desk</span>
+                        <span class="desk-prompt">What's your story about?</span>
+                    </div>
+                    <div class="desk-beats" role="tablist" aria-label="Pick a beat">
+                        <button class="beat is-active" role="tab" aria-selected="true" data-beat="agency" id="beat-agency">
+                            <span class="beat-num">01</span>
+                            <span class="beat-name">Agency costs</span>
+                            <span class="beat-sub">The $1.5B Ontario spends on private staffing</span>
+                        </button>
+                        <button class="beat" role="tab" aria-selected="false" data-beat="retention" id="beat-retention">
+                            <span class="beat-num">02</span>
+                            <span class="beat-name">Nurse retention</span>
+                            <span class="beat-sub">Why six of every ten new hires leave</span>
+                        </button>
+                        <button class="beat" role="tab" aria-selected="false" data-beat="burnout" id="beat-burnout">
+                            <span class="beat-num">03</span>
+                            <span class="beat-name">Burnout</span>
+                            <span class="beat-sub">System drivers of frontline exhaustion</span>
+                        </button>
+                        <button class="beat" role="tab" aria-selected="false" data-beat="postop" id="beat-postop">
+                            <span class="beat-num">04</span>
+                            <span class="beat-name">Post-op recovery</span>
+                            <span class="beat-sub">Cosmetic surgery aftercare standards</span>
+                        </button>
+                    </div>
+                    <div class="desk-pack" role="tabpanel" aria-live="polite" id="desk-pack">
+                        <div class="pack-label"><span class="pack-dot" aria-hidden="true"></span> Cleared for attribution</div>
+                        <blockquote class="pack-quote" id="pack-quote"></blockquote>
+                        <div class="pack-attr" id="pack-attr">JoAnne Andrea Gomez, RN, critical care nurse and founder of ProRN Inc.</div>
+                        <div class="pack-actions">
+                            <button class="hero-cta pack-copy" id="pack-copy" type="button">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                Copy quote + attribution
+                            </button>
+                            <a class="hero-cta hero-cta-ghost" id="pack-email" href="mailto:prorninc@gmail.com">Email JoAnne about this</a>
+                            <a class="pack-form" id="pack-form" href="#contact">Use the request form instead</a>
+                        </div>
+                    </div>
                 </div>
-                <a href="#contact" class="hero-cta">
-                    Request Commentary
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-                </a>
-                <a href="#soundbites" class="hero-cta hero-cta-ghost">Read the Soundbites</a>
             </div>
         </div>
     </header>
@@ -1254,6 +1329,69 @@
             const t = document.createElement('textarea'); t.value = text; document.body.appendChild(t);
             t.select(); try { document.execCommand('copy'); done(); } catch (e) {} t.remove();
         }
+
+        // ── Story Desk: tap a beat, the hero assembles the press pack for that angle ──
+        // To change a quote or subject line, edit the text here. Keys match data-beat on the buttons.
+        const BEATS = {
+            agency: {
+                topic: 'Private staffing agency costs in Ontario',
+                quote: 'Spending $1.5 billion annually on private staffing agencies while cutting permanent bedside lines is not a funding scarcity issue; it is a structural misallocation of public health dollars.'
+            },
+            retention: {
+                topic: 'Nurse retention and bedside working conditions',
+                quote: 'Training new nurses without fixing bedside working conditions is like pouring water into a leaky bucket, because for every ten nurses Ontario hires, six leave.'
+            },
+            burnout: {
+                topic: 'Healthcare burnout and moral injury',
+                quote: 'Workplace burnout is not an individual resilience failure. It happens when dedicated professionals are forced to operate in broken systems that make safe care impossible.'
+            },
+            postop: {
+                topic: 'Post-operative recovery standards after cosmetic surgery',
+                quote: 'The first 24 hours after cosmetic surgery are a clinical phase, not a hotel stay. Most preventable complications begin when a patient goes home without a nurse watching the basics.'
+            }
+        };
+        const ATTR = 'JoAnne Andrea Gomez, RN, critical care nurse and founder of ProRN Inc.';
+        const packQuote = document.getElementById('pack-quote');
+        const packEmail = document.getElementById('pack-email');
+        const packForm = document.getElementById('pack-form');
+        const pack = document.getElementById('desk-pack');
+        let currentBeat = 'agency';
+
+        function showBeat(key) {
+            const b = BEATS[key]; if (!b) return;
+            currentBeat = key;
+            document.querySelectorAll('.beat').forEach(btn => {
+                const on = btn.dataset.beat === key;
+                btn.classList.toggle('is-active', on);
+                btn.setAttribute('aria-selected', on ? 'true' : 'false');
+            });
+            packQuote.textContent = '“' + b.quote + '”';
+            const subject = 'Comment request: ' + b.topic;
+            const body = 'Hi JoAnne,\n\nI\'m working on a story about ' + b.topic.toLowerCase() + ' for [publication].\n\nAngle: \nDeadline: \nFormat (print, TV, radio, podcast): \n\nThanks,\n[name]';
+            packEmail.href = 'mailto:prorninc@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+            pack.classList.remove('is-swapping'); void pack.offsetWidth; pack.classList.add('is-swapping');
+        }
+        document.querySelectorAll('.beat').forEach(btn => btn.addEventListener('click', () => showBeat(btn.dataset.beat)));
+        showBeat('agency');
+
+        document.getElementById('pack-copy').addEventListener('click', function () {
+            const text = packQuote.textContent + '\n— ' + ATTR;
+            const btn = this;
+            const done = () => {
+                const original = btn.innerHTML;
+                btn.classList.add('copied');
+                btn.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Copied, ready to paste';
+                setTimeout(() => { btn.classList.remove('copied'); btn.innerHTML = original; }, 2500);
+            };
+            if (navigator.clipboard) navigator.clipboard.writeText(text).then(done, () => fallbackCopy(text, done));
+            else fallbackCopy(text, done);
+        });
+
+        // "Use the request form instead": jump to the form with the topic and inquiry type already filled in
+        packForm.addEventListener('click', function () {
+            document.getElementById('topic').value = BEATS[currentBeat].topic;
+            document.getElementById('type').value = 'expert-quote';
+        });
 
         document.getElementById('contactForm').addEventListener('submit', async function(e) {
             e.preventDefault();

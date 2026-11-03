@@ -86,3 +86,16 @@ Built for Qwoted journalists. Sections on `media/index.html`, top to bottom:
 `media/media-sheet.html` (hidden from search engines). If you change the bios or quotes on the page,
 change them in `media-sheet.html` too, then rebuild the PDF by printing that page to PDF
 (Letter size, no headers/footers) and check it is still one page.
+
+## Story Desk in the media hero (Nov 3, 2026)
+The hero on `media/index.html` is now a press-pack builder (`#story-desk`). The static topic tags and
+the two hero buttons were replaced by four beat buttons (`.beat`, keyed by `data-beat`). Tapping one:
+- shows the cleared quote for that beat in `#pack-quote` and the attribution line;
+- rewrites the "Email JoAnne about this" link into a mailto with a subject line and a short
+  fill-in-the-blanks body for that beat;
+- "Copy quote + attribution" puts the quote and attribution on the clipboard;
+- "Use the request form instead" jumps to `#contact` with the Topic and Inquiry Type already filled in.
+The quotes, topics and subject lines live in the `BEATS` object in the page script. To change a quote,
+edit it there (the Soundbites section further down has its own copy of the three original quotes).
+Styles are in the `STORY DESK` block at the end of the `<style>`. On phones the beats go two across and
+the buttons stack full width. People with "reduce motion" on get no swap animation.
