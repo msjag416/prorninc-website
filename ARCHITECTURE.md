@@ -108,3 +108,7 @@ anywhere outside it, or on Escape (script near the top of the page's `<script>`)
 - Hero photo loads `hero.webp` (about 70 KB) with `hero.jpg` as the fallback and as the download/share image. If you replace the headshot, replace both files.
 - The hidden "Person" data uses job title "Registered Nurse" and lists Medium, LinkedIn, Instagram, the two books and prorninc.com under `sameAs`.
 - The H1 is the name plus a smaller second line, "Toronto ICU Nurse & Expert Source" (`.h1-sub`).
+- **Hear Her First** (`#hear`, between Credentials and Published, Nov 3, 2026): three cards linking to the
+  Burnout to Balance podcast on Spotify and Apple Podcasts and the Amazon Author Page. When JoAnne gets
+  quoted or interviewed by an outlet, add a card here (copy a `.work-card`) and consider renaming the section
+  "As Featured In". The hidden Person data lists the author page and the Spotify show instead of the two book pages.
