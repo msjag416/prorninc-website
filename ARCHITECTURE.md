@@ -22,7 +22,7 @@ file (`assets/css/site.css`) is built by hand and committed (see below).
   so Tailwind's line heights win, as they did before.
 - `assets/js/lucide.min.js` — Lucide icons 1.67.0. Note: Lucide has no brand logos, so the footer
   LinkedIn icon uses Font Awesome (`fa-brands fa-linkedin`).
-- `/media` now uses the same self-hosted fonts (from `../assets/fonts/`); `/resume` still loads its own outside libraries.
+- `/media` and `/resume` use the same self-hosted fonts (from `../assets/fonts/`). `/resume` also uses the self-hosted Font Awesome; it still loads Tailwind from its CDN.
 
 ## Accessibility notes
 - The moving hero word is hidden from screen readers; a hidden full sentence
@@ -112,3 +112,15 @@ anywhere outside it, or on Escape (script near the top of the page's `<script>`)
   Burnout to Balance podcast on Spotify and Apple Podcasts and the Amazon Author Page. When JoAnne gets
   quoted or interviewed by an outlet, add a card here (copy a `.work-card`) and consider renaming the section
   "As Featured In". The hidden Person data lists the author page and the Spotify show instead of the two book pages.
+
+## Resume page theme (Nov 4, 2026)
+`resume/index.html` now matches the main site's dark + neon look. The page markup and text stayed the same.
+- The Tailwind colour names in its `tailwind.config` script were kept but now hold the new colours
+  (`corporateNavy` = dark background `#0a0b0d`, `accentTeal` and `corporateBlue` = neon `#c8ff2e`).
+- Fonts: Inter (body) and Stack Sans Headline (headings), from `../assets/fonts/`. Icons from `../assets/fontawesome/`.
+- The `MAIN-SITE LOOK` block at the end of its `<style>` recolors white/gray/teal classes, rounds the cards,
+  styles the neon buttons and form, and adds the neon scroll progress bar (`#scroll-progress`).
+- Hero (`.resume-hero`): big name, then a moving line "27 ICU years, now in ___" (`#k-word`) that cycles
+  medical writing, AI training, clinical research. Words live in the `words` list in the page script.
+  Screen readers get one hidden full sentence instead. "Reduce motion" turns the movement off.
+- The "JAG" logo in the nav now links back to the ProRN Inc. home page.

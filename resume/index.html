@@ -60,13 +60,19 @@
     }
     </script>
 
-    <!-- Fonts: Montserrat (Headings) and Lato (Body) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Icons: FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Fonts: Inter (body) and Stack Sans Headline (headings), self-hosted like the main site -->
+    <link rel="preload" href="../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../assets/fonts/stack-sans-headline-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <style>
+        @font-face { font-family: 'Inter'; font-style: normal; font-weight: 100 900; font-display: swap; src: url('../assets/fonts/inter-latin-wght-normal.woff2') format('woff2'); }
+        @font-face { font-family: 'Stack Sans Headline'; font-style: normal; font-weight: 400; font-display: swap; src: url('../assets/fonts/stack-sans-headline-latin-400-normal.woff2') format('woff2'); }
+        @font-face { font-family: 'Stack Sans Headline'; font-style: normal; font-weight: 500; font-display: swap; src: url('../assets/fonts/stack-sans-headline-latin-500-normal.woff2') format('woff2'); }
+        @font-face { font-family: 'Stack Sans Headline'; font-style: normal; font-weight: 600; font-display: swap; src: url('../assets/fonts/stack-sans-headline-latin-600-normal.woff2') format('woff2'); }
+        @font-face { font-family: 'Stack Sans Headline'; font-style: normal; font-weight: 700; font-display: swap; src: url('../assets/fonts/stack-sans-headline-latin-700-normal.woff2') format('woff2'); }
+    </style>
+
+    <!-- Icons: Font Awesome, self-hosted -->
+    <link rel="stylesheet" href="../assets/fontawesome/css/all.min.css">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -75,15 +81,16 @@
             theme: {
                 extend: {
                     colors: {
-                        corporateNavy: '#1a365d',
-                        corporateSlate: '#64748b',
-                        corporateLight: '#f8fafc',
-                        corporateBlue: '#2563eb',
-                        accentTeal: '#0d9488',
+                        /* Dark + neon theme (Nov 2026). Old names kept so the markup didn't change. */
+                        corporateNavy: '#0a0b0d',
+                        corporateSlate: '#a9afa8',
+                        corporateLight: '#121417',
+                        corporateBlue: '#c8ff2e',
+                        accentTeal: '#c8ff2e',
                     },
                     fontFamily: {
-                        sans: ['Lato', 'sans-serif'],
-                        heading: ['Montserrat', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Stack Sans Headline', 'Inter', 'sans-serif'],
                     }
                 }
             }
@@ -128,18 +135,123 @@
             left: 0;
             width: 60px;
             height: 3px;
-            background: linear-gradient(90deg, #0d9488, #2563eb);
+            background: linear-gradient(90deg, #c8ff2e, #c8ff2e);
+        }
+
+        /* ═══ MAIN-SITE LOOK: DARK + NEON (Nov 2026) ═══
+           Recolors the existing Tailwind classes, same method as the main page. */
+        :root {
+            --bg: #0a0b0d; --surface: #121417; --surface-2: #1a1d21; --line: #26292e;
+            --ink: #f2f4f1; --ink-2: #d4d8d3; --muted: #a9afa8; --dim: #80867f;
+            --neon: #c8ff2e; --neon-soft: rgba(200,255,46,.12); --neon-line: rgba(200,255,46,.35);
+            --red: #ff6b5e;
+        }
+        html { background: var(--bg); color-scheme: dark; overflow-x: clip; }
+        body.antialiased { background: var(--bg); color: var(--ink-2); overflow-x: clip; }
+        ::selection { background: var(--neon); color: var(--bg); }
+        h1, h2, h3, h4, .font-heading { font-family: 'Stack Sans Headline', 'Inter', sans-serif; letter-spacing: -0.025em; }
+        body section h2.text-3xl { font-size: clamp(2.1rem, 5.2vw, 4rem); line-height: 1.02; font-weight: 700; }
+
+        /* Surfaces */
+        body .bg-white, body .bg-slate-50 { background-color: var(--bg); }
+        body section .bg-white, body section .bg-slate-50, body .bg-slate-100 { background-color: var(--surface); }
+        body .bg-corporateLight { background-color: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+        body .from-slate-50 { background-image: none; background-color: var(--bg); }
+        body .bg-slate-900 { background-color: var(--bg); border-top: 1px solid var(--line); }
+        body nav.bg-white\/95 { background-color: rgba(10,11,13,.82); backdrop-filter: blur(12px); }
+        body #mobile-menu { background-color: var(--surface); border-color: var(--line); }
+        body .bg-teal-50, body .bg-blue-50, body .bg-green-100 { background-color: var(--neon-soft); }
+        body .bg-red-100 { background-color: rgba(255,107,94,.12); }
+        body .bg-accentTeal\/20 { background-color: var(--neon-soft); border: 1px solid var(--neon-line); }
+        /* Book card tops: dark with neon icon; Medium card neon with dark icon */
+        body #publications .bg-corporateNavy { background-color: #10170a; border-bottom: 1px solid var(--neon-line); }
+        body #publications .bg-corporateNavy i { color: var(--neon); }
+        body #publications .bg-accentTeal i { color: var(--bg); }
+
+        /* Text */
+        body .text-slate-900, body .text-slate-800 { color: var(--ink); }
+        body .text-slate-700, body .text-gray-700 { color: var(--ink-2); }
+        body .text-gray-600, body .text-gray-300 { color: var(--muted); }
+        body .text-gray-500, body .text-slate-500, body .text-gray-400 { color: var(--dim); }
+        body .text-teal-800, body .text-teal-700, body .text-teal-200, body .text-green-600 { color: var(--neon); }
+        body .text-blue-100 { color: var(--ink-2); }
+        body .text-red-700 { color: var(--red); }
+        body .prose { color: var(--muted); }
+
+        /* Borders */
+        body .border-slate-100, body .border-slate-200, body .border-gray-100, body .border-gray-200, body #contact .border-t { border-color: var(--line); }
+        body .border-teal-200 { border-color: var(--neon-line); }
+        body .border-red-400 { border-color: rgba(255,107,94,.4); }
+        body .shadow-sm, body .shadow-2xl, body .shadow { box-shadow: none; }
+
+        /* Cards: rounded, glow on hover like the main site */
+        body section .rounded-sm.shadow-sm, body section .rounded-lg.shadow-sm { border-radius: 16px; border: 1px solid var(--line); transition: border-color .25s, box-shadow .25s, transform .25s; }
+        body section .border-t-4.border-accentTeal { border-top: 3px solid var(--neon); }
+        body section .hover\:shadow-md:hover { border-color: var(--neon); box-shadow: 0 0 40px rgba(200,255,46,.12); }
+        body #why-me .bg-white { border-left: 3px solid var(--neon); }
+
+        /* Nav */
+        body nav .hover\:text-corporateNavy:hover, body #mobile-menu .hover\:text-corporateNavy:hover { color: var(--neon); }
+        body #mobile-menu .hover\:bg-gray-50:hover { background-color: var(--surface-2); }
+        body #mobile-menu .hover\:border-corporateNavy:hover { border-color: var(--neon); }
+        body #mobile-menu a.text-corporateNavy { color: var(--neon); }
+        body nav .text-corporateNavy { color: var(--ink); }
+        body nav .hover\:bg-gray-100:hover { background-color: var(--surface-2); }
+        body .nav-home { color: var(--ink); }
+        body .nav-home:hover { color: var(--neon); }
+
+        /* Buttons: neon fill, dark text */
+        body a.bg-corporateNavy, body button.bg-corporateNavy, body #hero-cta { background-color: var(--neon); color: var(--bg); border-color: transparent; border-radius: 10px; font-weight: 700; }
+        body a.bg-corporateNavy:hover, body button.bg-corporateNavy:hover, body #hero-cta:hover { background-color: #d9ff6b; box-shadow: 0 0 0 6px rgba(200,255,46,.15); }
+        body #hero-cta-2 { border-radius: 10px; border: 1px solid #3a3f45; font-weight: 700; }
+        body #hero-cta-2:hover { border-color: var(--neon); color: var(--neon); background: transparent; }
+        body .text-corporateBlue:hover { color: #e4ff9a; }
+        body #contact .hover\:text-corporateNavy:hover { color: var(--neon); }
+
+        /* Form */
+        body #contact .bg-white { background-color: var(--surface); border: 1px solid var(--line); border-radius: 20px; }
+        body input, body textarea { background-color: var(--surface-2); color: var(--ink); border-color: var(--line); border-radius: 8px; }
+        body input::placeholder, body textarea::placeholder { color: var(--dim); }
+        body input:focus, body textarea:focus { border-color: var(--neon); box-shadow: 0 0 0 3px rgba(200,255,46,.2); }
+
+        /* Hero: neon glow, big name, kinetic word */
+        body .resume-hero { background: radial-gradient(60% 70% at 85% 10%, rgba(200,255,46,.16), transparent 60%), radial-gradient(50% 60% at 0% 100%, rgba(200,255,46,.07), transparent 60%), var(--bg); }
+        body .resume-hero > .absolute { display: none; }
+        body .resume-hero h1 { font-size: clamp(2.6rem, 8vw, 6.5rem); line-height: .95; letter-spacing: -0.045em; }
+        body .resume-hero img { border-radius: 22px; border: 1px solid var(--neon-line); box-shadow: 0 0 60px rgba(200,255,46,.12); }
+        .kinetic { font-family: 'Stack Sans Headline', 'Inter', sans-serif; font-weight: 700; line-height: 1; letter-spacing: -0.04em; color: var(--muted); font-size: clamp(1.6rem, 4.6vw, 3.2rem); margin: 0 auto 2rem; }
+        .kinetic .k-word { display: inline-block; white-space: nowrap; color: var(--neon); position: relative; height: 1.05em; overflow: hidden; vertical-align: bottom; }
+        .kinetic .k-word b { display: inline-block; font-weight: 700; transition: transform .55s cubic-bezier(.7,0,.2,1), opacity .55s, filter .55s; }
+        .kinetic .k-word b.out { transform: translateY(-105%) skewY(-6deg); opacity: 0; filter: blur(6px); }
+        .kinetic .k-word b.in { transform: translateY(105%) skewY(6deg); opacity: 0; filter: blur(6px); transition: none; }
+        .kinetic .k-word::after { content: ""; display: inline-block; width: .08em; height: .75em; margin-left: .06em; background: var(--neon); vertical-align: -0.02em; animation: caret 1s steps(1) infinite; }
+        @keyframes caret { 50% { opacity: 0; } }
+
+        /* Timeline dots glow */
+        body #experience .rounded-full.bg-accentTeal { box-shadow: 0 0 12px var(--neon); }
+        body #experience .rounded-full.bg-corporateNavy { background-color: var(--bg); border: 2px solid var(--neon); }
+        body #experience .border-l-2 { border-color: var(--line); }
+
+        /* Scroll progress bar */
+        #scroll-progress { position: fixed; top: 0; left: 0; height: 3px; width: 100%; transform-origin: 0 50%; transform: scaleX(0); background: var(--neon); z-index: 60; box-shadow: 0 0 12px var(--neon); }
+        .focus-ring:focus-visible, a:focus-visible, button:focus-visible { outline: 2px solid var(--neon); outline-offset: 3px; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .fade-in { opacity: 1; transform: none; transition: none; }
+            .kinetic .k-word::after { animation: none; }
+            .kinetic .k-word b { transition: none; }
         }
     </style>
 </head>
 <body class="font-sans text-slate-800 bg-white antialiased">
+    <div id="scroll-progress" aria-hidden="true"></div>
 
     <!-- Navigation -->
     <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50 border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20">
                 <div class="flex-shrink-0 flex items-center">
-                    <span class="font-heading font-bold text-xl text-corporateNavy tracking-tight">JAG <span class="text-accentTeal font-light">| Medical Writer + AI Clinical</span></span>
+                    <a href="/" class="font-heading font-bold text-xl tracking-tight nav-home" title="Back to ProRN Inc.">JAG <span class="text-accentTeal font-light">| Medical Writer + AI Clinical</span></a>
                 </div>
                 <div class="hidden md:ml-6 md:flex md:space-x-8 md:items-center">
                     <a href="#about" class="text-gray-600 hover:text-corporateNavy px-3 py-2 text-sm font-medium transition-colors">Profile</a>
@@ -172,7 +284,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative bg-corporateNavy pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+    <section class="resume-hero relative bg-corporateNavy pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
         <div class="absolute inset-0 opacity-10">
              <svg class="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
                  <path d="M0 100 C 20 0 50 0 100 100 Z" fill="white" />
@@ -188,6 +300,8 @@
             <h1 class="text-4xl tracking-tight font-heading font-bold text-white sm:text-5xl md:text-6xl mb-6">
                 JoAnne Andrea Gomez, RN
             </h1>
+            <p class="kinetic" aria-hidden="true">27 ICU years, now in <span class="k-word" id="k-word"><b>medical writing</b></span></p>
+            <p class="sr-only">27 ICU years, now in medical writing, AI training, and clinical research.</p>
             <p class="mt-4 max-w-3xl mx-auto text-xl text-blue-100 font-light tracking-wide">
                 Registered Nurse with 27 years of critical care experience and ICH GCP E6(R3) certification (TransCelerate recognized). Trained in HIPAA, PHIPA, and GDPR data privacy requirements. Seeking medical writing and healthcare AI training roles where clinical expertise in neurological assessment, safety monitoring, adverse event documentation, and patient communication directly improves the quality of clinical trial documentation, regulatory submissions, and AI model performance.
             </p>
@@ -195,17 +309,17 @@
                 Medical Writing &bull; Clinical Trial Documentation &bull; Safety Reporting &bull; Medical AI Annotation &bull; Clinical Data Validation &bull; RLHF Domain Expert
             </p>
             <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center mb-10">
-                <a href="#contact" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-sm text-corporateNavy bg-white hover:bg-blue-50 md:py-4 md:text-lg md:px-10 btn-hover">
+                <a href="#contact" id="hero-cta" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-sm text-corporateNavy bg-white hover:bg-blue-50 md:py-4 md:text-lg md:px-10 btn-hover">
                     Get in Touch
                 </a>
-                <a href="#competencies" class="inline-flex items-center justify-center px-8 py-3 border-2 border-white/30 text-base font-medium rounded-sm text-white hover:bg-white/10 md:py-4 md:text-lg md:px-10 btn-hover">
+                <a href="#competencies" id="hero-cta-2" class="inline-flex items-center justify-center px-8 py-3 border-2 border-white/30 text-base font-medium rounded-sm text-white hover:bg-white/10 md:py-4 md:text-lg md:px-10 btn-hover">
                     View Expertise
                 </a>
             </div>
             
             <!-- Hero Image -->
             <div class="flex justify-center">
-                <img src="hero.jpg" alt="JoAnne Andrea Gomez, RN - Medical Writer and Healthcare AI Training Specialist" class="rounded-full shadow-2xl border-4 border-white/20 w-64 md:w-80 aspect-square object-cover" onerror="this.src='https://placehold.co/400x400/1a365d/ffffff?text=JAG'">
+                <img src="hero.jpg" alt="JoAnne Andrea Gomez, RN - Medical Writer and Healthcare AI Training Specialist" class="rounded-full shadow-2xl border-4 border-white/20 w-64 md:w-80 aspect-square object-cover" onerror="this.src='https://placehold.co/400x400/0a0b0d/c8ff2e?text=JAG'">
             </div>
         </div>
     </section>
@@ -702,6 +816,34 @@
         document.addEventListener('DOMContentLoaded', function() {
             // Year
             document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+            // Scroll progress bar
+            const bar = document.getElementById('scroll-progress');
+            const setBar = () => {
+                const h = document.documentElement.scrollHeight - window.innerHeight;
+                bar.style.transform = 'scaleX(' + (h > 0 ? window.scrollY / h : 0) + ')';
+            };
+            window.addEventListener('scroll', setBar, { passive: true });
+            setBar();
+
+            // Kinetic hero word (skipped for "reduce motion")
+            const kw = document.getElementById('k-word');
+            if (kw && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                const words = ['medical writing', 'AI training', 'clinical research'];
+                let i = 0;
+                setInterval(() => {
+                    const old = kw.querySelector('b');
+                    old.classList.add('out');
+                    setTimeout(() => {
+                        i = (i + 1) % words.length;
+                        const b = document.createElement('b');
+                        b.className = 'in';
+                        b.textContent = words[i];
+                        kw.replaceChildren(b);
+                        requestAnimationFrame(() => requestAnimationFrame(() => b.classList.remove('in')));
+                    }, 450);
+                }, 2600);
+            }
 
             // Mobile Menu
             const mobileMenu = document.getElementById('mobile-menu');
